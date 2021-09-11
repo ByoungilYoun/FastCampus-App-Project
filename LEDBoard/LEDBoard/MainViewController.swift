@@ -48,6 +48,7 @@ class MainViewController :  UIViewController {
   
   //MARK: - @objc func
    @objc private func buttonTap() {
-    print("123")
+    let vc = SettingsViewController()
+    navigationController?.pushViewController(vc, animated: true)
   }
 }
