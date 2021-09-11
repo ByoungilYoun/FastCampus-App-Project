@@ -39,14 +39,17 @@ class SettingsViewController : UIViewController {
     bt.backgroundColor = .yellow
     bt.setTitle("노란색", for: .normal)
     bt.setTitleColor(.black, for: .normal)
+    bt.addTarget(self, action: #selector(tapTextColorButton(_:)), for: .touchUpInside)
     return bt
   }()
   
   private let redBtn : UIButton = {
     let bt = UIButton()
     bt.backgroundColor = .red
-    bt.setTitle("자주색", for: .normal)
+    bt.setTitle("빨간색", for: .normal)
+    bt.alpha = 0.2
     bt.setTitleColor(.black, for: .normal)
+    bt.addTarget(self, action: #selector(tapTextColorButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -54,7 +57,9 @@ class SettingsViewController : UIViewController {
     let bt = UIButton()
     bt.backgroundColor = .green
     bt.setTitle("초록색", for: .normal)
+    bt.alpha = 0.2
     bt.setTitleColor(.black, for: .normal)
+    bt.addTarget(self, action: #selector(tapTextColorButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -70,6 +75,7 @@ class SettingsViewController : UIViewController {
     bt.backgroundColor = .black
     bt.setTitle("검정색", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapBackgroundColorButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -77,7 +83,9 @@ class SettingsViewController : UIViewController {
     let bt = UIButton()
     bt.backgroundColor = .blue
     bt.setTitle("파란색", for: .normal)
-    bt.setTitleColor(.black, for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.alpha = 0.2
+    bt.addTarget(self, action: #selector(tapBackgroundColorButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -86,6 +94,8 @@ class SettingsViewController : UIViewController {
     bt.backgroundColor = .orange
     bt.setTitle("주황색", for: .normal)
     bt.setTitleColor(.black, for: .normal)
+    bt.alpha = 0.2
+    bt.addTarget(self, action: #selector(tapBackgroundColorButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -93,6 +103,7 @@ class SettingsViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("저장", for: .normal)
     bt.setTitleColor(.black, for: .normal)
+    bt.addTarget(self, action: #selector(tapSaveButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -101,6 +112,10 @@ class SettingsViewController : UIViewController {
     super.viewDidLoad()
     configureUI()
     configureNavi()
+  }
+  
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
   }
   
   //MARK: - Functions
@@ -158,5 +173,42 @@ class SettingsViewController : UIViewController {
   private func configureNavi() {
     title = "설정"
     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
+  }
+  
+  private func changeTextColor(color : UIColor) {
+    self.yellowBtn.alpha = color == UIColor.yellow ? 1 : 0.2
+    self.redBtn.alpha = color == UIColor.red ? 1 : 0.2
+    self.greenBtn.alpha = color == UIColor.green ? 1 : 0.2
+  }
+
+  private func changeBackgroundColor(color : UIColor) {
+    self.blackBtn.alpha = color == UIColor.black ? 1 : 0.2
+    self.blueBtn.alpha = color == UIColor.blue ? 1 : 0.2
+    self.orangeBtn.alpha = color == UIColor.orange ? 1 : 0.2
+  }
+  
+  //MARK: - @objc func
+  @objc func tapTextColorButton(_ sender :  UIButton) {
+    if sender == self.yellowBtn {
+      self.changeTextColor(color: .yellow)
+    } else if sender == self.redBtn {
+      self.changeTextColor(color: .red)
+    } else {
+      self.changeTextColor(color: .green)
+    }
+  }
+  
+  @objc func tapBackgroundColorButton(_ sender : UIButton) {
+    if sender == self.blackBtn {
+      self.changeBackgroundColor(color: .black)
+    } else if sender == self.blueBtn {
+      self.changeBackgroundColor(color: .blue)
+    } else {
+      changeBackgroundColor(color: .orange)
+    }
+  }
+  
+  @objc func tapSaveButton(_ sender : UIButton) {
+    
   }
 }

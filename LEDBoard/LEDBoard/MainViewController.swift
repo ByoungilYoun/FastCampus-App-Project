@@ -15,7 +15,6 @@ class MainViewController :  UIViewController {
   private let mainLabel : UILabel = {
     let label = UILabel()
     label.text = "윤병일"
-    label.textColor = .yellow
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: 50)
     return label
@@ -31,7 +30,7 @@ class MainViewController :  UIViewController {
   //MARK: - Functions
   private func configureUI() {
     view.backgroundColor = .black
-    
+    mainLabel.textColor = .yellow
     view.addSubview(mainLabel)
     mainLabel.snp.makeConstraints {
       $0.center.equalToSuperview()
