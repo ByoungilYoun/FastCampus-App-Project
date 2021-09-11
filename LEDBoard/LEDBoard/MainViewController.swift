@@ -14,7 +14,7 @@ class MainViewController :  UIViewController {
   
   private let mainLabel : UILabel = {
     let label = UILabel()
-    label.text = "윤병일"
+    label.text = ""
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: 50)
     return label
@@ -35,7 +35,6 @@ class MainViewController :  UIViewController {
     mainLabel.snp.makeConstraints {
       $0.center.equalToSuperview()
     }
-    
   }
   
   private func configureNavi() {
@@ -48,6 +47,22 @@ class MainViewController :  UIViewController {
   //MARK: - @objc func
    @objc private func buttonTap() {
     let vc = SettingsViewController()
+    vc.delegate = self
+    vc.ledText = self.mainLabel.text
+    vc.textColor = self.mainLabel.textColor
+    vc.backgroundColor = self.view.backgroundColor ?? .black
     navigationController?.pushViewController(vc, animated: true)
+  }
+}
+
+  //MARK: - extension
+extension MainViewController : SettingsViewControllerDelegate {
+  func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor) {
+    if let text = text {
+      self.mainLabel.text = text
+    }
+    
+    self.mainLabel.textColor = textColor
+    self.view.backgroundColor = backgroundColor
   }
 }
