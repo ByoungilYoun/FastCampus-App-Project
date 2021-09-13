@@ -8,9 +8,23 @@
 import UIKit
 import SnapKit
 
+enum Operation {
+  case Add
+  case Subtract
+  case Divide
+  case Multiply
+  case unknown
+}
+
 class MainCalculatorViewController : UIViewController {
   
   //MARK: - Properties
+  
+  var disPlayNumber = "" // 보여지는 숫자 저장하는 프로퍼티
+  var firstOperand = "" //이전 계산 값을 저장하는 프로퍼티
+  var secondOperand = "" //새롭게 입력되는 값을 저장하는 프로퍼티
+  var result = "" //계산의 결과값을 저장하는 프로퍼티
+  var currentOperation : Operation = .unknown //현재 계산기에 어떤 연산자가 입력되었는지 알 수 있게 연산자를 저장하는 변수
   
   private let numberLabel : UILabel = {
     let label = UILabel()
@@ -32,6 +46,7 @@ class MainCalculatorViewController : UIViewController {
     bt.setTitle("AC", for: .normal)
     bt.backgroundColor = UIColor.init(red: 165 / 255, green: 165 / 255, blue: 165 / 255, alpha: 1)
     bt.setTitleColor(.black, for: .normal)
+    bt.addTarget(self, action: #selector(tapClearButton), for: .touchUpInside)
     return bt
   }()
   
@@ -39,6 +54,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("/", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapDivideButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
     return bt
   }()
@@ -48,6 +64,7 @@ class MainCalculatorViewController : UIViewController {
     bt.setTitle("7", for: .normal)
     bt.setTitleColor(.white, for: .normal)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -55,6 +72,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("8", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -63,6 +81,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("9", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -71,6 +90,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("X", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapMultiplyButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
     return bt
   }()
@@ -79,6 +99,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("4", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -87,6 +108,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("5", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -95,6 +117,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("6", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -102,6 +125,7 @@ class MainCalculatorViewController : UIViewController {
   let minusButton : UIButton = {
     let bt = UIButton()
     bt.setTitle("ㅡ", for: .normal)
+    bt.addTarget(self, action: #selector(tapMinusButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
     bt.setTitleColor(.white, for: .normal)
     return bt
@@ -111,6 +135,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("1", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -119,6 +144,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("2", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -127,6 +153,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("3", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -135,6 +162,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("+", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapPlusButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
     return bt
   }()
@@ -143,6 +171,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("0", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapNumberButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -152,6 +181,7 @@ class MainCalculatorViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle(".", for: .normal)
     bt.setTitleColor(.white, for: .normal)
+    bt.addTarget(self, action: #selector(tapDotButton(_:)), for: .touchUpInside)
     bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
@@ -161,6 +191,7 @@ class MainCalculatorViewController : UIViewController {
     bt.setTitle("=", for: .normal)
     bt.setTitleColor(.white, for: .normal)
     bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
+    bt.addTarget(self, action: #selector(tapEqualButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -240,5 +271,53 @@ class MainCalculatorViewController : UIViewController {
     verticalStackView.snp.makeConstraints { make in
       make.top.leading.trailing.bottom.equalToSuperview()
     }
+  }
+  
+  //MARK: - @objc func
+  @objc func tapNumberButton(_ sender : UIButton) {
+    guard let numberValue = sender.title(for: .normal) else {return}
+    
+    if self.disPlayNumber.count < 9 {
+      self.disPlayNumber += numberValue
+      self.numberLabel.text = self.disPlayNumber
+    }
+  }
+  
+  @objc func tapClearButton(_ sender : UIButton) {
+    //모든 프로퍼티 초기값으로 초기화
+    //numberLabel 에 0으로
+    self.disPlayNumber = ""
+    self.firstOperand = ""
+    self.secondOperand = ""
+    self.result = ""
+    self.currentOperation = .unknown
+    self.numberLabel.text = "0"
+  }
+  
+  @objc func tapDotButton(_ sender : UIButton) {
+    if self.disPlayNumber.count < 8, !self.disPlayNumber.contains(".") { //0.소수점하면 8자리까지만 해야 총 9자리 까지니까 예외처리를 8보다 작을때로 해준다
+      self.disPlayNumber += self.disPlayNumber.isEmpty ? "0." : "."
+      self.numberLabel.text = self.disPlayNumber
+    }
+  }
+  
+  @objc func tapDivideButton(_ sender : UIButton) {
+    
+  }
+  
+  @objc func tapMultiplyButton(_ sender : UIButton) {
+    
+  }
+  
+  @objc func tapMinusButton(_ sender : UIButton) {
+    
+  }
+  
+  @objc func tapPlusButton(_ sender : UIButton) {
+    
+  }
+  
+  @objc func tapEqualButton(_ sender : UIButton) {
+    
   }
 }
