@@ -14,102 +14,156 @@ class MainCalculatorViewController : UIViewController {
   
   private let numberLabel : UILabel = {
     let label = UILabel()
-    label.text = "123"
-    label.textColor = .black
+    label.text = "0"
+    label.textColor = .white
     label.textAlignment = .right
-    label.font = UIFont.systemFont(ofSize: 30)
-    label.backgroundColor = .yellow
+    label.font = UIFont.systemFont(ofSize: 40)
     return label
   }()
   
    lazy var keypadView : UIView = {
     let v = UIView()
-    v.backgroundColor = .green
+    v.backgroundColor = .black
     return v
   }()
   
-  let button1 : UIButton = {
+  let acButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("AC", for: .normal)
+    bt.backgroundColor = UIColor.init(red: 165 / 255, green: 165 / 255, blue: 165 / 255, alpha: 1)
+    bt.setTitleColor(.black, for: .normal)
     return bt
   }()
   
-  let button2 : UIButton = {
+  let divideButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("/", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
     return bt
   }()
   
-  let button3 : UIButton = {
+  let sevenButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("7", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
   
-  let button4 : UIButton = {
+  let eightButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("8", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
   
-  let button5 : UIButton = {
+  let nineButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("9", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
   
-  let button6 : UIButton = {
+  let multiplyButton : UIButton = {
     let bt = UIButton()
-    return bt
-  }()
-  let button7 : UIButton = {
-    let bt = UIButton()
-    return bt
-  }()
-  let button8 : UIButton = {
-    let bt = UIButton()
-    return bt
-  }()
-  let button9 : UIButton = {
-    let bt = UIButton()
-    return bt
-  }()
-  let button10 : UIButton = {
-    let bt = UIButton()
-    return bt
-  }()
-  let button11 : UIButton = {
-    let bt = UIButton()
-    return bt
-  }()
-  let button12 : UIButton = {
-    let bt = UIButton()
-    return bt
-  }()
-  let button13 : UIButton = {
-    let bt = UIButton()
+    bt.setTitle("X", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
     return bt
   }()
   
-  let button14 : UIButton = {
+  let fourButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("4", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
   
-  let button15 : UIButton = {
+  let fiveButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("5", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
   
-  let button16 : UIButton = {
+  let sixButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("6", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
   
-  let button17 : UIButton = {
+  let minusButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("ㅡ", for: .normal)
+    bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
+    bt.setTitleColor(.white, for: .normal)
     return bt
   }()
   
-  let button18 : UIButton = {
+  let oneButton : UIButton = {
     let bt = UIButton()
+    bt.setTitle("1", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
     return bt
   }()
+  
+  let twoButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle("2", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
+    return bt
+  }()
+  
+  let threeButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle("3", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
+    return bt
+  }()
+  
+  let plusButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle("+", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
+    return bt
+  }()
+  
+  let zeroButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle("0", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
+    return bt
+  }()
+  
+  
+  let decimalPointButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle(".", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1)
+    return bt
+  }()
+  
+  let equalButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle("=", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.backgroundColor = UIColor.init(red: 254 / 255, green: 160 / 255, blue: 10 / 255, alpha: 1)
+    return bt
+  }()
+  
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -118,7 +172,7 @@ class MainCalculatorViewController : UIViewController {
   
   //MARK: - Functions
   private func configureUI() {
-    view.backgroundColor = .white
+    view.backgroundColor = .black
     
     [numberLabel, keypadView].forEach {
       view.addSubview($0)
@@ -137,38 +191,45 @@ class MainCalculatorViewController : UIViewController {
       make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-24)
     }
     
+    [acButton, divideButton, sevenButton, eightButton, nineButton, multiplyButton, fourButton, fiveButton, sixButton, minusButton, oneButton, twoButton, threeButton, plusButton, zeroButton, decimalPointButton, equalButton].forEach {
+      $0.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+    }
     
-    let firstHorizontalStack = UIStackView(arrangedSubviews: [button1, button2])
+    
+    let firstHorizontalStack = UIStackView(arrangedSubviews: [acButton, divideButton])
     firstHorizontalStack.axis = .horizontal
     firstHorizontalStack.distribution = .fillProportionally
-    button2.snp.makeConstraints {
-      $0.width.equalTo(button1.snp.width).dividedBy(2)
+    divideButton.snp.makeConstraints {
+      $0.width.equalTo(acButton.snp.width).dividedBy(3)
     }
     firstHorizontalStack.spacing = 5
     
-    let secondHorizontalStack = UIStackView(arrangedSubviews: [button3, button4, button5, button6])
+    let secondHorizontalStack = UIStackView(arrangedSubviews: [sevenButton, eightButton, nineButton, multiplyButton])
     secondHorizontalStack.axis = .horizontal
     secondHorizontalStack.distribution = .fillEqually
     secondHorizontalStack.spacing = 5
     
-    let thirdHorizontalStack = UIStackView(arrangedSubviews: [button7, button8, button9, button10])
+    let thirdHorizontalStack = UIStackView(arrangedSubviews: [fourButton, fiveButton, sixButton, minusButton])
     thirdHorizontalStack.axis = .horizontal
     thirdHorizontalStack.distribution = .fillEqually
     thirdHorizontalStack.spacing = 5
     
     
-    let fourthHorizontalStack = UIStackView(arrangedSubviews: [button11, button12, button13, button14])
+    let fourthHorizontalStack = UIStackView(arrangedSubviews: [oneButton, twoButton, threeButton, plusButton])
     fourthHorizontalStack.axis = .horizontal
     fourthHorizontalStack.distribution = .fillEqually
     fourthHorizontalStack.spacing = 5
     
     
-    let fifthHorizontalStack = UIStackView(arrangedSubviews: [button15, button16, button17, button18])
+    let fifthHorizontalStack = UIStackView(arrangedSubviews: [zeroButton, decimalPointButton, equalButton])
     fifthHorizontalStack.axis = .horizontal
-    fifthHorizontalStack.distribution = .fillEqually
+    fifthHorizontalStack.distribution = .fillProportionally
     fifthHorizontalStack.spacing = 5
     
-    
+    zeroButton.snp.makeConstraints {
+      $0.width.equalTo(fifthHorizontalStack.snp.width).dividedBy(2.3)
+    }
+      
     let verticalStackView = UIStackView(arrangedSubviews: [firstHorizontalStack, secondHorizontalStack, thirdHorizontalStack, fourthHorizontalStack, fifthHorizontalStack])
     verticalStackView.axis = .vertical
     verticalStackView.spacing = 8
