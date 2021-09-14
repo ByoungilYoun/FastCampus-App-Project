@@ -273,6 +273,46 @@ class MainCalculatorViewController : UIViewController {
     }
   }
   
+  func operation(_ operation : Operation) {
+    if self.currentOperation != .unknown {
+      if !self.disPlayNumber.isEmpty {
+        self.secondOperand = self.disPlayNumber
+        self.disPlayNumber = ""
+        
+        // 계산을 위해 스트링에서 더블형으로 바꿔준다.
+        guard let firstOperand = Double(self.firstOperand)  else { return }
+        guard let secondOperand = Double(self.secondOperand) else { return }
+        
+        switch self.currentOperation {
+        case .Add :
+          self.result = "\(firstOperand + secondOperand)"
+        case .Subtract :
+          self.result = "\(firstOperand - secondOperand)"
+        case .Divide :
+          self.result = "\(firstOperand / secondOperand)"
+        case .Multiply :
+          self.result = "\(firstOperand * secondOperand)"
+        default :
+          break
+        }
+        
+        // 1로 나눈 나머지가 0일때는 Double 형인 result 를 Int 형으로 바꿔준다.
+        if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0 {
+          self.result = "\(Int(result))"
+        }
+        
+        self.firstOperand = self.result
+        self.numberLabel.text = self.result
+      }
+      
+      self.currentOperation = operation
+    } else {
+      self.firstOperand = self.disPlayNumber
+      self.currentOperation = operation
+      self.disPlayNumber = ""
+    }
+  }
+  
   //MARK: - @objc func
   @objc func tapNumberButton(_ sender : UIButton) {
     guard let numberValue = sender.title(for: .normal) else {return}
@@ -302,22 +342,22 @@ class MainCalculatorViewController : UIViewController {
   }
   
   @objc func tapDivideButton(_ sender : UIButton) {
-    
+    self.operation(.Divide)
   }
   
   @objc func tapMultiplyButton(_ sender : UIButton) {
-    
+    self.operation(.Multiply)
   }
   
   @objc func tapMinusButton(_ sender : UIButton) {
-    
+    self.operation(.Subtract)
   }
   
   @objc func tapPlusButton(_ sender : UIButton) {
-    
+    self.operation(.Add)
   }
   
   @objc func tapEqualButton(_ sender : UIButton) {
-    
+    self.operation(self.currentOperation)
   }
 }
