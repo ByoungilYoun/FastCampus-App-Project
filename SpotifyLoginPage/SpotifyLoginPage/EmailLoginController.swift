@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class EmailLoginController : UIViewController {
   
@@ -52,7 +53,6 @@ class EmailLoginController : UIViewController {
     let label = UILabel()
     label.numberOfLines = 0
     label.textColor = .red
-    label.text = "에러입니다"
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: 18)
     return label
@@ -123,21 +123,21 @@ class EmailLoginController : UIViewController {
     totalStackView.distribution = .fill
     totalStackView.spacing = 5
     
-    view.addSubview(totalStackView)
+    [totalStackView, errorMessageLabel, nextButton].forEach {
+      view.addSubview($0)
+    }
+    
     totalStackView.snp.makeConstraints {
       $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(30)
       $0.leading.equalToSuperview().offset(30)
       $0.trailing.equalToSuperview().offset(-30)
     }
     
-    view.addSubview(errorMessageLabel)
     errorMessageLabel.snp.makeConstraints {
       $0.top.equalTo(totalStackView.snp.bottom).offset(10)
       $0.leading.trailing.equalTo(totalStackView)
-      $0.height.equalTo(20)
     }
     
-    view.addSubview(nextButton)
     nextButton.snp.makeConstraints {
       $0.top.equalTo(errorMessageLabel.snp.bottom).offset(50)
       $0.centerX.equalToSuperview()
@@ -152,10 +152,46 @@ class EmailLoginController : UIViewController {
     passwordTextField.delegate = self
   }
   
-  //MARK: - @objc func
-  @objc func nextBtnTapped() {
+  private func showMainViewController() {
     let vc = MainViewController()
     navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  private func loginUser(withEmail email : String, password : String) {
+    Auth.auth().signIn(withEmail: email, password: password) { [weak self] _, error in
+      guard let self = self else { return }
+      
+      if let error = error {
+        self.errorMessageLabel.text = error.localizedDescription
+      } else {
+        self.showMainViewController()
+      }
+    }
+  }
+  
+  //MARK: - @objc func
+  @objc func nextBtnTapped() {
+    // Firebase 이메일/비밀번호 인증하는 곳
+    let email = emailTextField.text ?? ""
+    let password = passwordTextField.text ?? ""
+    
+    // 신규 사용자 생성
+    Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+      guard let self = self else { return }
+      
+      if let error = error {
+        let code = (error as NSError).code
+        
+        switch code {
+        case 17007: // 이미 가입한 계정일때는 로그인 함수를 만들어서 로그인을 하도록 한다.
+          self.loginUser(withEmail: email, password: password)
+        default:
+          self.errorMessageLabel.text = error.localizedDescription
+        }
+      } else {
+        self.showMainViewController()
+      }
+    }
   }
 }
 
