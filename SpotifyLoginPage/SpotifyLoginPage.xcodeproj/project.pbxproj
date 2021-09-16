@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F47B97526F2FEC500E0297E /* EmailLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F47B97426F2FEC500E0297E /* EmailLoginController.swift */; };
 		0F99335B26F389350053493B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99335A26F389350053493B /* MainViewController.swift */; };
+		0F99335D26F38F380053493B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F99335C26F38F380053493B /* GoogleService-Info.plist */; };
 		0FDB615726F1EB4E00E8B494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB615626F1EB4E00E8B494 /* AppDelegate.swift */; };
 		0FDB615926F1EB4E00E8B494 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB615826F1EB4E00E8B494 /* SceneDelegate.swift */; };
 		0FDB615E26F1EB4E00E8B494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDB615C26F1EB4E00E8B494 /* Main.storyboard */; };
@@ -17,7 +18,10 @@
 		0FDB616E26F1EB5100E8B494 /* SpotifyLoginPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB616D26F1EB5100E8B494 /* SpotifyLoginPageTests.swift */; };
 		0FDB617926F1EB5100E8B494 /* SpotifyLoginPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB617826F1EB5100E8B494 /* SpotifyLoginPageUITests.swift */; };
 		0FDB618726F1EB9100E8B494 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB618626F1EB9100E8B494 /* LoginViewController.swift */; };
-		0FDB618C26F1F35300E8B494 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0FDB618B26F1F35300E8B494 /* SnapKit */; };
+		0FDB618C26F1F35300E8B494 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0FDB618B26F1F35300E8B494 /* SwiftPackageProductDependency */; };
+		48FE3E9D460D5C9B8B8CE092 /* Pods_SpotifyLoginPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD075FC6D1571535641AA5B /* Pods_SpotifyLoginPage.framework */; };
+		CD8E559CD05E1DEE71ECBE60 /* Pods_SpotifyLoginPageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3AAC2F6F927E62F28F6383 /* Pods_SpotifyLoginPageTests.framework */; };
+		FEBBBE555359F58F9EBE8BB1 /* Pods_SpotifyLoginPage_SpotifyLoginPageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E948ACF237270A3D9C9FBB85 /* Pods_SpotifyLoginPage_SpotifyLoginPageUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0587505466E392486483777C /* Pods-SpotifyLoginPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginPage.release.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginPage/Pods-SpotifyLoginPage.release.xcconfig"; sourceTree = "<group>"; };
 		0F47B97426F2FEC500E0297E /* EmailLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginController.swift; sourceTree = "<group>"; };
 		0F99335A26F389350053493B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F99335C26F38F380053493B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0FDB615326F1EB4E00E8B494 /* SpotifyLoginPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyLoginPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDB615626F1EB4E00E8B494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FDB615826F1EB4E00E8B494 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +60,14 @@
 		0FDB617826F1EB5100E8B494 /* SpotifyLoginPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyLoginPageUITests.swift; sourceTree = "<group>"; };
 		0FDB617A26F1EB5100E8B494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FDB618626F1EB9100E8B494 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		110A6FB1680B36D6EE59AA4C /* Pods-SpotifyLoginPage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginPage.debug.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginPage/Pods-SpotifyLoginPage.debug.xcconfig"; sourceTree = "<group>"; };
+		2FECF2A814CDC68C54D5C299 /* Pods-SpotifyLoginPageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginPageTests.release.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginPageTests/Pods-SpotifyLoginPageTests.release.xcconfig"; sourceTree = "<group>"; };
+		3DD075FC6D1571535641AA5B /* Pods_SpotifyLoginPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyLoginPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3AAC2F6F927E62F28F6383 /* Pods_SpotifyLoginPageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyLoginPageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D11014EBF3B76836B2735569 /* Pods-SpotifyLoginPage-SpotifyLoginPageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginPage-SpotifyLoginPageUITests.release.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginPage-SpotifyLoginPageUITests/Pods-SpotifyLoginPage-SpotifyLoginPageUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D1371B9F7D5BDF36E07632BC /* Pods-SpotifyLoginPage-SpotifyLoginPageUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginPage-SpotifyLoginPageUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginPage-SpotifyLoginPageUITests/Pods-SpotifyLoginPage-SpotifyLoginPageUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFBE96DFE1311D9D92006103 /* Pods-SpotifyLoginPageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginPageTests.debug.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginPageTests/Pods-SpotifyLoginPageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E948ACF237270A3D9C9FBB85 /* Pods_SpotifyLoginPage_SpotifyLoginPageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyLoginPage_SpotifyLoginPageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FDB618C26F1F35300E8B494 /* SnapKit in Frameworks */,
+				0FDB618C26F1F35300E8B494 /* BuildFile in Frameworks */,
+				48FE3E9D460D5C9B8B8CE092 /* Pods_SpotifyLoginPage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8E559CD05E1DEE71ECBE60 /* Pods_SpotifyLoginPageTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEBBBE555359F58F9EBE8BB1 /* Pods_SpotifyLoginPage_SpotifyLoginPageUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +106,8 @@
 				0FDB616C26F1EB5100E8B494 /* SpotifyLoginPageTests */,
 				0FDB617726F1EB5100E8B494 /* SpotifyLoginPageUITests */,
 				0FDB615426F1EB4E00E8B494 /* Products */,
+				342EE700E19E46230E37B3BE /* Pods */,
+				59C11061F8BDB887601576F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +132,7 @@
 				0FDB615C26F1EB4E00E8B494 /* Main.storyboard */,
 				0FDB615F26F1EB5100E8B494 /* Assets.xcassets */,
 				0FDB616126F1EB5100E8B494 /* LaunchScreen.storyboard */,
+				0F99335C26F38F380053493B /* GoogleService-Info.plist */,
 				0FDB616426F1EB5100E8B494 /* Info.plist */,
 			);
 			path = SpotifyLoginPage;
@@ -136,6 +156,30 @@
 			path = SpotifyLoginPageUITests;
 			sourceTree = "<group>";
 		};
+		342EE700E19E46230E37B3BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				110A6FB1680B36D6EE59AA4C /* Pods-SpotifyLoginPage.debug.xcconfig */,
+				0587505466E392486483777C /* Pods-SpotifyLoginPage.release.xcconfig */,
+				D1371B9F7D5BDF36E07632BC /* Pods-SpotifyLoginPage-SpotifyLoginPageUITests.debug.xcconfig */,
+				D11014EBF3B76836B2735569 /* Pods-SpotifyLoginPage-SpotifyLoginPageUITests.release.xcconfig */,
+				DFBE96DFE1311D9D92006103 /* Pods-SpotifyLoginPageTests.debug.xcconfig */,
+				2FECF2A814CDC68C54D5C299 /* Pods-SpotifyLoginPageTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		59C11061F8BDB887601576F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DD075FC6D1571535641AA5B /* Pods_SpotifyLoginPage.framework */,
+				E948ACF237270A3D9C9FBB85 /* Pods_SpotifyLoginPage_SpotifyLoginPageUITests.framework */,
+				5A3AAC2F6F927E62F28F6383 /* Pods_SpotifyLoginPageTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FDB617D26F1EB5100E8B494 /* Build configuration list for PBXNativeTarget "SpotifyLoginPage" */;
 			buildPhases = (
+				F70BD5E5ED17783CC98CA4EB /* [CP] Check Pods Manifest.lock */,
 				0FDB614F26F1EB4E00E8B494 /* Sources */,
 				0FDB615026F1EB4E00E8B494 /* Frameworks */,
 				0FDB615126F1EB4E00E8B494 /* Resources */,
+				38EDE09270604E711C1934BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,7 +199,7 @@
 			);
 			name = SpotifyLoginPage;
 			packageProductDependencies = (
-				0FDB618B26F1F35300E8B494 /* SnapKit */,
+				0FDB618B26F1F35300E8B494 /* SwiftPackageProductDependency */,
 			);
 			productName = SpotifyLoginPage;
 			productReference = 0FDB615326F1EB4E00E8B494 /* SpotifyLoginPage.app */;
@@ -163,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FDB618026F1EB5100E8B494 /* Build configuration list for PBXNativeTarget "SpotifyLoginPageTests" */;
 			buildPhases = (
+				FD7810C2DD2CD8A0481C22A3 /* [CP] Check Pods Manifest.lock */,
 				0FDB616526F1EB5100E8B494 /* Sources */,
 				0FDB616626F1EB5100E8B494 /* Frameworks */,
 				0FDB616726F1EB5100E8B494 /* Resources */,
@@ -181,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FDB618326F1EB5100E8B494 /* Build configuration list for PBXNativeTarget "SpotifyLoginPageUITests" */;
 			buildPhases = (
+				6231528B7626F520638BE665 /* [CP] Check Pods Manifest.lock */,
 				0FDB617026F1EB5100E8B494 /* Sources */,
 				0FDB617126F1EB5100E8B494 /* Frameworks */,
 				0FDB617226F1EB5100E8B494 /* Resources */,
+				ED53703653030378BB3CD477 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,7 +276,7 @@
 			);
 			mainGroup = 0FDB614A26F1EB4E00E8B494;
 			packageReferences = (
-				0FDB618A26F1F35300E8B494 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0FDB618A26F1F35300E8B494 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 0FDB615426F1EB4E00E8B494 /* Products */;
 			projectDirPath = "";
@@ -246,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FDB616326F1EB5100E8B494 /* LaunchScreen.storyboard in Resources */,
+				0F99335D26F38F380053493B /* GoogleService-Info.plist in Resources */,
 				0FDB616026F1EB5100E8B494 /* Assets.xcassets in Resources */,
 				0FDB615E26F1EB4E00E8B494 /* Main.storyboard in Resources */,
 			);
@@ -266,6 +316,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38EDE09270604E711C1934BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginPage/Pods-SpotifyLoginPage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginPage/Pods-SpotifyLoginPage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginPage/Pods-SpotifyLoginPage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6231528B7626F520638BE665 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpotifyLoginPage-SpotifyLoginPageUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED53703653030378BB3CD477 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginPage-SpotifyLoginPageUITests/Pods-SpotifyLoginPage-SpotifyLoginPageUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginPage-SpotifyLoginPageUITests/Pods-SpotifyLoginPage-SpotifyLoginPageUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginPage-SpotifyLoginPageUITests/Pods-SpotifyLoginPage-SpotifyLoginPageUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F70BD5E5ED17783CC98CA4EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpotifyLoginPage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD7810C2DD2CD8A0481C22A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpotifyLoginPageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FDB614F26F1EB4E00E8B494 /* Sources */ = {
@@ -449,6 +602,7 @@
 		};
 		0FDB617E26F1EB5100E8B494 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110A6FB1680B36D6EE59AA4C /* Pods-SpotifyLoginPage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,6 +622,7 @@
 		};
 		0FDB617F26F1EB5100E8B494 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0587505466E392486483777C /* Pods-SpotifyLoginPage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -487,6 +642,7 @@
 		};
 		0FDB618126F1EB5100E8B494 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFBE96DFE1311D9D92006103 /* Pods-SpotifyLoginPageTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +665,7 @@
 		};
 		0FDB618226F1EB5100E8B494 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FECF2A814CDC68C54D5C299 /* Pods-SpotifyLoginPageTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +688,7 @@
 		};
 		0FDB618426F1EB5100E8B494 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1371B9F7D5BDF36E07632BC /* Pods-SpotifyLoginPage-SpotifyLoginPageUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +709,7 @@
 		};
 		0FDB618526F1EB5100E8B494 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D11014EBF3B76836B2735569 /* Pods-SpotifyLoginPage-SpotifyLoginPageUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,7 +770,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0FDB618A26F1F35300E8B494 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		0FDB618A26F1F35300E8B494 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -622,9 +781,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0FDB618B26F1F35300E8B494 /* SnapKit */ = {
+		0FDB618B26F1F35300E8B494 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0FDB618A26F1F35300E8B494 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 0FDB618A26F1F35300E8B494 /* RemoteSwiftPackageReference */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
