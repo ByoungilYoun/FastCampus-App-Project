@@ -117,15 +117,17 @@ class LoginViewController : UIViewController {
     }
   }
   
+  //MARK: - @objc func
+  @objc private func emailLoginBtnTapped() {
+    let vc = EmailLoginController()
+    navigationController?.pushViewController(vc, animated: true)
+  }
+  
   @objc private func googleLoginBtnTapped() {
     
   }
   
   @objc private func appleLoginBtnTapped() {
-    
-  }
-  
-  @objc private func emailLoginBtnTapped() {
     
   }
 }

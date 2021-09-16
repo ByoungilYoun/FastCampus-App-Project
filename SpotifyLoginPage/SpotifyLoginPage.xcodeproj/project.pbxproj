@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F47B97526F2FEC500E0297E /* EmailLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F47B97426F2FEC500E0297E /* EmailLoginController.swift */; };
 		0FDB615726F1EB4E00E8B494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB615626F1EB4E00E8B494 /* AppDelegate.swift */; };
 		0FDB615926F1EB4E00E8B494 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB615826F1EB4E00E8B494 /* SceneDelegate.swift */; };
 		0FDB615E26F1EB4E00E8B494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDB615C26F1EB4E00E8B494 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F47B97426F2FEC500E0297E /* EmailLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginController.swift; sourceTree = "<group>"; };
 		0FDB615326F1EB4E00E8B494 /* SpotifyLoginPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyLoginPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDB615626F1EB4E00E8B494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FDB615826F1EB4E00E8B494 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				0FDB615626F1EB4E00E8B494 /* AppDelegate.swift */,
 				0FDB615826F1EB4E00E8B494 /* SceneDelegate.swift */,
 				0FDB618626F1EB9100E8B494 /* LoginViewController.swift */,
+				0F47B97426F2FEC500E0297E /* EmailLoginController.swift */,
 				0FDB615C26F1EB4E00E8B494 /* Main.storyboard */,
 				0FDB615F26F1EB5100E8B494 /* Assets.xcassets */,
 				0FDB616126F1EB5100E8B494 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			files = (
 				0FDB618726F1EB9100E8B494 /* LoginViewController.swift in Sources */,
 				0FDB615726F1EB4E00E8B494 /* AppDelegate.swift in Sources */,
+				0F47B97526F2FEC500E0297E /* EmailLoginController.swift in Sources */,
 				0FDB615926F1EB4E00E8B494 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
