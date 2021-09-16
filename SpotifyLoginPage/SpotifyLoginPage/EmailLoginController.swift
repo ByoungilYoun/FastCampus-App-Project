@@ -154,7 +154,8 @@ class EmailLoginController : UIViewController {
   
   //MARK: - @objc func
   @objc func nextBtnTapped() {
-    print("1234")
+    let vc = MainViewController()
+    navigationController?.pushViewController(vc, animated: true)
   }
 }
 
