@@ -39,6 +39,15 @@ class MainViewController : UIViewController {
     return bt
   }()
   
+  private let updateNickNameButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle("닉네임 업데이트", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+    bt.addTarget(self, action: #selector(updateNickNameBtnTapped), for: .touchUpInside)
+    return bt
+  }()
+  
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -61,7 +70,7 @@ class MainViewController : UIViewController {
   private func configureUI() {
     view.backgroundColor = .black
     
-    [welcomeLabel, logoutButton, resetPasswordButton].forEach {
+    [welcomeLabel, logoutButton, resetPasswordButton, updateNickNameButton].forEach {
       view.addSubview($0)
     }
     
@@ -76,6 +85,11 @@ class MainViewController : UIViewController {
     
     resetPasswordButton.snp.makeConstraints {
       $0.top.equalTo(logoutButton.snp.bottom).offset(20)
+      $0.centerX.equalToSuperview()
+    }
+    
+    updateNickNameButton.snp.makeConstraints {
+      $0.top.equalTo(logoutButton.snp.bottom).offset(40)
       $0.centerX.equalToSuperview()
     }
   }
@@ -109,5 +123,17 @@ class MainViewController : UIViewController {
   @objc private func findPasswordBtnTapped() {
     let email = Auth.auth().currentUser?.email ?? ""
     Auth.auth().sendPasswordReset(withEmail: email, completion: nil) // 현재 사용자가 가지고있는 이메일로 비밀번호를 리셋할수 있는 이메일을 보낸다.
+  }
+  
+  @objc private func updateNickNameBtnTapped() {
+    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+    changeRequest?.displayName = "애플로그인"
+    changeRequest?.commitChanges { _ in
+      let displayName = Auth.auth().currentUser?.displayName ?? Auth.auth().currentUser?.email ?? "고객님"
+      self.welcomeLabel.text = """
+        환영합니다.
+        \(displayName)님
+        """
+    }
   }
 }
