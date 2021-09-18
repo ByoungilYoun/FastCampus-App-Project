@@ -29,6 +29,16 @@ class MainViewController : UIViewController {
     return bt
   }()
   
+  private let resetPasswordButton : UIButton = {
+    let bt = UIButton()
+    bt.setTitle("비밀번호 변경", for: .normal)
+    bt.setTitleColor(.white, for: .normal)
+    bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+    bt.addTarget(self, action: #selector(findPasswordBtnTapped), for: .touchUpInside)
+    bt.isHidden = true
+    return bt
+  }()
+  
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,6 +50,7 @@ class MainViewController : UIViewController {
     super.viewWillAppear(animated)
     navigationController?.navigationBar.isHidden = true
     setWelcomLabelText()
+    showResetPasswordButtonOrNot()
   }
   
   //MARK: - Functions
@@ -50,7 +61,7 @@ class MainViewController : UIViewController {
   private func configureUI() {
     view.backgroundColor = .black
     
-    [welcomeLabel, logoutButton].forEach {
+    [welcomeLabel, logoutButton, resetPasswordButton].forEach {
       view.addSubview($0)
     }
     
@@ -62,6 +73,11 @@ class MainViewController : UIViewController {
       $0.top.equalTo(welcomeLabel.snp.bottom).offset(30)
       $0.centerX.equalToSuperview()
     }
+    
+    resetPasswordButton.snp.makeConstraints {
+      $0.top.equalTo(logoutButton.snp.bottom).offset(20)
+      $0.centerX.equalToSuperview()
+    }
   }
   
   private func setWelcomLabelText() {
@@ -70,6 +86,11 @@ class MainViewController : UIViewController {
       환영합니다.
       \(email)님
       """
+  }
+  
+  private func showResetPasswordButtonOrNot() {
+    let isEmailSignIn = Auth.auth().currentUser?.providerData[0].providerID == "password"
+    resetPasswordButton.isHidden = !isEmailSignIn
   }
   
   //MARK: - @objc func
@@ -83,5 +104,10 @@ class MainViewController : UIViewController {
     } catch let signOutError as NSError {
       print("Error : signOut \(signOutError.localizedDescription)")
     }
+  }
+  
+  @objc private func findPasswordBtnTapped() {
+    let email = Auth.auth().currentUser?.email ?? ""
+    Auth.auth().sendPasswordReset(withEmail: email, completion: nil) // 현재 사용자가 가지고있는 이메일로 비밀번호를 리셋할수 있는 이메일을 보낸다.
   }
 }
