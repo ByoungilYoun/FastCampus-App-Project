@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import GoogleSignIn
 
 class LoginViewController : UIViewController {
   
@@ -34,16 +35,16 @@ class LoginViewController : UIViewController {
     bt.setTitle("이메일/비밀번호로 계속하기", for: .normal)
     bt.setTitleColor(.white, for: .normal)
     bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+    bt.layer.borderWidth = 1
+    bt.layer.borderColor = UIColor.white.cgColor
+    bt.layer.cornerRadius = 10
     bt.addTarget(self, action: #selector(emailLoginBtnTapped), for: .touchUpInside)
     return bt
   }()
   
-  let googleLoginButton : UIButton = {
-    let bt = UIButton()
-    bt.setTitle("구글로 계속하기", for: .normal)
-    bt.setTitleColor(.white, for: .normal)
-    bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-    bt.setImage(UIImage(named: "logo_google"), for: .normal)
+  let googleLoginButton : GIDSignInButton = {
+    let bt = GIDSignInButton()
+    bt.layer.cornerRadius = 10
     bt.addTarget(self, action: #selector(googleLoginBtnTapped), for: .touchUpInside)
     return bt
   }()
@@ -54,6 +55,9 @@ class LoginViewController : UIViewController {
     bt.setTitleColor(.white, for: .normal)
     bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
     bt.setImage(UIImage(named: "logo_apple"), for: .normal)
+    bt.layer.borderWidth = 1
+    bt.layer.borderColor = UIColor.white.cgColor
+    bt.layer.cornerRadius = 10
     bt.addTarget(self, action: #selector(appleLoginBtnTapped), for: .touchUpInside)
     return bt
   }()
@@ -67,6 +71,9 @@ class LoginViewController : UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.navigationBar.isHidden = true
+    
+    // Google Sign In
+    GIDSignIn.sharedInstance().presentingViewController = self
   }
   
   //MARK: - Functions
@@ -96,10 +103,6 @@ class LoginViewController : UIViewController {
       $0.snp.makeConstraints {
         $0.height.equalTo(60)
       }
-      
-      $0.layer.borderWidth = 1
-      $0.layer.borderColor = UIColor.white.cgColor
-      $0.layer.cornerRadius = 30
     }
     
     
@@ -124,7 +127,7 @@ class LoginViewController : UIViewController {
   }
   
   @objc private func googleLoginBtnTapped() {
-    
+    GIDSignIn.sharedInstance().signIn()
   }
   
   @objc private func appleLoginBtnTapped() {
