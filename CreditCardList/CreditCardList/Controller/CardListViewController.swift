@@ -7,12 +7,15 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class CardListViewController : UIViewController {
   
   //MARK: - Properties
   
   let cardListTableView = UITableView()
+  
+  var creditCardList : [CreditCardModel] = []
   
   //MARK: - Lifecycle
   override func viewDidLoad() {
@@ -30,7 +33,6 @@ class CardListViewController : UIViewController {
     cardListTableView.tableFooterView = UIView()
     cardListTableView.register(CardListCell.self, forCellReuseIdentifier: CardListCell.identifier)
     cardListTableView.backgroundColor = .white
-    cardListTableView.rowHeight = 80
     view.addSubview(cardListTableView)
    
     cardListTableView.snp.makeConstraints {
@@ -46,17 +48,27 @@ class CardListViewController : UIViewController {
   //MARK: - UITableViewDataSource
 extension CardListViewController : UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 9
+    return creditCardList.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: CardListCell.identifier, for: indexPath) as! CardListCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: CardListCell.identifier, for: indexPath) as? CardListCell else {
+      return UITableViewCell()
+    }
     cell.selectionStyle = .none
+    cell.rankingLabel.text = "\(creditCardList[indexPath.row].rank)위"
+    cell.moneyPayingBackLabel.text = "\(creditCardList[indexPath.row].promotionDetail.amount)만원 증정"
+    cell.cardNameLabel.text = "\(creditCardList[indexPath.row].name)"
+    
+    let imageURL = URL(string: creditCardList[indexPath.row].cardImageURL)
+    cell.cardImageView.kf.setImage(with: imageURL)
     return cell
   }
 }
 
   //MARK: - UITableViewDelegate
 extension CardListViewController : UITableViewDelegate {
-  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 80
+  }
 }
