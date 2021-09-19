@@ -28,8 +28,9 @@ class CardListViewController : UIViewController {
     cardListTableView.delegate = self
     cardListTableView.dataSource = self
     cardListTableView.tableFooterView = UIView()
-    cardListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    cardListTableView.backgroundColor = .yellow
+    cardListTableView.register(CardListCell.self, forCellReuseIdentifier: CardListCell.identifier)
+    cardListTableView.backgroundColor = .white
+    cardListTableView.rowHeight = 80
     view.addSubview(cardListTableView)
    
     cardListTableView.snp.makeConstraints {
@@ -45,12 +46,13 @@ class CardListViewController : UIViewController {
   //MARK: - UITableViewDataSource
 extension CardListViewController : UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return 9
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    return cell 
+    let cell = tableView.dequeueReusableCell(withIdentifier: CardListCell.identifier, for: indexPath) as! CardListCell
+    cell.selectionStyle = .none
+    return cell
   }
 }
 

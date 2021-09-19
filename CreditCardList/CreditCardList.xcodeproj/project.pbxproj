@@ -16,6 +16,7 @@
 		0F38DC9026F76CA800C87AFE /* CreditCardListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38DC8F26F76CA800C87AFE /* CreditCardListUITests.swift */; };
 		0F4460CA26F7733800622226 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F4460C926F7733800622226 /* SnapKit */; };
 		0F4460CC26F7746100622226 /* CreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4460CB26F7746100622226 /* CreditCardModel.swift */; };
+		0F4460D126F781E800622226 /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4460D026F781E800622226 /* CardListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		0F38DC8F26F76CA800C87AFE /* CreditCardListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardListUITests.swift; sourceTree = "<group>"; };
 		0F38DC9126F76CA800C87AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4460CB26F7746100622226 /* CreditCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardModel.swift; sourceTree = "<group>"; };
+		0F4460D026F781E800622226 /* CardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,9 @@
 			children = (
 				0F38DC6D26F76CA600C87AFE /* AppDelegate.swift */,
 				0F38DC6F26F76CA600C87AFE /* SceneDelegate.swift */,
-				0F4460CB26F7746100622226 /* CreditCardModel.swift */,
-				0F1B5E7026F76EAB00937E5E /* CardListViewController.swift */,
+				0F4460CD26F7819C00622226 /* Model */,
+				0F4460CF26F781B000622226 /* View */,
+				0F4460CE26F781A500622226 /* Controller */,
 				0F38DC7626F76CA700C87AFE /* Assets.xcassets */,
 				0F38DC7826F76CA700C87AFE /* LaunchScreen.storyboard */,
 				0F38DC7B26F76CA700C87AFE /* Info.plist */,
@@ -128,6 +131,30 @@
 				0F38DC9126F76CA800C87AFE /* Info.plist */,
 			);
 			path = CreditCardListUITests;
+			sourceTree = "<group>";
+		};
+		0F4460CD26F7819C00622226 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F4460CB26F7746100622226 /* CreditCardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F4460CE26F781A500622226 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F1B5E7026F76EAB00937E5E /* CardListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0F4460CF26F781B000622226 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F4460D026F781E800622226 /* CardListCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F1B5E7126F76EAB00937E5E /* CardListViewController.swift in Sources */,
+				0F4460D126F781E800622226 /* CardListCell.swift in Sources */,
 				0F38DC6E26F76CA600C87AFE /* AppDelegate.swift in Sources */,
 				0F4460CC26F7746100622226 /* CreditCardModel.swift in Sources */,
 				0F38DC7026F76CA600C87AFE /* SceneDelegate.swift in Sources */,
