@@ -16,3 +16,9 @@
     - Email / Password 
     - Google SignIn
     - Apple Login
+
+4. [카드추천 리스트앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/CreditCardList/CreditCardList)
+    - Kingfisher
+    - lottie-animation
+    - UIStackView ContentHugging
+
