@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06B473B4A790CF1C798ABC65 /* Pods_CreditCardListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62D781CF4EF590BA9521FBE /* Pods_CreditCardListTests.framework */; };
+		0F01A65426F88B4200ED2985 /* money.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F01A65326F88B4200ED2985 /* money.json */; };
+		0F05126526F799570055788B /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05126426F799570055788B /* CardDetailViewController.swift */; };
 		0F1B5E7126F76EAB00937E5E /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B5E7026F76EAB00937E5E /* CardListViewController.swift */; };
 		0F38DC6E26F76CA600C87AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38DC6D26F76CA600C87AFE /* AppDelegate.swift */; };
 		0F38DC7026F76CA600C87AFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38DC6F26F76CA600C87AFE /* SceneDelegate.swift */; };
@@ -15,7 +17,7 @@
 		0F38DC7A26F76CA700C87AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F38DC7826F76CA700C87AFE /* LaunchScreen.storyboard */; };
 		0F38DC8526F76CA800C87AFE /* CreditCardListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38DC8426F76CA800C87AFE /* CreditCardListTests.swift */; };
 		0F38DC9026F76CA800C87AFE /* CreditCardListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38DC8F26F76CA800C87AFE /* CreditCardListUITests.swift */; };
-		0F4460CA26F7733800622226 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0F4460C926F7733800622226 /* SwiftPackageProductDependency */; };
+		0F4460CA26F7733800622226 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F4460C926F7733800622226 /* SnapKit */; };
 		0F4460CC26F7746100622226 /* CreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4460CB26F7746100622226 /* CreditCardModel.swift */; };
 		0F4460D126F781E800622226 /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4460D026F781E800622226 /* CardListCell.swift */; };
 		21164BBE3DB8317FA904FB89 /* Pods_CreditCardList_CreditCardListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E917E59459D58600BE86F2DA /* Pods_CreditCardList_CreditCardListUITests.framework */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F01A65326F88B4200ED2985 /* money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money.json; sourceTree = "<group>"; };
+		0F05126426F799570055788B /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		0F1B5E7026F76EAB00937E5E /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		0F38DC6A26F76CA600C87AFE /* CreditCardList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCardList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F38DC6D26F76CA600C87AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F4460CA26F7733800622226 /* BuildFile in Frameworks */,
+				0F4460CA26F7733800622226 /* SnapKit in Frameworks */,
 				BDD0AD4A78F7716AC0C94D61 /* Pods_CreditCardList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +132,7 @@
 				0F38DC7626F76CA700C87AFE /* Assets.xcassets */,
 				0F38DC7826F76CA700C87AFE /* LaunchScreen.storyboard */,
 				0F38DC7B26F76CA700C87AFE /* Info.plist */,
+				0F01A65326F88B4200ED2985 /* money.json */,
 			);
 			path = CreditCardList;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				0F1B5E7026F76EAB00937E5E /* CardListViewController.swift */,
+				0F05126426F799570055788B /* CardDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,7 +190,6 @@
 				E397AEE1F54B4CECEDD4C83E /* Pods-CreditCardListTests.debug.xcconfig */,
 				98B0B1DB3D6BC2D8E61E2CB3 /* Pods-CreditCardListTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -217,7 +222,7 @@
 			);
 			name = CreditCardList;
 			packageProductDependencies = (
-				0F4460C926F7733800622226 /* SwiftPackageProductDependency */,
+				0F4460C926F7733800622226 /* SnapKit */,
 			);
 			productName = CreditCardList;
 			productReference = 0F38DC6A26F76CA600C87AFE /* CreditCardList.app */;
@@ -294,7 +299,7 @@
 			);
 			mainGroup = 0F38DC6126F76CA600C87AFE;
 			packageReferences = (
-				0F4460C826F7733800622226 /* RemoteSwiftPackageReference */,
+				0F4460C826F7733800622226 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 0F38DC6B26F76CA600C87AFE /* Products */;
 			projectDirPath = "";
@@ -314,6 +319,7 @@
 			files = (
 				0F38DC7A26F76CA700C87AFE /* LaunchScreen.storyboard in Resources */,
 				0F38DC7726F76CA700C87AFE /* Assets.xcassets in Resources */,
+				0F01A65426F88B4200ED2985 /* money.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F1B5E7126F76EAB00937E5E /* CardListViewController.swift in Sources */,
+				0F05126526F799570055788B /* CardDetailViewController.swift in Sources */,
 				0F4460D126F781E800622226 /* CardListCell.swift in Sources */,
 				0F38DC6E26F76CA600C87AFE /* AppDelegate.swift in Sources */,
 				0F4460CC26F7746100622226 /* CreditCardModel.swift in Sources */,
@@ -778,7 +785,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0F4460C826F7733800622226 /* RemoteSwiftPackageReference */ = {
+		0F4460C826F7733800622226 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -789,9 +796,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0F4460C926F7733800622226 /* SwiftPackageProductDependency */ = {
+		0F4460C926F7733800622226 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0F4460C826F7733800622226 /* RemoteSwiftPackageReference */;
+			package = 0F4460C826F7733800622226 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

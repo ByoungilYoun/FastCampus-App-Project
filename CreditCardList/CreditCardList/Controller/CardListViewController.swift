@@ -59,7 +59,7 @@ extension CardListViewController : UITableViewDataSource {
     cell.rankingLabel.text = "\(creditCardList[indexPath.row].rank)위"
     cell.moneyPayingBackLabel.text = "\(creditCardList[indexPath.row].promotionDetail.amount)만원 증정"
     cell.cardNameLabel.text = "\(creditCardList[indexPath.row].name)"
-    
+
     let imageURL = URL(string: creditCardList[indexPath.row].cardImageURL)
     cell.cardImageView.kf.setImage(with: imageURL)
     return cell
@@ -70,5 +70,11 @@ extension CardListViewController : UITableViewDataSource {
 extension CardListViewController : UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = CardDetailViewController()
+    vc.promotionDetail = creditCardList[indexPath.row].promotionDetail
+    navigationController?.pushViewController(vc, animated: true)
   }
 }

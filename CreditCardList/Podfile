@@ -7,6 +7,7 @@ target 'CreditCardList' do
 
   # Pods for CreditCardList
 	pod 'Kingfisher'
+	pod 'lottie-ios'
 
   target 'CreditCardListTests' do
     inherit! :search_paths
