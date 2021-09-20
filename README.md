@@ -1,4 +1,5 @@
-# FastCampus-App-Project
+# FastCampus App Project📱
+### 30개 프로젝트로 배우는 iOS 앱 개발 with Swift 🍎 
 
 1. [전광판 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/LEDBoard/LEDBoard)
     - UINavigationController 
