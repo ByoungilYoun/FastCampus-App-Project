@@ -15,6 +15,8 @@ class CardListCell : UITableViewCell {
   let cardImageView : UIImageView = {
     let v = UIImageView()
     v.image = UIImage(systemName: "creditcard.fill")
+    v.clipsToBounds = true
+    v.contentMode = .scaleAspectFit
     return v
   }()
   
