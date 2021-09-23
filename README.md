@@ -22,4 +22,5 @@
     - Kingfisher
     - lottie-animation
     - UIStackView ContentHugging
-
+    - Firebase Realtime Database
+    - Firebase Firestore
