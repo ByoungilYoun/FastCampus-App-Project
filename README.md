@@ -24,3 +24,6 @@
     - UIStackView ContentHugging
     - Firebase Realtime Database
     - Firebase Firestore
+5. [실시간 공지사항 팝업](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/NoticePopup/NoticePopup)
+    - Firebase Remote Config
+    - Firebase A/B Testing
