@@ -34,7 +34,8 @@ class NoticeViewController : UIViewController {
     lb.font = UIFont.systemFont(ofSize: 30, weight: .bold)
     lb.textColor = .black
     lb.textAlignment = .center
-    lb.numberOfLines = 2
+    lb.numberOfLines = 0
+    lb.adjustsFontSizeToFitWidth = true
     return lb
   }()
   
@@ -45,6 +46,7 @@ class NoticeViewController : UIViewController {
     lb.textColor = .black
     lb.textAlignment = .center
     lb.numberOfLines = 4
+    lb.adjustsFontSizeToFitWidth = true
     return lb
   }()
   
@@ -60,8 +62,10 @@ class NoticeViewController : UIViewController {
   let dateLabel : UILabel = {
     let lb = UILabel()
     lb.text = "2021년 1월 31일 00:00 - 03:00"
+    lb.numberOfLines = 0
     lb.font = UIFont.systemFont(ofSize: 15, weight: .regular)
     lb.textColor = .black
+    lb.adjustsFontSizeToFitWidth = true
     return lb
   }()
   
