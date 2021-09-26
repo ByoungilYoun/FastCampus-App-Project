@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseInstallations
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     FirebaseApp.configure()
+    
+    // 토큰 가져와서 파이어베이스 웹에서 여기서 얻은 토큰을 가지고 직접 A 또는 B 안을 세팅해서 볼 수 있다.
+    Installations.installations().authTokenForcingRefresh(true) { result, error in
+      if error != nil {
+        print("Error")
+        return
+      }
+      
+      guard let result = result else {return}
+      print("Installation auth token : \(result.authToken)")
+      
+    }
     return true
   }
 

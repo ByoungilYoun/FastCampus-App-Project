@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseRemoteConfig
+import FirebaseAnalytics
 
 class MainViewController : UIViewController {
   
@@ -68,11 +69,43 @@ extension MainViewController {
         
         noticeVC.noticeContents = (title : title, detail : detail, date : date)
         self.present(noticeVC, animated: true, completion: nil)
+      } else {
+        self.showEventAlert()
       }
     }
   }
   
   func isNoticeHidden(_ remoteConfig : RemoteConfig) -> Bool {
     return remoteConfig["isHidden"].boolValue // 불린값
+  }
+}
+
+  //MARK: - A/B Testing
+extension MainViewController {
+  func showEventAlert() {
+    guard let remoteConfig = remoteConfig else {return}
+    
+    remoteConfig.fetch { [weak self] status, _ in
+      if status == .success {
+        remoteConfig.activate(completion: nil)
+      } else {
+        print("Error : Config not fetched")
+      }
+      
+      let message = remoteConfig["message"].stringValue ?? "" // 옵셔널 처리
+      print("하하하 message : \(message)")
+      let confirmAction = UIAlertAction(title: "확인하기", style: .default) { _ in
+        // Google Analytics 에서 확인하기, 이벤트 로깅, Firebase Anayltics import 시켜줘야한다.
+        Analytics.logEvent("promotion_alert", parameters: nil) //버튼 누를때마다 firebase 에 이벤트 기록
+      }
+      
+      let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+      
+      let alertController = UIAlertController(title: "깜짝이벤트", message: message, preferredStyle: .alert)
+      alertController.addAction(confirmAction)
+      alertController.addAction(cancelAction)
+      
+      self?.present(alertController, animated: true, completion: nil)
+    }
   }
 }
