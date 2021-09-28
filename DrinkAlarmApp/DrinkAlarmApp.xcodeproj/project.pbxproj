@@ -15,6 +15,9 @@
 		0F0939432702282E00C96662 /* DrinkAlarmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0939422702282E00C96662 /* DrinkAlarmAppUITests.swift */; };
 		0F0939452702282E00C96662 /* DrinkAlarmAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0939442702282E00C96662 /* DrinkAlarmAppUITestsLaunchTests.swift */; };
 		0F0939522702287300C96662 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0939512702287300C96662 /* AlertListViewController.swift */; };
+		0F63D20527037B8100E3ECE3 /* AlertListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63D20427037B8100E3ECE3 /* AlertListCell.swift */; };
+		0F63D20827037CDF00E3ECE3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F63D20727037CDF00E3ECE3 /* SnapKit */; };
+		0FEF75E42703271400133BDB /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF75E32703271400133BDB /* AddAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,8 @@
 		0F0939422702282E00C96662 /* DrinkAlarmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAlarmAppUITests.swift; sourceTree = "<group>"; };
 		0F0939442702282E00C96662 /* DrinkAlarmAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAlarmAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F0939512702287300C96662 /* AlertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		0F63D20427037B8100E3ECE3 /* AlertListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListCell.swift; sourceTree = "<group>"; };
+		0FEF75E32703271400133BDB /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F63D20827037CDF00E3ECE3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +105,8 @@
 			children = (
 				0F0939212702282D00C96662 /* AppDelegate.swift */,
 				0F0939232702282D00C96662 /* SceneDelegate.swift */,
-				0F0939512702287300C96662 /* AlertListViewController.swift */,
+				0F63D20A27037FEB00E3ECE3 /* View */,
+				0F63D20927037FE500E3ECE3 /* Controller */,
 				0F09392A2702282E00C96662 /* Assets.xcassets */,
 				0F09392C2702282E00C96662 /* LaunchScreen.storyboard */,
 				0F09392F2702282E00C96662 /* Info.plist */,
@@ -124,6 +131,23 @@
 			path = DrinkAlarmAppUITests;
 			sourceTree = "<group>";
 		};
+		0F63D20927037FE500E3ECE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F0939512702287300C96662 /* AlertListViewController.swift */,
+				0FEF75E32703271400133BDB /* AddAlertViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0F63D20A27037FEB00E3ECE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F63D20427037B8100E3ECE3 /* AlertListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +164,9 @@
 			dependencies = (
 			);
 			name = DrinkAlarmApp;
+			packageProductDependencies = (
+				0F63D20727037CDF00E3ECE3 /* SnapKit */,
+			);
 			productName = DrinkAlarmApp;
 			productReference = 0F09391E2702282D00C96662 /* DrinkAlarmApp.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 0F0939152702282D00C96662;
+			packageReferences = (
+				0F63D20627037CDF00E3ECE3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 0F09391F2702282D00C96662 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +287,8 @@
 				0F0939222702282D00C96662 /* AppDelegate.swift in Sources */,
 				0F0939242702282D00C96662 /* SceneDelegate.swift in Sources */,
 				0F0939522702287300C96662 /* AlertListViewController.swift in Sources */,
+				0FEF75E42703271400133BDB /* AddAlertViewController.swift in Sources */,
+				0F63D20527037B8100E3ECE3 /* AlertListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +648,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F63D20627037CDF00E3ECE3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F63D20727037CDF00E3ECE3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F63D20627037CDF00E3ECE3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F0939162702282D00C96662 /* Project object */;
 }

@@ -22,6 +22,18 @@ class AlertListViewController : UIViewController {
   //MARK: - Functions
   private func configureUI() {
     view.backgroundColor = .white
+    
+    self.alertListTableView.delegate = self
+    self.alertListTableView.dataSource = self
+    self.alertListTableView.tableFooterView = UIView()
+    self.alertListTableView.rowHeight = 60
+    self.alertListTableView.register(AlertListCell.self, forCellReuseIdentifier: AlertListCell.identifier)
+    view.addSubview(alertListTableView)
+    
+    alertListTableView.snp.makeConstraints {
+      $0.top.equalTo(view.safeAreaLayoutGuide)
+      $0.leading.trailing.bottom.equalToSuperview()
+    }
   }
   
   private func configureNavi() {
@@ -37,6 +49,25 @@ class AlertListViewController : UIViewController {
   
   //MARK: - @objc func
   @objc func plusBtnTap() {
-    
+    let vc = AddAlertViewController()
+    navigationController?.pushViewController(vc, animated: true)
   }
+}
+
+  //MARK: - UITableViewDataSource
+extension AlertListViewController : UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 10
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: AlertListCell.identifier, for: indexPath) as! AlertListCell
+    cell.selectionStyle = .none
+    return cell
+  }
+}
+
+  //MARK: - UITableViewDelegate
+extension AlertListViewController : UITableViewDelegate {
+  
 }
