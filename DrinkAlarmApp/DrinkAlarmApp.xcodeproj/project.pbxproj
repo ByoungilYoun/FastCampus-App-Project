@@ -15,6 +15,7 @@
 		0F0939432702282E00C96662 /* DrinkAlarmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0939422702282E00C96662 /* DrinkAlarmAppUITests.swift */; };
 		0F0939452702282E00C96662 /* DrinkAlarmAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0939442702282E00C96662 /* DrinkAlarmAppUITestsLaunchTests.swift */; };
 		0F0939522702287300C96662 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0939512702287300C96662 /* AlertListViewController.swift */; };
+		0F566D8B2704689E008EF460 /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F566D8A2704689E008EF460 /* UNNotificationCenter.swift */; };
 		0F63D20527037B8100E3ECE3 /* AlertListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63D20427037B8100E3ECE3 /* AlertListCell.swift */; };
 		0F63D20827037CDF00E3ECE3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F63D20727037CDF00E3ECE3 /* SnapKit */; };
 		0F63D20D2703805200E3ECE3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63D20C2703805200E3ECE3 /* Alert.swift */; };
@@ -51,6 +52,7 @@
 		0F0939422702282E00C96662 /* DrinkAlarmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAlarmAppUITests.swift; sourceTree = "<group>"; };
 		0F0939442702282E00C96662 /* DrinkAlarmAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAlarmAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F0939512702287300C96662 /* AlertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		0F566D8A2704689E008EF460 /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
 		0F63D20427037B8100E3ECE3 /* AlertListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListCell.swift; sourceTree = "<group>"; };
 		0F63D20C2703805200E3ECE3 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		0FEF75E32703271400133BDB /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				0F0939212702282D00C96662 /* AppDelegate.swift */,
 				0F0939232702282D00C96662 /* SceneDelegate.swift */,
+				0F566D8A2704689E008EF460 /* UNNotificationCenter.swift */,
 				0F63D20B2703804B00E3ECE3 /* Model */,
 				0F63D20A27037FEB00E3ECE3 /* View */,
 				0F63D20927037FE500E3ECE3 /* Controller */,
@@ -300,6 +303,7 @@
 				0F0939242702282D00C96662 /* SceneDelegate.swift in Sources */,
 				0F0939522702287300C96662 /* AlertListViewController.swift in Sources */,
 				0FEF75E42703271400133BDB /* AddAlertViewController.swift in Sources */,
+				0F566D8B2704689E008EF460 /* UNNotificationCenter.swift in Sources */,
 				0F63D20527037B8100E3ECE3 /* AlertListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

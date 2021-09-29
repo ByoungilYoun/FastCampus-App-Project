@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AlertListViewController : UIViewController {
   
@@ -13,6 +14,8 @@ class AlertListViewController : UIViewController {
   let alertListTableView = UITableView()
   
   var alerts : [Alert] = []
+  
+  let userNotificationCenter = UNUserNotificationCenter.current()
   
   //MARK: - Lifecycle
   override func viewDidLoad() {
@@ -76,6 +79,7 @@ class AlertListViewController : UIViewController {
       self.alerts = alertList
       
       UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts") // 인코딩을 하고 유저디폴트에 저장해준다.
+      self.userNotificationCenter.addNotificationRequest(by: newAlert)
     
       self.alertListTableView.reloadData()
       
@@ -128,6 +132,7 @@ extension AlertListViewController : UITableViewDelegate {
     case .delete :
       self.alerts.remove(at: indexPath.row)
       UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts")
+      userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [self.alerts[indexPath.row].id]) // 센터가 가지고 있는 request 중에서 남아있는 노티피케이션 요청중 해당하는 identifier 만 삭제하겠다 라는 뜻.
       self.alertListTableView.reloadData()
       return
     default :

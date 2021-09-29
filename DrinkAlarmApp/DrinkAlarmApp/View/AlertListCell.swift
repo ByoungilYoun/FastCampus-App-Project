@@ -7,11 +7,14 @@
 
 import Foundation
 import UIKit
+import UserNotifications
 
 class AlertListCell : UITableViewCell {
   
   //MARK: - Properties
   static let identifier = "AlertListCell"
+  
+  let userNotificationCenter = UNUserNotificationCenter.current()
   
   let amPmLabel : UILabel = {
     let lb = UILabel()
@@ -76,5 +79,11 @@ class AlertListCell : UITableViewCell {
     
     alerts[sender.tag].isOn = sender.isOn
     UserDefaults.standard.set(try? PropertyListEncoder().encode(alerts), forKey: "alerts")
+    
+    if sender.isOn {
+      userNotificationCenter.addNotificationRequest(by: alerts[sender.tag])
+    } else {
+      userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [alerts[sender.tag].id])
+    }
   }
 }
