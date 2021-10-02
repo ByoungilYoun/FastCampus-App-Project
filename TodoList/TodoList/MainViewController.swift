@@ -55,7 +55,18 @@ class MainViewController : UIViewController {
   }
   
   @objc func plusBtnTapped() {
+    let alert = UIAlertController(title: "할 일 등록", message: nil, preferredStyle: .alert)
+    let registerButton = UIAlertAction(title: "등록", style: .default) { _ in
+//      print("text : \(alert.textFields?[0].text)")
+    }
     
+    let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+    alert.addAction(cancelButton)
+    alert.addAction(registerButton)
+    alert.addTextField { textfField in
+      textfField.placeholder = "할 일을 입력해주세요."
+    }
+    self.present(alert, animated: true, completion: nil)
   }
 }
 
