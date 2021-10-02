@@ -17,6 +17,7 @@
 		0F3582812708CBDE00799692 /* TodoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3582802708CBDE00799692 /* TodoListUITestsLaunchTests.swift */; };
 		0F35828E2708CC0C00799692 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35828D2708CC0C00799692 /* MainViewController.swift */; };
 		0F3582912708CD7700799692 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3582902708CD7700799692 /* SnapKit */; };
+		0F3582932708D20900799692 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3582922708D20900799692 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		0F35827E2708CBDE00799692 /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		0F3582802708CBDE00799692 /* TodoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F35828D2708CC0C00799692 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F3582922708D20900799692 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				0F35825D2708CBDC00799692 /* AppDelegate.swift */,
 				0F35825F2708CBDC00799692 /* SceneDelegate.swift */,
+				0F3582922708D20900799692 /* Task.swift */,
 				0F35828D2708CC0C00799692 /* MainViewController.swift */,
 				0F3582632708CBDC00799692 /* Main.storyboard */,
 				0F3582662708CBDE00799692 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3582932708D20900799692 /* Task.swift in Sources */,
 				0F35828E2708CC0C00799692 /* MainViewController.swift in Sources */,
 				0F35825E2708CBDC00799692 /* AppDelegate.swift in Sources */,
 				0F3582602708CBDC00799692 /* SceneDelegate.swift in Sources */,

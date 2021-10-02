@@ -14,6 +14,8 @@ class MainViewController : UIViewController {
   
   private let todoListTableView = UITableView()
   
+  var tasks = [Task]()
+  
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -56,8 +58,12 @@ class MainViewController : UIViewController {
   
   @objc func plusBtnTapped() {
     let alert = UIAlertController(title: "할 일 등록", message: nil, preferredStyle: .alert)
-    let registerButton = UIAlertAction(title: "등록", style: .default) { _ in
-//      print("text : \(alert.textFields?[0].text)")
+    let registerButton = UIAlertAction(title: "등록", style: .default) { [weak self] _ in
+      guard let title = alert.textFields?[0].text else {return}
+      
+      let task = Task(title: title, done: false)
+      self?.tasks.append(task)
+      self?.todoListTableView.reloadData()
     }
     
     let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -73,11 +79,14 @@ class MainViewController : UIViewController {
   //MARK: - UITableViewDataSource
 extension MainViewController : UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return self.tasks.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    let task = self.tasks[indexPath.row]
+    cell.textLabel?.text = task.title
+    cell.textLabel?.textColor = .black
     cell.backgroundColor = .white
     cell.selectionStyle = .none
     return cell
