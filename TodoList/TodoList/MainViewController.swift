@@ -116,11 +116,23 @@ extension MainViewController : UITableViewDataSource {
     cell.textLabel?.textColor = .black
     cell.backgroundColor = .white
     cell.selectionStyle = .none
+    
+    if task.done {
+      cell.accessoryType = .checkmark
+    } else {
+      cell.accessoryType = .none
+    }
+    
     return cell
   }
 }
 
   //MARK: - UITableViewDelegate
 extension MainViewController : UITableViewDelegate {
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    var task = self.tasks[indexPath.row]
+    task.done = !task.done
+    self.tasks[indexPath.row] = task
+    self.todoListTableView.reloadRows(at: [indexPath], with: .automatic) // 선택된 셀만 리로드
+  }
 }
