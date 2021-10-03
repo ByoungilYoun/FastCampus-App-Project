@@ -14,6 +14,9 @@ class MainViewController : UIViewController {
   
   private let todoListTableView = UITableView()
   
+  var editButton = UIBarButtonItem()
+  var doneButton = UIBarButtonItem()
+  
   var tasks = [Task]() {
     didSet {
       self.saveTasks()
@@ -47,9 +50,11 @@ class MainViewController : UIViewController {
   }
   
   private func configureNavi() {
-    let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editBtnTapped))
+    editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editBtnTapped))
     editButton.tintColor = .black
     navigationItem.leftBarButtonItem = editButton
+    
+    doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneBtnTapped))
     
     let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusBtnTapped))
     plusButton.tintColor = .black
@@ -80,7 +85,14 @@ class MainViewController : UIViewController {
   
   //MARK: - @objc func
   @objc func editBtnTapped() {
-    
+    guard !self.tasks.isEmpty else { return } // tasks 배열이 비어있지 않을때만 편집 모드로 전환되게 방어 코드 작성
+    self.navigationItem.leftBarButtonItem = self.doneButton
+    self.todoListTableView.setEditing(true, animated: true) // 테이블뷰가 편집모드로 전환되게끔 구현
+  }
+  
+  @objc func doneBtnTapped() {
+    self.navigationItem.leftBarButtonItem = self.editButton
+    self.todoListTableView.setEditing(false, animated: true)
   }
   
   @objc func plusBtnTapped() {
@@ -124,6 +136,29 @@ extension MainViewController : UITableViewDataSource {
     }
     
     return cell
+  }
+  
+  // 편집모드에서 삭제버튼을 눌렀을때 삭제버튼이 눌러진 셀이 어떤 셀인지 알려주는 메서드
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    self.tasks.remove(at: indexPath.row)
+    self.todoListTableView.deleteRows(at: [indexPath], with: .automatic)
+    
+    if self.tasks.isEmpty { // 만약 task 가 비어있다면 done 버튼 눌러짐으로써 빠져나오게끔 구현
+      self.doneBtnTapped()
+    }
+  }
+  
+  func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
+  // 행이 다른 위치로 이동하면 sourceIndexPath 파라미터를 통해 원래 있었던 위치를 알려주고 destinationIndexPath 파라미터를 통해 어디로 이동했는지 알려준다.
+  func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    var tasks = self.tasks
+    let task = tasks[sourceIndexPath.row]
+    tasks.remove(at: sourceIndexPath.row)
+    tasks.insert(task, at: destinationIndexPath.row)
+    self.tasks = tasks
   }
 }
 
