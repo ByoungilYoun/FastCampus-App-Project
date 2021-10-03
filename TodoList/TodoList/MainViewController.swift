@@ -14,13 +14,18 @@ class MainViewController : UIViewController {
   
   private let todoListTableView = UITableView()
   
-  var tasks = [Task]()
+  var tasks = [Task]() {
+    didSet {
+      self.saveTasks()
+    }
+  }
   
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     configureUI()
     configureNavi()
+    self.loadTasks()
   }
   
   //MARK: - Functions
@@ -49,6 +54,28 @@ class MainViewController : UIViewController {
     let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusBtnTapped))
     plusButton.tintColor = .black
     navigationItem.rightBarButtonItem = plusButton
+  }
+  
+  func saveTasks() {
+    let data = self.tasks.map {
+      [
+        "title" : $0.title,
+        "done" : $0.done
+      ]
+    }
+    
+    let userDefaults = UserDefaults.standard
+    userDefaults.set(data, forKey: "tasks")
+  }
+  
+  func loadTasks() {
+    let userDefaults = UserDefaults.standard
+    guard let data = userDefaults.object(forKey: "tasks") as? [[String : Any]] else {return}
+    self.tasks = data.compactMap {
+      guard let title = $0["title"] as? String else { return nil }
+      guard let done = $0["done"] as? Bool else {return nil }
+      return Task(title: title, done: done)
+    }
   }
   
   //MARK: - @objc func
