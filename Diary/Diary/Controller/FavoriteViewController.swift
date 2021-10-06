@@ -31,7 +31,7 @@ class FavoriteViewController : UIViewController {
     favoriteCollectionView.dataSource = self
     favoriteCollectionView.delegate = self
     favoriteCollectionView.backgroundColor = .white
-    favoriteCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+    favoriteCollectionView.register(FavoriteCollectionViewCell.self, forCellWithReuseIdentifier: FavoriteCollectionViewCell.identifier)
     view.addSubview(favoriteCollectionView)
     
     favoriteCollectionView.snp.makeConstraints {
@@ -50,13 +50,18 @@ extension FavoriteViewController : UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCollectionViewCell.identifier, for: indexPath) as! FavoriteCollectionViewCell
     return cell
   }
-  
-  
 }
 
 extension FavoriteViewController: UICollectionViewDelegate {
   
+}
+
+
+extension FavoriteViewController : UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: UIScreen.main.bounds.width, height: 80)
+  }
 }
