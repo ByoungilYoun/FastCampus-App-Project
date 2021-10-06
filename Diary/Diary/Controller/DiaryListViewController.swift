@@ -28,6 +28,9 @@ class DiaryListViewController : UIViewController {
     view.backgroundColor = .white
     title = "일기장"
     
+    let rightTabButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusBtnTapped))
+    navigationItem.rightBarButtonItem = rightTabButton
+    
     diaryListCollectionView.dataSource = self
     diaryListCollectionView.delegate = self
     diaryListCollectionView.backgroundColor = .white
@@ -41,7 +44,10 @@ class DiaryListViewController : UIViewController {
   }
   
   //MARK: - @objc func
-  
+  @objc func plusBtnTapped() {
+    let controller = RegisterDiaryViewController()
+    navigationController?.pushViewController(controller, animated: true)
+  }
 }
 
 extension DiaryListViewController : UICollectionViewDataSource {

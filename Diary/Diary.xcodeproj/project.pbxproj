@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F57CE5C270DB23F00333981 /* RegisterDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F57CE5B270DB23F00333981 /* RegisterDiaryViewController.swift */; };
 		0FCD816E270B672D00F614A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCD816D270B672D00F614A6 /* AppDelegate.swift */; };
 		0FCD8170270B672D00F614A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCD816F270B672D00F614A6 /* SceneDelegate.swift */; };
 		0FCD8175270B672D00F614A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCD8173270B672D00F614A6 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F57CE5B270DB23F00333981 /* RegisterDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDiaryViewController.swift; sourceTree = "<group>"; };
 		0FCD816A270B672D00F614A6 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCD816D270B672D00F614A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCD816F270B672D00F614A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				0FCECB2F270CB27A00B7BBDE /* MainTabBarController.swift */,
 				0FCECB31270CB73700B7BBDE /* DiaryListViewController.swift */,
 				0FCECB34270CBAC400B7BBDE /* FavoriteViewController.swift */,
+				0F57CE5B270DB23F00333981 /* RegisterDiaryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				0FCECB3B270CBD0C00B7BBDE /* DiaryListCollectionViewCell.swift in Sources */,
 				0FCECB35270CBAC400B7BBDE /* FavoriteViewController.swift in Sources */,
 				0FCECB32270CB73700B7BBDE /* DiaryListViewController.swift in Sources */,
+				0F57CE5C270DB23F00333981 /* RegisterDiaryViewController.swift in Sources */,
 				0FCD816E270B672D00F614A6 /* AppDelegate.swift in Sources */,
 				0FFB41BF270D947A0012FC9B /* FavoriteCollectionViewCell.swift in Sources */,
 				0FCD8170270B672D00F614A6 /* SceneDelegate.swift in Sources */,
