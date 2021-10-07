@@ -61,17 +61,28 @@ class RegisterDiaryViewController : UIViewController {
     return tf
   }()
   
+  var registerButton = UIBarButtonItem()
+  
+  private let datePicker = UIDatePicker()
+  private var diaryDate : Date?
+  
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     configureUI()
+    configureDatePicker()
+  }
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
   }
   
   //MARK: - Functions
   private func configureUI() {
     view.backgroundColor = .white
     
-    let registerButton = UIBarButtonItem(title: "등록", style: .plain, target: self, action: #selector(registerBtnTapped))
+    registerButton = UIBarButtonItem(title: "등록", style: .plain, target: self, action: #selector(registerBtnTapped))
+    registerButton.isEnabled = false
     navigationItem.rightBarButtonItem = registerButton
     
     [titleLabel, titleTextField, contentLabel, contentTextView, dateLabel, dateTextField].forEach {
@@ -113,9 +124,49 @@ class RegisterDiaryViewController : UIViewController {
     }
   }
   
+  private func configureDatePicker() {
+    self.datePicker.datePickerMode = .date
+    self.datePicker.preferredDatePickerStyle = .wheels
+    self.datePicker.addTarget(self, action: #selector(datePickerValueDidChange(_:)), for: .valueChanged)
+    self.datePicker.locale = Locale(identifier: "ko_KR")
+    self.dateTextField.inputView = self.datePicker
+  }
+  
+  private func configureInputField() {
+    self.contentTextView.delegate = self
+    self.titleTextField.addTarget(self, action: #selector(titleTextFieldDidChange(_:)), for: .editingChanged)
+  }
+  
+  private func validateInputField() {
+    self.registerButton.isEnabled = !(self.titleTextField.text?.isEmpty ?? true) && !(self.dateTextField.text?.isEmpty ?? true) && !self.contentTextView.text.isEmpty
+  }
+  
   //MARK: - @objc func
   
   @objc func registerBtnTapped() {
     
+  }
+  
+  @objc private func datePickerValueDidChange(_ datePicker : UIDatePicker) {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy년 MM월 dd일 (EEEEE)"
+    formatter.locale = Locale(identifier: "ko_KR")
+    self.diaryDate = datePicker.date
+    self.dateTextField.text = formatter.string(from: datePicker.date)
+  }
+  
+  @objc private func titleTextFieldDidChange(_ textField : UITextField) {
+    self.validateInputField()
+  }
+  
+  @objc private func dateTextFieldDidChange() {
+    
+  }
+}
+
+  //MARK: - RegisterDiaryViewController
+extension RegisterDiaryViewController : UITextViewDelegate {
+  func textViewDidChange(_ textView: UITextView) {
+    self.validateInputField()
   }
 }
