@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol RegisterDiaryViewControllerDelegate : AnyObject {
+  func didSelectRegister(diary : Diary)
+}
+
 class RegisterDiaryViewController : UIViewController {
   
   //MARK: - Properties
+  
+  weak var delegate : RegisterDiaryViewControllerDelegate?
   
   let titleLabel : UILabel = {
     let lb = UILabel()
@@ -146,7 +152,13 @@ class RegisterDiaryViewController : UIViewController {
   //MARK: - @objc func
   
   @objc func registerBtnTapped() {
-    print("하하하")
+    guard let title = self.titleTextField.text else {return}
+    guard let contents = self.contentTextView.text else {return}
+    guard let date = self.diaryDate else {return}
+    
+    let diary = Diary(title: title, contents: contents, date: date, isStar: false)
+    self.delegate?.didSelectRegister(diary: diary)
+    self.navigationController?.popViewController(animated: true)
   }
   
   @objc private func datePickerValueDidChange(_ datePicker : UIDatePicker) {
