@@ -71,6 +71,7 @@ class RegisterDiaryViewController : UIViewController {
     super.viewDidLoad()
     configureUI()
     configureDatePicker()
+    configureInputField()
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -135,6 +136,7 @@ class RegisterDiaryViewController : UIViewController {
   private func configureInputField() {
     self.contentTextView.delegate = self
     self.titleTextField.addTarget(self, action: #selector(titleTextFieldDidChange(_:)), for: .editingChanged)
+    self.dateTextField.addTarget(self, action: #selector(dateTextFieldDidChange(_:)), for: .editingChanged)
   }
   
   private func validateInputField() {
@@ -144,7 +146,7 @@ class RegisterDiaryViewController : UIViewController {
   //MARK: - @objc func
   
   @objc func registerBtnTapped() {
-    
+    print("하하하")
   }
   
   @objc private func datePickerValueDidChange(_ datePicker : UIDatePicker) {
@@ -153,20 +155,21 @@ class RegisterDiaryViewController : UIViewController {
     formatter.locale = Locale(identifier: "ko_KR")
     self.diaryDate = datePicker.date
     self.dateTextField.text = formatter.string(from: datePicker.date)
+    self.dateTextField.sendActions(for: .editingChanged) // 날짜가 변경될때마다 editingChanged 액션이 발생되서 dateTextFieldDidChange 가 호출된다.
   }
   
   @objc private func titleTextFieldDidChange(_ textField : UITextField) {
     self.validateInputField()
   }
   
-  @objc private func dateTextFieldDidChange() {
-    
+  @objc private func dateTextFieldDidChange(_ textField : UITextField) {
+    self.validateInputField()
   }
 }
 
   //MARK: - RegisterDiaryViewController
 extension RegisterDiaryViewController : UITextViewDelegate {
-  func textViewDidChange(_ textView: UITextView) {
+  func textViewDidChange(_ textView: UITextView) { // 텍스트 뷰에 텍스트가 입력될때마다 호출됨
     self.validateInputField()
   }
 }
