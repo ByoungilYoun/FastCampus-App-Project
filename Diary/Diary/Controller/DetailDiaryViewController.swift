@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol DetailDiaryViewControllerDelegate : AnyObject {
+  func didSelectDelete(indexPath : IndexPath)
+}
+
 class DetailDiaryViewController : UIViewController {
   
   //MARK: - Properties
+  
+  weak var delegate : DetailDiaryViewControllerDelegate?
   
   let titleLabel : UILabel = {
     let lb = UILabel()
@@ -63,19 +69,22 @@ class DetailDiaryViewController : UIViewController {
   
   let editButton : UIButton = {
     let bt = UIButton()
-    bt.titleLabel?.text = "수정"
-    bt.titleLabel?.textColor = .black
+    bt.setTitle("수정", for: .normal)
+    bt.setTitleColor(.black, for: .normal)
     bt.addTarget(self, action: #selector(editBtnTapped), for: .touchUpInside)
     return bt
   }()
   
   let removeButton : UIButton = {
     let bt = UIButton()
-    bt.titleLabel?.text = "삭제"
-    bt.titleLabel?.textColor = .red
+    bt.setTitle("삭제", for: .normal)
+    bt.setTitleColor(.red, for: .normal)
     bt.addTarget(self, action: #selector(removeBtnTapped), for: .touchUpInside)
     return bt
   }()
+  
+  var diary : Diary?
+  var indexPath : IndexPath?
   
   //MARK: - Lifecycle
   override func viewDidLoad() {
@@ -86,6 +95,10 @@ class DetailDiaryViewController : UIViewController {
   //MARK: - Functions
   private func configureUI() {
     view.backgroundColor = .white
+    guard let diary = self.diary else {return}
+    self.diaryTitleLabel.text = diary.title
+    self.contentTextView.text = diary.contents
+    self.dateDataLabel.text = self.dateToString(date: diary.date)
     
     let stack = UIStackView(arrangedSubviews: [titleLabel, diaryTitleLabel])
     stack.spacing = 12
@@ -103,12 +116,17 @@ class DetailDiaryViewController : UIViewController {
     stack.axis = .vertical
     stack.spacing = 12
     
-    let buttonStack = UIStackView(arrangedSubviews: [editButton, removeButton])
-    stack.spacing = 50
-    stack.axis = .horizontal
-    stack.alignment = .center
+    dateLabel.snp.makeConstraints {
+      $0.height.equalTo(20)
+      $0.width.equalTo(40)
+    }
     
-    [stack, contentLabel, contentTextView, secondStack, buttonStack].forEach {
+    dateDataLabel.snp.makeConstraints {
+      $0.height.equalTo(20)
+    }
+
+    
+    [stack, contentLabel, contentTextView, secondStack, editButton, removeButton].forEach {
       view.addSubview($0)
     }
     
@@ -134,19 +152,38 @@ class DetailDiaryViewController : UIViewController {
       $0.leading.trailing.equalTo(stack)
     }
     
-    buttonStack.snp.makeConstraints {
-      $0.top.equalTo(secondStack.snp.bottom).offset(24)
-      $0.centerX.equalToSuperview()
-      $0.leading.trailing.equalTo(stack)
+    editButton.snp.makeConstraints {
+      $0.top.equalTo(secondStack.snp.bottom).offset(20)
+      $0.centerX.equalToSuperview().offset(-30)
+      $0.width.equalTo(50)
+      $0.height.equalTo(30)
     }
+    
+    removeButton.snp.makeConstraints {
+      $0.top.equalTo(editButton)
+      $0.centerX.equalToSuperview().offset(30)
+      $0.width.height.equalTo(editButton)
+    }
+  }
+  
+  private func dateToString(date : Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yy년 MM월 dd일 (EEEEE)"
+    formatter.locale = Locale(identifier: "ko_KR")
+    return formatter.string(from: date)
   }
   
   //MARK: - @objc func
   @objc func editBtnTapped() {
-    
+    print("edit button tapped")
   }
   
   @objc func removeBtnTapped() {
-    
+    guard let indexPath = self.indexPath else {
+      return
+    }
+
+    self.delegate?.didSelectDelete(indexPath: indexPath)
+    self.navigationController?.popViewController(animated: true)
   }
 }

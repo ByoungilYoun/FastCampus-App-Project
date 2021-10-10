@@ -111,7 +111,14 @@ extension DiaryListViewController : UICollectionViewDataSource {
 
   //MARK: - UICollectionViewDelegate
 extension DiaryListViewController : UICollectionViewDelegate {
-  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let vc = DetailDiaryViewController()
+    let diary = self.diaryList[indexPath.row]
+    vc.diary = diary
+    vc.indexPath = indexPath
+    vc.delegate = self
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
 }
 
 
@@ -135,5 +142,13 @@ extension DiaryListViewController : RegisterDiaryViewControllerDelegate {
       $0.date.compare($1.date) == .orderedDescending
     })
     self.diaryListCollectionView.reloadData()
+  }
+}
+
+  //MARK: - DetailDiaryViewControllerDelegate
+extension DiaryListViewController : DetailDiaryViewControllerDelegate {
+  func didSelectDelete(indexPath: IndexPath) {
+    self.diaryList.remove(at: indexPath.row)
+    self.diaryListCollectionView.deleteItems(at: [indexPath])
   }
 }
