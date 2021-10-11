@@ -44,6 +44,9 @@ class FavoriteCollectionViewCell : UICollectionViewCell {
   //MARK: - Functions
   private func configureUI() {
     backgroundColor = .white
+    layer.borderWidth = 1.0
+    layer.borderColor = UIColor.black.cgColor
+    layer.cornerRadius = 3.0
     
     let stack = UIStackView(arrangedSubviews: [titleLabel, dateLabel])
     stack.axis = .vertical

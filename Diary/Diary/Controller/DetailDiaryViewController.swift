@@ -7,15 +7,9 @@
 
 import UIKit
 
-protocol DetailDiaryViewControllerDelegate : AnyObject {
-  func didSelectDelete(indexPath : IndexPath)
-}
-
 class DetailDiaryViewController : UIViewController {
   
   //MARK: - Properties
-  
-  weak var delegate : DetailDiaryViewControllerDelegate?
   
   let titleLabel : UILabel = {
     let lb = UILabel()
@@ -86,6 +80,8 @@ class DetailDiaryViewController : UIViewController {
   var diary : Diary?
   var indexPath : IndexPath?
   
+  var starButton : UIBarButtonItem?
+  
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -99,10 +95,16 @@ class DetailDiaryViewController : UIViewController {
   //MARK: - Functions
   private func configureUI() {
     view.backgroundColor = .white
+
     guard let diary = self.diary else {return}
     self.diaryTitleLabel.text = diary.title
     self.contentTextView.text = diary.contents
     self.dateDataLabel.text = self.dateToString(date: diary.date)
+    
+    self.starButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(tapStarButton))
+    self.starButton?.image = diary.isStar ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+    self.starButton?.tintColor = .orange
+    self.navigationItem.rightBarButtonItem = self.starButton
     
     let stack = UIStackView(arrangedSubviews: [titleLabel, diaryTitleLabel])
     stack.spacing = 12
@@ -202,14 +204,35 @@ class DetailDiaryViewController : UIViewController {
       return
     }
 
-    self.delegate?.didSelectDelete(indexPath: indexPath)
+//    self.delegate?.didSelectDelete(indexPath: indexPath)
+    NotificationCenter.default.post(name: NSNotification.Name("deleteDiary"),
+                                    object: indexPath,
+                                    userInfo: nil)
     self.navigationController?.popViewController(animated: true)
   }
   
   @objc func editDiaryNotification(_ notification : Notification) {
     guard let diary = notification.object as? Diary else {return} // 포스트 한 다이어리 객체를 notification.object 로 가져올수 있다.
-//    guard let row = notification.userInfo?["indexPath.row"] as? Int else {return}
     self.diary = diary
     self.configureUI()
+  }
+  
+  @objc func tapStarButton() {
+    guard let isStar = self.diary?.isStar else {return}
+    guard let indexPath = self.indexPath else {return}
+    
+    if isStar {
+      self.starButton?.image = UIImage(systemName: "star")
+    } else {
+      self.starButton?.image = UIImage(systemName: "star.fill")
+    }
+    
+    self.diary?.isStar = !isStar
+    NotificationCenter.default.post(name: Notification.Name("starDiary"),
+                                    object: [
+                                      "diary" : self.diary, //즐겨찾기가 된 다이어리
+                                      "isStar" : self.diary?.isStar ?? false,
+                                      "indexPath" : indexPath
+                                    ], userInfo: nil)
   }
 }

@@ -31,6 +31,15 @@ class DiaryListViewController : UIViewController {
     
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(editDiaryNotification(_:)), name: NSNotification.Name("editDiary"), object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(starDiaryNofitication(_:)),
+                                           name: NSNotification.Name("starDiary"),
+                                           object: nil)
+    
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(deleteDiaryNotification(_:)),
+                                           name: NSNotification.Name("deleteDiary"),
+                                           object: nil)
   }
   
   //MARK: - Functions
@@ -107,6 +116,20 @@ class DiaryListViewController : UIViewController {
     })
     self.diaryListCollectionView.reloadData()
   }
+  
+  @objc func starDiaryNofitication(_ notification : Notification) {
+    guard let starDiary = notification.object as? [String : Any] else {return}
+    guard let isStar = starDiary["isStar"] as? Bool else { return }
+    guard let indexPath = starDiary["indexPath"] as? IndexPath else {return}
+    
+    self.diaryList[indexPath.row].isStar = isStar
+  }
+  
+  @objc func deleteDiaryNotification(_ notification : Notification) {
+    guard let indexPath = notification.object as? IndexPath else {return}
+    self.diaryList.remove(at: indexPath.row)
+    self.diaryListCollectionView.deleteItems(at: [indexPath])
+  }
 }
 
 extension DiaryListViewController : UICollectionViewDataSource {
@@ -130,7 +153,6 @@ extension DiaryListViewController : UICollectionViewDelegate {
     let diary = self.diaryList[indexPath.row]
     vc.diary = diary
     vc.indexPath = indexPath
-    vc.delegate = self
     self.navigationController?.pushViewController(vc, animated: true)
   }
 }
@@ -156,13 +178,5 @@ extension DiaryListViewController : RegisterDiaryViewControllerDelegate {
       $0.date.compare($1.date) == .orderedDescending
     })
     self.diaryListCollectionView.reloadData()
-  }
-}
-
-  //MARK: - DetailDiaryViewControllerDelegate
-extension DiaryListViewController : DetailDiaryViewControllerDelegate {
-  func didSelectDelete(indexPath: IndexPath) {
-    self.diaryList.remove(at: indexPath.row)
-    self.diaryListCollectionView.deleteItems(at: [indexPath])
   }
 }
