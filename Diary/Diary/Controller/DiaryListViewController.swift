@@ -28,6 +28,9 @@ class DiaryListViewController : UIViewController {
     super.viewDidLoad()
     configureUI()
     self.loadDiaryList()
+    
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(editDiaryNotification(_:)), name: NSNotification.Name("editDiary"), object: nil)
   }
   
   //MARK: - Functions
@@ -92,6 +95,17 @@ class DiaryListViewController : UIViewController {
     let controller = RegisterDiaryViewController()
     controller.delegate = self
     navigationController?.pushViewController(controller, animated: true)
+  }
+  
+  @objc func editDiaryNotification(_ notification : Notification) {
+    guard let diary = notification.object as? Diary else {return}
+    guard let row = notification.userInfo?["indexPath.row"] as? Int else {return}
+  
+    self.diaryList[row] = diary
+    self.diaryList = self.diaryList.sorted(by: {
+      $0.date.compare($1.date) == .orderedDescending
+    })
+    self.diaryListCollectionView.reloadData()
   }
 }
 

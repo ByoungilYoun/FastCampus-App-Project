@@ -92,6 +92,10 @@ class DetailDiaryViewController : UIViewController {
     configureUI()
   }
   
+  deinit { // deinit 될때 옵저버 모두 제거
+    NotificationCenter.default.removeObserver(self)
+  }
+  
   //MARK: - Functions
   private func configureUI() {
     view.backgroundColor = .white
@@ -175,7 +179,22 @@ class DetailDiaryViewController : UIViewController {
   
   //MARK: - @objc func
   @objc func editBtnTapped() {
-    print("edit button tapped")
+    let vc = RegisterDiaryViewController()
+    guard let indexPath = indexPath else {
+      return
+    }
+
+    guard let diary = diary else {
+      return
+    }
+
+    vc.diaryEditorMode = .edit(indexPath, diary)
+    
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(editDiaryNotification(_:)),
+                                           name: NSNotification.Name("editDiary"),
+                                           object: nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
   
   @objc func removeBtnTapped() {
@@ -185,5 +204,12 @@ class DetailDiaryViewController : UIViewController {
 
     self.delegate?.didSelectDelete(indexPath: indexPath)
     self.navigationController?.popViewController(animated: true)
+  }
+  
+  @objc func editDiaryNotification(_ notification : Notification) {
+    guard let diary = notification.object as? Diary else {return} // 포스트 한 다이어리 객체를 notification.object 로 가져올수 있다.
+//    guard let row = notification.userInfo?["indexPath.row"] as? Int else {return}
+    self.diary = diary
+    self.configureUI()
   }
 }
