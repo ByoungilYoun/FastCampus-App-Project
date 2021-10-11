@@ -8,6 +8,12 @@
 import UIKit
 import SnapKit
 
+enum TimerStatus {
+  case start
+  case pause
+  case end
+}
+
 class MainViewController : UIViewController {
   
   //MARK: - Properties
@@ -47,6 +53,8 @@ class MainViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("취소", for: .normal)
     bt.setTitleColor(.black, for: .normal)
+    bt.isEnabled = false
+    bt.addTarget(self, action: #selector(tapCancelButton(_:)), for: .touchUpInside)
     return bt
   }()
   
@@ -54,13 +62,18 @@ class MainViewController : UIViewController {
     let bt = UIButton()
     bt.setTitle("시작", for: .normal)
     bt.setTitleColor(.black, for: .normal)
+    bt.addTarget(self, action: #selector(tapStartButton(_:)), for: .touchUpInside)
     return bt
   }()
+  
+  var duration = 60 // 타이머에 설정된 시간을 초로 저장하는 프로퍼티, 60 으로 설정하는 이유는 앱이 켜질때 기본적으로 datePicker 가 1분으로 설정되어있기 때문
+  var timerStatus : TimerStatus = .end // 타이머의 상태를 가지고있는 프로퍼티, end 로 초기화
   
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    configureUI()
+    self.configureUI()
+    self.configureStartButton()
   }
   
   //MARK: - Functions
@@ -107,6 +120,46 @@ class MainViewController : UIViewController {
     }
   }
   
-  //MARK: - @objc func
+  func setTimerInfoViewVisible(isHidden : Bool) {
+    self.timerLabel.isHidden = isHidden
+    self.progressView.isHidden = isHidden
+  }
   
+  func configureStartButton() {
+    self.startButton.setTitle("시작", for: .normal)
+    self.startButton.setTitle("일시정지", for: .selected)
+  }
+  
+  //MARK: - @objc func
+  @objc func tapCancelButton(_ sender : UIButton) {
+    switch self.timerStatus {
+    case .start, .pause :
+      self.timerStatus = .end
+      self.cancelButton.isEnabled = false
+      self.setTimerInfoViewVisible(isHidden: true)
+      self.datePicker.isHidden = false
+      self.startButton.isSelected = false
+      
+    default :
+      break
+    }
+  }
+  
+  @objc func tapStartButton(_ sender : UIButton) {
+    self.duration = Int(self.datePicker.countDownDuration) // 초로 계산되서 Int 형으로 변환
+    switch self.timerStatus {
+    case .end : // 시작 버튼 누를때
+      self.timerStatus = .start
+      self.setTimerInfoViewVisible(isHidden: false)
+      self.datePicker.isHidden = true
+      self.startButton.isSelected = true // 시작 버튼 타이틀이 일시정지로 변환한다.
+      self.cancelButton.isEnabled = true
+    case .start :
+      self.timerStatus = .pause
+      self.startButton.isSelected = false // 일시정지일때 다시 시작 버튼 타이틀로 돌아오게끔
+    case .pause :
+      self.timerStatus = .start
+      self.startButton.isSelected = true
+    }
+  }
 }
