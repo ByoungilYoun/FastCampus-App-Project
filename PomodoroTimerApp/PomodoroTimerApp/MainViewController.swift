@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import AudioToolbox
 
 enum TimerStatus {
   case start
@@ -138,10 +139,23 @@ class MainViewController : UIViewController {
       self.timer?.schedule(deadline: .now(), repeating: 1) // 어떤 주기로? deadline : .now -> 바로 , repeating 반복주기
       self.timer?.setEventHandler(handler: { [weak self] in // 타이머가 동작할때마다 이벤트 핸들러가 동작한다.
         // 즉 1초에 한번씩 여기가 구현이 된다.
-        self?.currentSeconds -= 1
-        if self?.currentSeconds ?? 0 <= 0 {
+        guard let self = self else { return }
+        
+        //초를 시, 분, 초로 변환
+        let hour = self.currentSeconds / 3600
+        let minutes = (self.currentSeconds % 3600) / 60
+        let seconds = (self.currentSeconds % 3600) % 60
+        self.timerLabel.text = String(format: "%02d:%02d:%02d", hour, minutes, seconds)
+        
+        // progressView 줄어들도록 구현
+        self.progressView.progress = Float(self.currentSeconds) / Float(self.duration)
+        debugPrint(self.progressView.progress)
+        
+        self.currentSeconds -= 1
+        if self.currentSeconds <= 0 {
           // 타이머가 종료
-          self?.stopTimer()
+          self.stopTimer()
+          AudioServicesPlaySystemSound(1005) // https://iphonedev.wiki/index.php/AudioServices 여기서 sound 값들을 찾을수 있다.
         }
       })
       
