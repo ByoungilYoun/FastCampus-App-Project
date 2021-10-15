@@ -45,3 +45,13 @@
     - UITabBarController
     - UICollectionView
     - NotificationCenter
+
+10. [뽀모도로 타이머 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/PomodoroTimerApp/PomodoroTimerApp)
+    - DispatchSourceTimer
+    - UIView Animation
+
+
+
+
+
+
