@@ -31,14 +31,14 @@ class MainViewController : UIViewController {
     lb.textColor = .black
     lb.font = UIFont.systemFont(ofSize: 50, weight: .bold)
     lb.textAlignment = .center
-    lb.isHidden = true
+    lb.alpha = 0
     return lb
   }()
   
   let progressView : UIProgressView = {
     let v = UIProgressView()
     v.progress = 1
-    v.isHidden = true
+    v.alpha = 0
     return v
   }()
   
@@ -149,7 +149,15 @@ class MainViewController : UIViewController {
         
         // progressView 줄어들도록 구현
         self.progressView.progress = Float(self.currentSeconds) / Float(self.duration)
-        debugPrint(self.progressView.progress)
+        
+        // 이미지 빙글돌도록
+        UIView.animate(withDuration: 0.5, delay: 0, animations: {
+          self.pomodoroImageView.transform = CGAffineTransform(rotationAngle: .pi) // 뷰를 180 도로 , CGAffinTransform 구조체는  프레임을 계산하지 않고 2d 그래픽을 그릴 수 있다. 예를 들어 뷰를 이동시키거나 스케일을 조정하거나 회전시키는 효과
+        })
+        
+        UIView.animate(withDuration: 0.5, delay: 0.5, animations: {
+          self.pomodoroImageView.transform = CGAffineTransform(rotationAngle: .pi * 2) //뷰를 360 도로 회전
+        })
         
         self.currentSeconds -= 1
         if self.currentSeconds <= 0 {
@@ -169,8 +177,14 @@ class MainViewController : UIViewController {
     }
     self.timerStatus = .end
     self.cancelButton.isEnabled = false
-    self.setTimerInfoViewVisible(isHidden: true)
-    self.datePicker.isHidden = false
+    UIView.animate(withDuration: 0.5, animations: {
+      self.timerLabel.alpha = 0
+      self.progressView.alpha = 0
+      self.datePicker.alpha = 1
+      self.pomodoroImageView.transform = .identity // 이미지뷰가 원상태로 돌아오도록
+    })
+
+
     self.startButton.isSelected = false
     self.timer?.cancel() //타이머 종료
     self.timer = nil // 타이머를 메모리에서 해제
@@ -192,8 +206,13 @@ class MainViewController : UIViewController {
     case .end : // 시작 버튼 누를때
       self.currentSeconds = self.duration
       self.timerStatus = .start
-      self.setTimerInfoViewVisible(isHidden: false)
-      self.datePicker.isHidden = true
+        
+      UIView.animate(withDuration: 0.5, animations: {
+        self.timerLabel.alpha = 1
+        self.progressView.alpha = 1
+        self.datePicker.alpha = 0
+      })
+      
       self.startButton.isSelected = true // 시작 버튼 타이틀이 일시정지로 변환한다.
       self.cancelButton.isEnabled = true
       self.startTimer()
