@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F1873A9272D540B00A77B68 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1873A8272D540B00A77B68 /* WeatherInformation.swift */; };
+		0F1873AB272D723200A77B68 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1873AA272D723200A77B68 /* ErrorMessage.swift */; };
 		0FD6A216272D39C400E1EEB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD6A215272D39C400E1EEB8 /* AppDelegate.swift */; };
 		0FD6A218272D39C400E1EEB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD6A217272D39C400E1EEB8 /* SceneDelegate.swift */; };
 		0FD6A21A272D39C400E1EEB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD6A219272D39C400E1EEB8 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		0F1873A8272D540B00A77B68 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		0F1873AA272D723200A77B68 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		0FD6A212272D39C400E1EEB8 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD6A215272D39C400E1EEB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FD6A217272D39C400E1EEB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				0FD6A215272D39C400E1EEB8 /* AppDelegate.swift */,
 				0FD6A217272D39C400E1EEB8 /* SceneDelegate.swift */,
+				0F1873AA272D723200A77B68 /* ErrorMessage.swift */,
 				0F1873A8272D540B00A77B68 /* WeatherInformation.swift */,
 				0FD6A219272D39C400E1EEB8 /* ViewController.swift */,
 				0FD6A21B272D39C400E1EEB8 /* Main.storyboard */,
@@ -331,6 +334,7 @@
 			files = (
 				0FD6A21A272D39C400E1EEB8 /* ViewController.swift in Sources */,
 				0F1873A9272D540B00A77B68 /* WeatherInformation.swift in Sources */,
+				0F1873AB272D723200A77B68 /* ErrorMessage.swift in Sources */,
 				0FD6A216272D39C400E1EEB8 /* AppDelegate.swift in Sources */,
 				0FD6A218272D39C400E1EEB8 /* SceneDelegate.swift in Sources */,
 			);

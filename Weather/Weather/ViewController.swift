@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     let lb = UILabel()
     lb.text = "서울"
     lb.textColor = .black
+    lb.isHidden = true
     lb.font = UIFont.systemFont(ofSize: 30, weight: .medium)
     return lb
   }()
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
     let lb = UILabel()
     lb.text = "맑음"
     lb.textColor = .black
+    lb.isHidden = true
     lb.font = UIFont.systemFont(ofSize: 20, weight: .medium)
     return lb
   }()
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
     let lb = UILabel()
     lb.text = "23.°C"
     lb.textColor = .black
+    lb.isHidden = true
     lb.font = UIFont.systemFont(ofSize: 40, weight: .bold)
     return lb
   }()
@@ -55,6 +58,7 @@ class ViewController: UIViewController {
     let lb = UILabel()
     lb.text = "최고 23.°C"
     lb.textColor = .black
+    lb.isHidden = true
     lb.font = UIFont.systemFont(ofSize: 17, weight: .medium)
     return lb
   }()
@@ -63,6 +67,7 @@ class ViewController: UIViewController {
     let lb = UILabel()
     lb.text = "최저 23.°C"
     lb.textColor = .black
+    lb.isHidden = true
     lb.font = UIFont.systemFont(ofSize: 17, weight: .medium)
     return lb
   }()
@@ -124,17 +129,56 @@ class ViewController: UIViewController {
     }
   }
   
+  func configureView(weatherInformation : WeatherInformation) {
+    self.cityLabel.isHidden = false
+    self.weatherLabel.isHidden = false
+    self.temperatureLabel.isHidden = false
+    self.heighestTempLabel.isHidden = false
+    self.lowestTempLabel.isHidden = false
+    
+    self.cityLabel.text = weatherInformation.name
+    
+    if let weather = weatherInformation.weather.first {
+      self.weatherLabel.text = weather.description
+    }
+    
+    self.temperatureLabel.text = "\(Int(weatherInformation.temp.temp - 273.15)) °C"
+    self.lowestTempLabel.text = "최저 : \(Int(weatherInformation.temp.minTemp - 273.15)) °C"
+    self.heighestTempLabel.text = "최고 : \(Int(weatherInformation.temp.maxTemp - 273.15)) °C"
+  }
+  
+  func showAlert(message : String) {
+    let alert = UIAlertController(title: "에러", message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+    self.present(alert, animated: true, completion: nil)
+  }
+  
   func getCurrentWeather(cityName : String) {
     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=e59af0787af3b640648647546145a347") else {return}
     let session = URLSession(configuration: .default)
-    session.dataTask(with: url) { data, response, error in
+    session.dataTask(with: url) { [weak self] data, response, error in
+      let successRange = (200..<300)
+      
       guard let data = data, error == nil else {
         return
       }
       
       let decoder = JSONDecoder()
-      let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data)
-      debugPrint(weatherInformation)
+      
+      if let response = response as? HTTPURLResponse, successRange.contains(response.statusCode) {
+        guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
+        
+        DispatchQueue.main.async { // 네트워크 작업은 별도의 쓰레드에서 진행되고 응답이 온다 해도 자동으로 메인 쓰레드로 돌아오지 않기때문에 completionHandler 에서 ui 작업을 하게 된다면 메인쓰레드에서 동작하도록 해줘야한다. 
+          self?.configureView(weatherInformation: weatherInformation)
+        }
+      } else { // statusCode 가 200번대 가 아닐때 ErrorMessage 객체로 디코딩
+        guard let errorMessage = try? decoder.decode(ErrorMessage.self, from: data) else { return }
+        
+        DispatchQueue.main.async {
+          self?.showAlert(message: errorMessage.message)
+        }
+      }
+      
     }.resume()
   }
   
