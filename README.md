@@ -7,8 +7,7 @@
     - ViewController Life Cycle
     - Delegate Protocol 
     - Asset Catalog
-
-
+    
 2. [계산기](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/Calculator/Calculator)
     - UIStackView
 
@@ -24,6 +23,7 @@
     - UIStackView ContentHugging
     - Firebase Realtime Database
     - Firebase Firestore
+    
 5. [실시간 공지사항 팝업](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/NoticePopup/NoticePopup)
     - Firebase Remote Config
     - Firebase A/B Testing
@@ -50,7 +50,10 @@
     - DispatchSourceTimer
     - UIView Animation
 
-
+11. [날씨 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/Weather/Weather)
+    - Current Weather API 
+    - URLSession 
+    - Codable, CodingKey
 
 
 
