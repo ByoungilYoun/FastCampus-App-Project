@@ -124,12 +124,27 @@ class ViewController: UIViewController {
     }
   }
   
+  func getCurrentWeather(cityName : String) {
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=e59af0787af3b640648647546145a347") else {return}
+    let session = URLSession(configuration: .default)
+    session.dataTask(with: url) { data, response, error in
+      guard let data = data, error == nil else {
+        return
+      }
+      
+      let decoder = JSONDecoder()
+      let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data)
+      debugPrint(weatherInformation)
+    }.resume()
+  }
+  
   //MARK: - @objc func
   
   @objc func getWeatherBtnTap() {
-    print("버튼 클릭됨")
+    if let cityName = self.cityTextField.text {
+      self.getCurrentWeather(cityName: cityName)
+      self.view.endEditing(true)
+    }
   }
-
-
 }
 
