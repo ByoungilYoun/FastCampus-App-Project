@@ -8,4 +8,5 @@ target 'COVID19' do
   # Pods for COVID19
 	pod 'Alamofire', '~> 5.4'
 	pod 'Charts'
+	pod 'SnapKit'
 end
