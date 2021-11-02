@@ -23,7 +23,6 @@ class MainViewController : UIViewController {
   
   private let secondLabel : UILabel = {
     let lb = UILabel()
-    lb.text = "하하"
     lb.textColor = .black
     lb.font = UIFont.systemFont(ofSize: 17, weight: .medium)
     return lb
@@ -39,7 +38,6 @@ class MainViewController : UIViewController {
   
   private let fourthLabel : UILabel = {
     let lb = UILabel()
-    lb.text = "하하"
     lb.textColor = .black
     lb.font = UIFont.systemFont(ofSize: 17, weight: .medium)
     return lb
@@ -55,11 +53,13 @@ class MainViewController : UIViewController {
     super.viewDidLoad()
     configureUI()
     configureNavigation()
-    self.fetchCovidOverview(completionHandler: { [weak self] result in
+    self.fetchCovidOverview(completionHandler: { [weak self] result in // Alamofire 에서 reponseData 메소드의 completionHandler 는 메인스레드에서 동작하기 때문에 따로 메인 dispatchqueue 를 안만들어줘도 된다.
       guard let self = self else { return }
       switch result {
       case let .success(result) :
-        debugPrint("success : \(result)")
+        self.configureStackView(koreaCovidOverview: result.korea)
+        let covidOverviewList = self.makeCovidOverviewList(cityCovidOverview: result)
+        self.configureChartView(covidOverviewList: covidOverviewList)
       case let .failure(error) :
         debugPrint("failure : \(error)")
       }
@@ -134,8 +134,57 @@ class MainViewController : UIViewController {
           completionHandler(.failure(error))
         }
       })
+  }
+  
+  func configureStackView(koreaCovidOverview : CovidOverview) {
+    self.secondLabel.text = "\(koreaCovidOverview.totalCase) 명"
+    self.fourthLabel.text = "\(koreaCovidOverview.newCase) 명"
+  }
+  
+  func makeCovidOverviewList(cityCovidOverview : CityCovidOverview) -> [CovidOverview] {
+    return [
+      cityCovidOverview.seoul,
+      cityCovidOverview.busan,
+      cityCovidOverview.daegu,
+      cityCovidOverview.incheon,
+      cityCovidOverview.gwangju,
+      cityCovidOverview.daejeon,
+      cityCovidOverview.ulsan,
+      cityCovidOverview.sejong,
+      cityCovidOverview.gyeonggi,
+      cityCovidOverview.chungbuk,
+      cityCovidOverview.chungnam,
+      cityCovidOverview.gyeongbuk,
+      cityCovidOverview.gyeongnam,
+      cityCovidOverview.jeju
+    ]
+  }
+  
+  func configureChartView(covidOverviewList : [CovidOverview]) {
+    let entries = covidOverviewList.compactMap { [weak self] overView -> PieChartDataEntry? in
+      guard let self = self else { return nil }
+      return PieChartDataEntry(value: self.removeFormatString(string: overView.newCase), label: overView.countryName, data: overView)
+    }
     
+    let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
+    dataSet.sliceSpace = 1 //항목간 간격을 1피트 떨어지게
+    dataSet.entryLabelColor = .black //항목이름 검정색으로
+    dataSet.xValuePosition = .outsideSlice // 항목이름이 밖으로
+    dataSet.valueTextColor = .black // 항목 안에 있는 값도 검정
+    dataSet.valueLinePart1OffsetPercentage = 0.8
+    dataSet.valueLinePart1Length = 0.2
+    dataSet.valueLinePart2Length = 0.3
     
+    dataSet.colors = ChartColorTemplates.vordiplom() + ChartColorTemplates.joyful() + ChartColorTemplates.liberty() + ChartColorTemplates.pastel() + ChartColorTemplates.material() // 차트 다양한 색상 추가
+    
+    self.chartView.data = PieChartData(dataSet: dataSet)
+    self.chartView.spin(duration: 0.3, fromAngle: self.chartView.rotationAngle, toAngle: self.chartView.rotationAngle + 80) // 차트가 80도 정도 회전
+  }
+  
+  func removeFormatString(string : String) -> Double {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    return formatter.number(from: string)?.doubleValue ?? 0
   }
   //MARK: - @objc func
   
