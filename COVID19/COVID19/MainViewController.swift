@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Charts
+import Alamofire
 
 class MainViewController : UIViewController {
   
@@ -54,6 +55,15 @@ class MainViewController : UIViewController {
     super.viewDidLoad()
     configureUI()
     configureNavigation()
+    self.fetchCovidOverview(completionHandler: { [weak self] result in
+      guard let self = self else { return }
+      switch result {
+      case let .success(result) :
+        debugPrint("success : \(result)")
+      case let .failure(error) :
+        debugPrint("failure : \(error)")
+      }
+    })
   }
   
   //MARK: - Functions
@@ -101,6 +111,31 @@ class MainViewController : UIViewController {
     navigationController?.navigationBar.standardAppearance = appearance
     navigationController?.navigationBar.compactAppearance = appearance
     navigationController?.navigationBar.scrollEdgeAppearance = appearance
+  }
+  
+  func fetchCovidOverview (completionHandler : @escaping (Result<CityCovidOverview, Error>) -> Void ) {
+    let url = "https://api.corona-19.kr/korea/country/new/"
+    let param = [
+      "serviceKey" : "LYxOwXBQU4NPWlvhnIeV19EASdj7ZJpy2"
+    ]
+    
+    AF.request(url, method: .get, parameters: param) // 파라미터에 전달하면 알아서 url 뒤에 쿼리 파라미터를 추가해준다.
+      .responseData(completionHandler: { response in
+        switch response.result {
+        case let .success(data) :
+          do {
+            let decorder = JSONDecoder()
+            let result = try decorder.decode(CityCovidOverview.self, from: data)
+            completionHandler(.success(result))
+          } catch {
+            completionHandler(.failure(error))
+          }
+        case let .failure(error) :
+          completionHandler(.failure(error))
+        }
+      })
+    
+    
   }
   //MARK: - @objc func
   
