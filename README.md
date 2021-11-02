@@ -55,6 +55,10 @@
     - URLSession 
     - Codable, CodingKey
 
+12. [코로나 현황판](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/COVID19/COVID19)
+    - Goodbye Corona 19 API
+    - Alamofire
+    - Cocoapods
 
 
 
