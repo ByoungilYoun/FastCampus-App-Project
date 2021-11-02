@@ -14,14 +14,12 @@ class CustomTableViewCell : UITableViewCell {
   
   let titleLabel : UILabel = {
     let lb = UILabel()
-    lb.text = "신규 확진자"
     lb.textColor = .black
     return lb
   }()
   
   let countLabel : UILabel = {
     let lb = UILabel()
-    lb.text = "8명"
     lb.textColor = .black
     return lb
   }()

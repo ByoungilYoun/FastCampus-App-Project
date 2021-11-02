@@ -161,6 +161,7 @@ class MainViewController : UIViewController {
   }
   
   func configureChartView(covidOverviewList : [CovidOverview]) {
+    self.chartView.delegate = self
     let entries = covidOverviewList.compactMap { [weak self] overView -> PieChartDataEntry? in
       guard let self = self else { return nil }
       return PieChartDataEntry(value: self.removeFormatString(string: overView.newCase), label: overView.countryName, data: overView)
@@ -186,6 +187,15 @@ class MainViewController : UIViewController {
     formatter.numberStyle = .decimal
     return formatter.number(from: string)?.doubleValue ?? 0
   }
-  //MARK: - @objc func
-  
+}
+
+  //MARK: - ChartViewDelegate
+extension MainViewController : ChartViewDelegate {
+  func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+    let controller = CovidDetailViewController()
+    guard let covidOverview = entry.data as? CovidOverview else {return}
+    
+    controller.covidOverview = covidOverview
+    self.navigationController?.pushViewController(controller, animated: true)
+  }
 }
