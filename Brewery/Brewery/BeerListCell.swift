@@ -16,13 +16,14 @@ class BeerListCell : UITableViewCell {
   let nameLabel = UILabel()
   let taglineLabel = UILabel()
   
+  //MARK: - LayoutSubviews
   override func layoutSubviews() {
     super.layoutSubviews()
     [beerImageView, nameLabel, taglineLabel].forEach {
       contentView.addSubview($0)
     }
     
-    beerImageView.contentMode = .scaleAspectFill
+    beerImageView.contentMode = .scaleAspectFit
     
     nameLabel.font = .systemFont(ofSize: 18, weight: .bold)
     nameLabel.numberOfLines = 2
@@ -33,7 +34,7 @@ class BeerListCell : UITableViewCell {
     
     beerImageView.snp.makeConstraints {
       $0.centerY.equalToSuperview()
-      $0.leading.trailing.bottom.equalToSuperview().inset(20)
+      $0.leading.top.bottom.equalToSuperview().inset(20)
       $0.width.equalTo(80)
       $0.height.equalTo(120)
     }
@@ -50,9 +51,11 @@ class BeerListCell : UITableViewCell {
     }
   }
   
+  //MARK: - Functions
   func configure(with beer : Beer) {
     let imageURL = URL(string: beer.imageURL ?? "")
     beerImageView.kf.setImage(with: imageURL, placeholder: UIImage(named: "beer_icon"))
+    
     nameLabel.text = beer.name ?? "이름 없는 맥주"
     taglineLabel.text = beer.tagLine
     
