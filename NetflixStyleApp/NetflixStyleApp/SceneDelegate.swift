@@ -17,12 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     self.window = UIWindow(windowScene: windowScene)
     
-    let layout = UICollectionViewFlowLayout()
-    layout.scrollDirection = .vertical
-    let homeViewController = HomeViewController(collectionViewLayout: layout)
-    let rootNavigationController = UINavigationController(rootViewController: homeViewController)
+//    let layout = UICollectionViewFlowLayout()
+//    layout.scrollDirection = .vertical
+//    let homeViewController = HomeViewController(collectionViewLayout: layout)
+//    let rootNavigationController = UINavigationController(rootViewController: homeViewController)
+    let navi = UINavigationController(rootViewController: HomeViewController())
     
-    self.window?.rootViewController = rootNavigationController
+    self.window?.rootViewController = navi
     self.window?.makeKeyAndVisible()
   }
 
