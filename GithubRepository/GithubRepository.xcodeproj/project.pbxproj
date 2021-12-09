@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F46358A2761E6930085EE52 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4635892761E6930085EE52 /* Repository.swift */; };
 		0FD38B3A275D291400B7CE08 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD38B39275D291400B7CE08 /* RepositoryListViewController.swift */; };
 		0FD38B3D275D2A0400B7CE08 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD38B3C275D2A0400B7CE08 /* SnapKit */; };
 		0FD38B3F275D2A2500B7CE08 /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD38B3E275D2A2500B7CE08 /* RepositoryListCell.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4635892761E6930085EE52 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		0FD38B39275D291400B7CE08 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
 		0FD38B3E275D2A2500B7CE08 /* RepositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
 		0FFFA2D027440BDA005D3AB2 /* GithubRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 			children = (
 				0FFFA2D327440BDA005D3AB2 /* AppDelegate.swift */,
 				0FFFA2D527440BDA005D3AB2 /* SceneDelegate.swift */,
+				0F4635892761E6930085EE52 /* Repository.swift */,
 				0FD38B39275D291400B7CE08 /* RepositoryListViewController.swift */,
 				0FD38B3E275D2A2500B7CE08 /* RepositoryListCell.swift */,
 				0FFFA2DC27440BDB005D3AB2 /* Assets.xcassets */,
@@ -335,6 +338,7 @@
 			files = (
 				0FFFA2D427440BDA005D3AB2 /* AppDelegate.swift in Sources */,
 				0FFFA2D627440BDA005D3AB2 /* SceneDelegate.swift in Sources */,
+				0F46358A2761E6930085EE52 /* Repository.swift in Sources */,
 				0FD38B3A275D291400B7CE08 /* RepositoryListViewController.swift in Sources */,
 				0FD38B3F275D2A2500B7CE08 /* RepositoryListCell.swift in Sources */,
 			);
