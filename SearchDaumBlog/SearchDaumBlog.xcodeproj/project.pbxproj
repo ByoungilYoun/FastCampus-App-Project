@@ -88,11 +88,7 @@
 		0FF17D2027667C39002220D1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0FF17D1327666C69002220D1 /* MainViewController.swift */,
-				0FF17D1527666D84002220D1 /* SearchBar.swift */,
-				0FF17D17276679B3002220D1 /* FilterView.swift */,
-				0FF17D1927667BE7002220D1 /* BlogList.swift */,
-				0FF17D1B27667BF7002220D1 /* BlogListCell.swift */,
+				0FF17D23276683F4002220D1 /* MainViewController */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -103,6 +99,50 @@
 				0FF17D1D27667C06002220D1 /* BlogListCellData.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		0FF17D22276683C0002220D1 /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0FF17D242766840B002220D1 /* SearchBar */,
+				0FF17D2527668413002220D1 /* BlogListView */,
+			);
+			path = SubComponents;
+			sourceTree = "<group>";
+		};
+		0FF17D23276683F4002220D1 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0FF17D1327666C69002220D1 /* MainViewController.swift */,
+				0FF17D22276683C0002220D1 /* SubComponents */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		0FF17D242766840B002220D1 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				0FF17D1527666D84002220D1 /* SearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		0FF17D2527668413002220D1 /* BlogListView */ = {
+			isa = PBXGroup;
+			children = (
+				0FF17D1927667BE7002220D1 /* BlogList.swift */,
+				0FF17D2627668426002220D1 /* SubComponents */,
+			);
+			path = BlogListView;
+			sourceTree = "<group>";
+		};
+		0FF17D2627668426002220D1 /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0FF17D17276679B3002220D1 /* FilterView.swift */,
+				0FF17D1B27667BF7002220D1 /* BlogListCell.swift */,
+			);
+			path = SubComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
