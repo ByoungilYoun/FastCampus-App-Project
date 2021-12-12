@@ -22,6 +22,7 @@
 		0FF17D1A27667BE7002220D1 /* BlogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF17D1927667BE7002220D1 /* BlogList.swift */; };
 		0FF17D1C27667BF7002220D1 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF17D1B27667BF7002220D1 /* BlogListCell.swift */; };
 		0FF17D1E27667C06002220D1 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF17D1D27667C06002220D1 /* BlogListCellData.swift */; };
+		0FF17D28276688AE002220D1 /* AlertActionConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF17D27276688AE002220D1 /* AlertActionConvertable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0FF17D1927667BE7002220D1 /* BlogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogList.swift; sourceTree = "<group>"; };
 		0FF17D1B27667BF7002220D1 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
 		0FF17D1D27667C06002220D1 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
+		0FF17D27276688AE002220D1 /* AlertActionConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionConvertable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0FF17D1D27667C06002220D1 /* BlogListCellData.swift */,
+				0FF17D27276688AE002220D1 /* AlertActionConvertable.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				0FF17D1627666D84002220D1 /* SearchBar.swift in Sources */,
 				0FF17CF3276666D3002220D1 /* AppDelegate.swift in Sources */,
 				0FF17D18276679B3002220D1 /* FilterView.swift in Sources */,
+				0FF17D28276688AE002220D1 /* AlertActionConvertable.swift in Sources */,
 				0FF17CF5276666D3002220D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

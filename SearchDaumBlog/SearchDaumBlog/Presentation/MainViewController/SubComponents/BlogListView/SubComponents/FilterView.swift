@@ -24,7 +24,9 @@ class FilterView : UITableViewHeaderFooterView {
   //MARK: - Init
   override init(reuseIdentifier: String?) {
     super.init(reuseIdentifier: reuseIdentifier)
-    
+    bind()
+    attribute()
+    layout()
   }
   
   required init?(coder: NSCoder) {
