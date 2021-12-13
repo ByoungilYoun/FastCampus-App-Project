@@ -66,10 +66,11 @@
     - UITableView prefetchDatasource
 
 14. [깃헙 api 연동앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/GithubRepository/GithubRepository)
-    - Rxswift 
+    - RxSwift 
     - Observable
     - Operator
-
-
+15. [다음 카페/블로그 검색 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/SearchDaumBlog/SearchDaumBlog)
+    - RxSwift
+    - RxCocoa
 
 
