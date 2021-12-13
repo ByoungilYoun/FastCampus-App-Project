@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F767CAC2766C70600C13D37 /* DaumKakaoBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F767CAB2766C70600C13D37 /* DaumKakaoBlog.swift */; };
+		0F767CAE2766CFCF00C13D37 /* SearchBlogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F767CAD2766CFCF00C13D37 /* SearchBlogAPI.swift */; };
+		0F767CB12766D0B400C13D37 /* SearchBlogNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F767CB02766D0B400C13D37 /* SearchBlogNetwork.swift */; };
 		0FF17CF3276666D3002220D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF17CF2276666D3002220D1 /* AppDelegate.swift */; };
 		0FF17CF5276666D3002220D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF17CF4276666D3002220D1 /* SceneDelegate.swift */; };
 		0FF17CFC276666D6002220D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF17CFB276666D6002220D1 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F767CAB2766C70600C13D37 /* DaumKakaoBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumKakaoBlog.swift; sourceTree = "<group>"; };
+		0F767CAD2766CFCF00C13D37 /* SearchBlogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogAPI.swift; sourceTree = "<group>"; };
+		0F767CB02766D0B400C13D37 /* SearchBlogNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogNetwork.swift; sourceTree = "<group>"; };
 		0FF17CEF276666D3002220D1 /* SearchDaumBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDaumBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF17CF2276666D3002220D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF17CF4276666D3002220D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F767CAF2766CFD800C13D37 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0F767CAD2766CFCF00C13D37 /* SearchBlogAPI.swift */,
+				0F767CB02766D0B400C13D37 /* SearchBlogNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		0FF17CE6276666D3002220D1 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +93,7 @@
 			children = (
 				0FF17CF2276666D3002220D1 /* AppDelegate.swift */,
 				0FF17CF4276666D3002220D1 /* SceneDelegate.swift */,
+				0F767CAF2766CFD800C13D37 /* Network */,
 				0FF17D2127667C49002220D1 /* Entities */,
 				0FF17D2027667C39002220D1 /* Presentation */,
 				0FF17CFB276666D6002220D1 /* Assets.xcassets */,
@@ -100,6 +116,7 @@
 			children = (
 				0FF17D1D27667C06002220D1 /* BlogListCellData.swift */,
 				0FF17D27276688AE002220D1 /* AlertActionConvertable.swift */,
+				0F767CAB2766C70600C13D37 /* DaumKakaoBlog.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -230,14 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F767CAC2766C70600C13D37 /* DaumKakaoBlog.swift in Sources */,
 				0FF17D1427666C69002220D1 /* MainViewController.swift in Sources */,
 				0FF17D1C27667BF7002220D1 /* BlogListCell.swift in Sources */,
 				0FF17D1A27667BE7002220D1 /* BlogList.swift in Sources */,
+				0F767CAE2766CFCF00C13D37 /* SearchBlogAPI.swift in Sources */,
 				0FF17D1E27667C06002220D1 /* BlogListCellData.swift in Sources */,
 				0FF17D1627666D84002220D1 /* SearchBar.swift in Sources */,
 				0FF17CF3276666D3002220D1 /* AppDelegate.swift in Sources */,
 				0FF17D18276679B3002220D1 /* FilterView.swift in Sources */,
 				0FF17D28276688AE002220D1 /* AlertActionConvertable.swift in Sources */,
+				0F767CB12766D0B400C13D37 /* SearchBlogNetwork.swift in Sources */,
 				0FF17CF5276666D3002220D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
