@@ -35,12 +35,83 @@ class MainViewController : UIViewController {
   //MARK: - Functions
   
   private func bind() {
+    let blogResult = searchBar.shouldLoadResult
+      .flatMapLatest { query in
+        SearchBlogNetwork().searchBlog(query: query)
+      }
+      .share()
+    
+    let blogValue = blogResult // 성공한 데이터 값
+      .compactMap { data -> DaumKakaoBlog? in
+        guard case .success(let value) = data else {
+          return nil
+        }
+        
+        return value
+      }
+    
+    let blogError = blogResult // 에러
+      .compactMap { data -> String? in
+        guard case .failure(let error) = data else {
+          return nil
+        }
+        return error.localizedDescription
+      }
+    
+    // 네트워크를 통해 가져온 값을 cellData 로 변환
+    let cellData = blogValue
+      .map { blog -> [BlogListCellData] in
+        return blog.documents
+          .map { doc in
+            let thumbnailURL = URL(string: doc.thumbnail ?? "")
+            return BlogListCellData(thumbnailURL: thumbnailURL, name: doc.name, title: doc.title, dateTime: doc.datetime)
+          }
+      }
+    
+    // FilterView 를 선택했을 때 나오는 alertSheet 를 선택했을때 type
+    let sortedType = alertActionTapped
+      .filter {
+        switch $0 {
+        case .title, .datetime :
+          return true
+        default :
+          return false
+        }
+      }
+      .startWith(.title) // 만약 아무도 필터를 건들지 않으면 맨 처음 테이블뷰에 나오는 기준은 title 로 설정
+    
+    // MainViewController 에서 ListView 로 전달
+    Observable
+      .combineLatest(sortedType, cellData) { type, data -> [BlogListCellData] in 
+        switch type {
+        case .title :
+          return data.sorted { $0.title ?? "" < $1.title ?? "" }
+        case .datetime :
+          return data.sorted { $0.dateTime ?? Date() > $1.dateTime ?? Date() }
+        default :
+          return data
+        }
+      }
+      .bind(to: listView.cellData)
+      .disposed(by: disposeBag)
+    
+    
     let alertSheetForSorting = listView.headerView.sortButtonTapped
       .map { _ -> Alert in
         return (title : nil, message : nil, actions : [.title, .datetime, .cancel], style : .actionSheet)
       }
     
-    alertSheetForSorting
+    let alertForErrorMessage = blogError
+      .map { message -> Alert in
+        return (title : "앗!", message : "예상치 못한 오류가 발생했어요 \(message)", actions : [.confirm], style : .alert)
+      }
+    
+    
+    Observable
+      .merge(
+        alertSheetForSorting,
+        alertForErrorMessage
+      )
       .asSignal(onErrorSignalWith: .empty())
       .flatMapLatest { alert -> Signal<AlertAction> in
         let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
