@@ -16,13 +16,12 @@ class BlogListView : UITableView {
   
   let headerView = FilterView(frame: CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 50)))
   
-  // MainViewController -> BlogListView
-  let cellData = PublishSubject<[BlogListCellData]>()
+//  // MainViewController -> BlogListView
+//  let cellData = PublishSubject<[BlogListCellData]>()
   
   //MARK: - Init
   override init(frame: CGRect, style: UITableView.Style) {
     super.init(frame: frame, style: style)
-    bind()
     attribute()
   }
   
@@ -31,9 +30,8 @@ class BlogListView : UITableView {
   }
   
   //MARK: - Functions
-  private func bind() {
-    cellData
-      .asDriver(onErrorJustReturn: []) //만약에 에러가 나면 빈 어레이를 전달해라
+  private func bind(_ viewModel : BlogListViewModel) {
+    viewModel.cellData
       .drive(self.rx.items) { tableview, row, data in
         let index = IndexPath(row: row, section: 0)
         let cell = tableview.dequeueReusableCell(withIdentifier: "BlogListCell", for: index) as! BlogListCell

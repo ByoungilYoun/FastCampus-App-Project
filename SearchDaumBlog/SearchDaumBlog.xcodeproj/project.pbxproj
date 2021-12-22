@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F28E1F6277339EB004369F9 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E1F5277339EB004369F9 /* SearchBarViewModel.swift */; };
+		0F28E1F827736D10004369F9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E1F727736D10004369F9 /* FilterViewModel.swift */; };
+		0F28E1FB27736DAB004369F9 /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E1FA27736DAB004369F9 /* BlogListViewModel.swift */; };
 		0F767CAC2766C70600C13D37 /* DaumKakaoBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F767CAB2766C70600C13D37 /* DaumKakaoBlog.swift */; };
 		0F767CAE2766CFCF00C13D37 /* SearchBlogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F767CAD2766CFCF00C13D37 /* SearchBlogAPI.swift */; };
 		0F767CB12766D0B400C13D37 /* SearchBlogNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F767CB02766D0B400C13D37 /* SearchBlogNetwork.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		0F28E1F5277339EB004369F9 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		0F28E1F727736D10004369F9 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		0F28E1FA27736DAB004369F9 /* BlogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewModel.swift; sourceTree = "<group>"; };
 		0F767CAB2766C70600C13D37 /* DaumKakaoBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumKakaoBlog.swift; sourceTree = "<group>"; };
 		0F767CAD2766CFCF00C13D37 /* SearchBlogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogAPI.swift; sourceTree = "<group>"; };
 		0F767CB02766D0B400C13D37 /* SearchBlogNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogNetwork.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F28E1F927736D22004369F9 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				0FF17D17276679B3002220D1 /* FilterView.swift */,
+				0F28E1F727736D10004369F9 /* FilterViewModel.swift */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
 		0F767CAF2766CFD800C13D37 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				0FF17D1927667BE7002220D1 /* BlogList.swift */,
+				0F28E1FA27736DAB004369F9 /* BlogListViewModel.swift */,
 				0FF17D2627668426002220D1 /* SubComponents */,
 			);
 			path = BlogListView;
@@ -162,7 +176,7 @@
 		0FF17D2627668426002220D1 /* SubComponents */ = {
 			isa = PBXGroup;
 			children = (
-				0FF17D17276679B3002220D1 /* FilterView.swift */,
+				0F28E1F927736D22004369F9 /* FilterView */,
 				0FF17D1B27667BF7002220D1 /* BlogListCell.swift */,
 			);
 			path = SubComponents;
@@ -250,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F28E1F827736D10004369F9 /* FilterViewModel.swift in Sources */,
 				0F767CAC2766C70600C13D37 /* DaumKakaoBlog.swift in Sources */,
 				0FF17D1427666C69002220D1 /* MainViewController.swift in Sources */,
 				0FF17D1C27667BF7002220D1 /* BlogListCell.swift in Sources */,
@@ -257,6 +272,7 @@
 				0F767CAE2766CFCF00C13D37 /* SearchBlogAPI.swift in Sources */,
 				0FF17D1E27667C06002220D1 /* BlogListCellData.swift in Sources */,
 				0FF17D1627666D84002220D1 /* SearchBar.swift in Sources */,
+				0F28E1FB27736DAB004369F9 /* BlogListViewModel.swift in Sources */,
 				0FF17CF3276666D3002220D1 /* AppDelegate.swift in Sources */,
 				0FF17D18276679B3002220D1 /* FilterView.swift in Sources */,
 				0FF17D28276688AE002220D1 /* AlertActionConvertable.swift in Sources */,
