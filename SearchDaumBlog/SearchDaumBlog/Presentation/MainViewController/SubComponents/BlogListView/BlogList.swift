@@ -30,7 +30,9 @@ class BlogListView : UITableView {
   }
   
   //MARK: - Functions
-  private func bind(_ viewModel : BlogListViewModel) {
+  func bind(_ viewModel : BlogListViewModel) {
+    headerView.bind(viewModel.filterViewModel)
+    
     viewModel.cellData
       .drive(self.rx.items) { tableview, row, data in
         let index = IndexPath(row: row, section: 0)

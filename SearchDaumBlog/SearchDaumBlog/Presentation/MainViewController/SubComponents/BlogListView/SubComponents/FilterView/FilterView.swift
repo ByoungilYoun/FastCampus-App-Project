@@ -33,7 +33,7 @@ class FilterView : UITableViewHeaderFooterView {
   }
   
   //MARK: - Functions
-  private func bind(_ viewModel : FilterViewModel) {
+  func bind(_ viewModel : FilterViewModel) {
     sortButton.rx.tap
       .bind(to: viewModel.sortButtonTapped)
       .disposed(by: disposeBag)
