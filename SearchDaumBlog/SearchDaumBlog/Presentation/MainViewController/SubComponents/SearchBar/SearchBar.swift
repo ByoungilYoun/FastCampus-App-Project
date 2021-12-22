@@ -17,16 +17,15 @@ class SearchBar : UISearchBar {
   
   let searchButton = UIButton()
   
-  // SearchBar 버튼 탭 이벤트
-  let searchButtonTapped = PublishRelay<Void>() // ui 에 특화된, publishsubject 를 래핑하고 있지만 에러를 받지 않는다.
+//  // SearchBar 버튼 탭 이벤트
+//  let searchButtonTapped = PublishRelay<Void>() // ui 에 특화된, publishsubject 를 래핑하고 있지만 에러를 받지 않는다.
   
-  // SearchBar 외부로 내보낼 이벤트
-  var shouldLoadResult = Observable<String>.of("")
+//  // SearchBar 외부로 내보낼 이벤트
+//  var shouldLoadResult = Observable<String>.of("")
   
   //MARK: - Init
   override init(frame: CGRect) {
     super.init(frame: frame)
-    bind()
     attribute()
     layout()
   }
@@ -35,7 +34,11 @@ class SearchBar : UISearchBar {
     fatalError("init(coder:) has not been implemented")
   }
   
-  private func bind() {
+  private func bind(_ viewModel : SearchBarViewModel) {
+    self.rx.text
+      .bind(to: viewModel.queryText)
+      .disposed(by: disposeBag)
+    
     // seachBar search button tapped 검색 실행
     // button tapped  검색 실행
     Observable
@@ -43,22 +46,13 @@ class SearchBar : UISearchBar {
         self.rx.searchButtonClicked.asObservable(),
         self.searchButton.rx.tap.asObservable()
       )
-      .bind(to: searchButtonTapped)
+      .bind(to: viewModel.searchButtonTapped)
       .disposed(by: disposeBag)
     
-    searchButtonTapped
+      viewModel.searchButtonTapped
       .asSignal()
       .emit(to: self.rx.endEditing)
       .disposed(by: disposeBag)
-    
-    self.shouldLoadResult = searchButtonTapped
-      .withLatestFrom(self.rx.text) { // 가장 최신의 searchBar 의 텍스트를 전달한다.
-        $1 ?? "" // 없다면 빈값을 보낸다. 옵셔널 처리
-      }
-      .filter {
-        !$0.isEmpty // 빈값이 아닌걸 거른다.
-      }
-      .distinctUntilChanged() // 동일한 조건을 계속해서 검색해서 불필요한 네트워크가 발생하지 않도록
   }
   
   private func attribute() {
