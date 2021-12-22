@@ -17,6 +17,8 @@
 		0F28E22927738154004369F9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F28E22827738154004369F9 /* SnapKit */; };
 		0F28E22B27738C8A004369F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E22A27738C8A004369F9 /* MainViewController.swift */; };
 		0F28E22D277391AA004369F9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E22C277391AA004369F9 /* MainViewModel.swift */; };
+		0F28E23027739B22004369F9 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E22F27739B22004369F9 /* TitleTextFieldCell.swift */; };
+		0F28E23227739B2D004369F9 /* TitleTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E23127739B2D004369F9 /* TitleTextFieldCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0F28E21A2773810C004369F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F28E22A27738C8A004369F9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0F28E22C277391AA004369F9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0F28E22F27739B22004369F9 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
+		0F28E23127739B2D004369F9 /* TitleTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +70,31 @@
 			children = (
 				0F28E20C2773810B004369F9 /* AppDelegate.swift */,
 				0F28E20E2773810B004369F9 /* SceneDelegate.swift */,
-				0F28E22A27738C8A004369F9 /* MainViewController.swift */,
-				0F28E22C277391AA004369F9 /* MainViewModel.swift */,
+				0F28E22E27739B0D004369F9 /* MainViewController */,
 				0F28E2152773810C004369F9 /* Assets.xcassets */,
 				0F28E2172773810C004369F9 /* LaunchScreen.storyboard */,
 				0F28E21A2773810C004369F9 /* Info.plist */,
 			);
 			path = DaangnMarketStyleApp;
+			sourceTree = "<group>";
+		};
+		0F28E22E27739B0D004369F9 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0F28E22A27738C8A004369F9 /* MainViewController.swift */,
+				0F28E22C277391AA004369F9 /* MainViewModel.swift */,
+				0F28E23327739B32004369F9 /* TitleTextFieldCell */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		0F28E23327739B32004369F9 /* TitleTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F28E22F27739B22004369F9 /* TitleTextFieldCell.swift */,
+				0F28E23127739B2D004369F9 /* TitleTextFieldCellViewModel.swift */,
+			);
+			path = TitleTextFieldCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,8 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F28E22B27738C8A004369F9 /* MainViewController.swift in Sources */,
+				0F28E23227739B2D004369F9 /* TitleTextFieldCellViewModel.swift in Sources */,
 				0F28E20D2773810B004369F9 /* AppDelegate.swift in Sources */,
 				0F28E20F2773810B004369F9 /* SceneDelegate.swift in Sources */,
+				0F28E23027739B22004369F9 /* TitleTextFieldCell.swift in Sources */,
 				0F28E22D277391AA004369F9 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
