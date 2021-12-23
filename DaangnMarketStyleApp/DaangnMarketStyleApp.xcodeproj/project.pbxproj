@@ -24,6 +24,9 @@
 		0F6F15F527747D6D008A2FBF /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F15F427747D6D008A2FBF /* CategoryListViewController.swift */; };
 		0F6F15F82774B688008A2FBF /* PriceTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F15F72774B688008A2FBF /* PriceTextFieldCellViewModel.swift */; };
 		0F6F15FA2774DF22008A2FBF /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F15F92774DF22008A2FBF /* PriceTextFieldCell.swift */; };
+		0F6F15FD2774E377008A2FBF /* DetailWriteFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F15FC2774E377008A2FBF /* DetailWriteFormCell.swift */; };
+		0F6F15FF2774E389008A2FBF /* DetailWriteFormCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F15FE2774E389008A2FBF /* DetailWriteFormCellViewModel.swift */; };
+		0F6F16022774EF0F008A2FBF /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F16012774EF0F008A2FBF /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		0F6F15F427747D6D008A2FBF /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		0F6F15F72774B688008A2FBF /* PriceTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCellViewModel.swift; sourceTree = "<group>"; };
 		0F6F15F92774DF22008A2FBF /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
+		0F6F15FC2774E377008A2FBF /* DetailWriteFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCell.swift; sourceTree = "<group>"; };
+		0F6F15FE2774E389008A2FBF /* DetailWriteFormCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCellViewModel.swift; sourceTree = "<group>"; };
+		0F6F16012774EF0F008A2FBF /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +100,11 @@
 			children = (
 				0F28E22A27738C8A004369F9 /* MainViewController.swift */,
 				0F28E22C277391AA004369F9 /* MainViewModel.swift */,
+				0F6F16012774EF0F008A2FBF /* MainModel.swift */,
 				0F28E23327739B32004369F9 /* TitleTextFieldCell */,
 				0F6F15F62774B670008A2FBF /* CategoryViewController */,
 				0F6F15FB2774E2BF008A2FBF /* PriceTextFieldCell */,
+				0F6F16002774E38E008A2FBF /* DetailWriteFormCell */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -134,6 +142,15 @@
 				0F6F15F72774B688008A2FBF /* PriceTextFieldCellViewModel.swift */,
 			);
 			path = PriceTextFieldCell;
+			sourceTree = "<group>";
+		};
+		0F6F16002774E38E008A2FBF /* DetailWriteFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F6F15FC2774E377008A2FBF /* DetailWriteFormCell.swift */,
+				0F6F15FE2774E389008A2FBF /* DetailWriteFormCellViewModel.swift */,
+			);
+			path = DetailWriteFormCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +240,12 @@
 				0F28E20D2773810B004369F9 /* AppDelegate.swift in Sources */,
 				0F28E20F2773810B004369F9 /* SceneDelegate.swift in Sources */,
 				0F6F15FA2774DF22008A2FBF /* PriceTextFieldCell.swift in Sources */,
+				0F6F15FF2774E389008A2FBF /* DetailWriteFormCellViewModel.swift in Sources */,
 				0F6F15F327746F8F008A2FBF /* CategoryViewModel.swift in Sources */,
 				0F28E23027739B22004369F9 /* TitleTextFieldCell.swift in Sources */,
+				0F6F16022774EF0F008A2FBF /* MainModel.swift in Sources */,
 				0F28E22D277391AA004369F9 /* MainViewModel.swift in Sources */,
+				0F6F15FD2774E377008A2FBF /* DetailWriteFormCell.swift in Sources */,
 				0F6F15F027746F46008A2FBF /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
