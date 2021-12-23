@@ -49,7 +49,8 @@ class MainViewController : UIViewController {
     self.tableView.tableFooterView = UIView()
     
     self.tableView.register(TitleTextFieldCell.self, forCellReuseIdentifier: TitleTextFieldCell.identifier) // index row 0
-    
+    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CategorySelectCell") // index row 1
+    self.tableView.register(PriceTextFieldCell.self, forCellReuseIdentifier: PriceTextFieldCell.identifier) // index row 2
     
   }
   
