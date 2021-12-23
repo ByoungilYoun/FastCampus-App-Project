@@ -129,8 +129,8 @@
 		0F6F15F62774B670008A2FBF /* CategoryViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0F6F15F227746F8F008A2FBF /* CategoryViewModel.swift */,
 				0F6F15F427747D6D008A2FBF /* CategoryListViewController.swift */,
+				0F6F15F227746F8F008A2FBF /* CategoryViewModel.swift */,
 			);
 			path = CategoryViewController;
 			sourceTree = "<group>";
