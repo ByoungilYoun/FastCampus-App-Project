@@ -69,8 +69,12 @@
     - RxSwift 
     - Observable
     - Operator
+    
 15. [다음 카페/블로그 검색 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/SearchDaumBlog/SearchDaumBlog)
     - RxSwift
     - RxCocoa
 
-
+16. [당근마켓 스타일 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/DaangnMarketStyleApp/DaangnMarketStyleApp)
+    - RxSwift 
+    - RxCocoa
+    - MVVM
