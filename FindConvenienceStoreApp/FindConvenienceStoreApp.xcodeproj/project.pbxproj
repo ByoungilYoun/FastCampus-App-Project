@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA3CE3F27770D5600922982 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE3E27770D5600922982 /* LocationData.swift */; };
+		0FA3CE4227770D9800922982 /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4127770D9800922982 /* KLDocument.swift */; };
+		0FA3CE4427770E4F00922982 /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4327770E4F00922982 /* DetailListCellData.swift */; };
 		0FF68BF02777063C00D677C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF68BEF2777063C00D677C5 /* AppDelegate.swift */; };
 		0FF68BF22777063C00D677C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF68BF12777063C00D677C5 /* SceneDelegate.swift */; };
 		0FF68BF42777063C00D677C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF68BF32777063C00D677C5 /* ViewController.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA3CE3E27770D5600922982 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		0FA3CE4127770D9800922982 /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
+		0FA3CE4327770E4F00922982 /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
 		0FF68BEC2777063C00D677C5 /* FindConvenienceStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindConvenienceStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF68BEF2777063C00D677C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF68BF12777063C00D677C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FA3CE4027770D5E00922982 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CE3E27770D5600922982 /* LocationData.swift */,
+				0FA3CE4127770D9800922982 /* KLDocument.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		0FF68BE32777063C00D677C5 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +163,8 @@
 				0FF68BEF2777063C00D677C5 /* AppDelegate.swift */,
 				0FF68BF12777063C00D677C5 /* SceneDelegate.swift */,
 				0FF68BF32777063C00D677C5 /* ViewController.swift */,
+				0FA3CE4327770E4F00922982 /* DetailListCellData.swift */,
+				0FA3CE4027770D5E00922982 /* Entity */,
 				0FF68BF52777063C00D677C5 /* Main.storyboard */,
 				0FF68BF82777063D00D677C5 /* Assets.xcassets */,
 				0FF68BFA2777063D00D677C5 /* LaunchScreen.storyboard */,
@@ -328,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA3CE3F27770D5600922982 /* LocationData.swift in Sources */,
+				0FA3CE4227770D9800922982 /* KLDocument.swift in Sources */,
 				0FF68BF42777063C00D677C5 /* ViewController.swift in Sources */,
 				0FF68BF02777063C00D677C5 /* AppDelegate.swift in Sources */,
+				0FA3CE4427770E4F00922982 /* DetailListCellData.swift in Sources */,
 				0FF68BF22777063C00D677C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
