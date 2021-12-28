@@ -10,10 +10,17 @@
 		0FA3CE3F27770D5600922982 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE3E27770D5600922982 /* LocationData.swift */; };
 		0FA3CE4227770D9800922982 /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4127770D9800922982 /* KLDocument.swift */; };
 		0FA3CE4427770E4F00922982 /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4327770E4F00922982 /* DetailListCellData.swift */; };
+		0FA3CE4627770F1C00922982 /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4527770F1C00922982 /* LocationInformationViewController.swift */; };
+		0FA3CE4927770F4C00922982 /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4827770F4C00922982 /* LocationInformationViewModel.swift */; };
+		0FA3CE4C2777117800922982 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA3CE4B2777117800922982 /* SnapKit */; };
+		0FA3CE4F277711A400922982 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA3CE4E277711A400922982 /* RxBlocking */; };
+		0FA3CE51277711A400922982 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA3CE50277711A400922982 /* RxCocoa */; };
+		0FA3CE53277711A400922982 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA3CE52277711A400922982 /* RxRelay */; };
+		0FA3CE55277711A400922982 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA3CE54277711A400922982 /* RxSwift */; };
+		0FA3CE57277711A400922982 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA3CE56277711A400922982 /* RxTest */; };
+		0FEC2CDC277AE5840042A30D /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC2CDB277AE5840042A30D /* MTMapViewError.swift */; };
 		0FF68BF02777063C00D677C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF68BEF2777063C00D677C5 /* AppDelegate.swift */; };
 		0FF68BF22777063C00D677C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF68BF12777063C00D677C5 /* SceneDelegate.swift */; };
-		0FF68BF42777063C00D677C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF68BF32777063C00D677C5 /* ViewController.swift */; };
-		0FF68BF72777063C00D677C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF68BF52777063C00D677C5 /* Main.storyboard */; };
 		0FF68BF92777063D00D677C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF68BF82777063D00D677C5 /* Assets.xcassets */; };
 		0FF68BFC2777063D00D677C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF68BFA2777063D00D677C5 /* LaunchScreen.storyboard */; };
 		0FF68C2A2777082A00D677C5 /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF68C052777082A00D677C5 /* map_pinup_custom@3x.png */; };
@@ -57,11 +64,12 @@
 		0FA3CE3E27770D5600922982 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		0FA3CE4127770D9800922982 /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		0FA3CE4327770E4F00922982 /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
+		0FA3CE4527770F1C00922982 /* LocationInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewController.swift; sourceTree = "<group>"; };
+		0FA3CE4827770F4C00922982 /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
+		0FEC2CDB277AE5840042A30D /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
 		0FF68BEC2777063C00D677C5 /* FindConvenienceStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindConvenienceStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF68BEF2777063C00D677C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF68BF12777063C00D677C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0FF68BF32777063C00D677C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0FF68BF62777063C00D677C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FF68BF82777063D00D677C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FF68BFB2777063D00D677C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FF68BFD2777063D00D677C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,14 +124,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA3CE57277711A400922982 /* RxTest in Frameworks */,
 				0FF68C6627770A4600D677C5 /* CoreLocation.framework in Frameworks */,
 				0FF68C6527770A4000D677C5 /* QuartzCore.framework in Frameworks */,
+				0FA3CE51277711A400922982 /* RxCocoa in Frameworks */,
 				0FF68C6427770A3A00D677C5 /* SystemConfiguration.framework in Frameworks */,
 				0FF68C6327770A2E00D677C5 /* OpenGLES.framework in Frameworks */,
 				0FF68C5E27770A0400D677C5 /* libc++.tbd in Frameworks */,
+				0FA3CE55277711A400922982 /* RxSwift in Frameworks */,
+				0FA3CE53277711A400922982 /* RxRelay in Frameworks */,
 				0FF68C6227770A0800D677C5 /* libsqlite3.tbd in Frameworks */,
+				0FA3CE4C2777117800922982 /* SnapKit in Frameworks */,
 				0FF68C6027770A0600D677C5 /* libxml2.tbd in Frameworks */,
 				0FF68C452777082A00D677C5 /* DaumMap.framework in Frameworks */,
+				0FA3CE4F277711A400922982 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +149,18 @@
 			children = (
 				0FA3CE3E27770D5600922982 /* LocationData.swift */,
 				0FA3CE4127770D9800922982 /* KLDocument.swift */,
+				0FEC2CDB277AE5840042A30D /* MTMapViewError.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		0FA3CE4727770F2000922982 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CE4527770F1C00922982 /* LocationInformationViewController.swift */,
+				0FA3CE4827770F4C00922982 /* LocationInformationViewModel.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		0FF68BE32777063C00D677C5 = {
@@ -162,10 +186,9 @@
 				0FF68C462777087300D677C5 /* BridgingHeader.h */,
 				0FF68BEF2777063C00D677C5 /* AppDelegate.swift */,
 				0FF68BF12777063C00D677C5 /* SceneDelegate.swift */,
-				0FF68BF32777063C00D677C5 /* ViewController.swift */,
+				0FA3CE4727770F2000922982 /* Presentation */,
 				0FA3CE4327770E4F00922982 /* DetailListCellData.swift */,
 				0FA3CE4027770D5E00922982 /* Entity */,
-				0FF68BF52777063C00D677C5 /* Main.storyboard */,
 				0FF68BF82777063D00D677C5 /* Assets.xcassets */,
 				0FF68BFA2777063D00D677C5 /* LaunchScreen.storyboard */,
 				0FF68BFD2777063D00D677C5 /* Info.plist */,
@@ -176,10 +199,10 @@
 		0FF68C032777082A00D677C5 /* DaumMap.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
+				0FF68C5B277709DA00D677C5 /* OpenGLES.framework */,
+				0FF68C5A277709D800D677C5 /* SystemConfiguration.framework */,
 				0FF68C042777082A00D677C5 /* Resources */,
 				0FF68C292777082A00D677C5 /* DaumMap.framework */,
-				0FF68C5A277709D800D677C5 /* SystemConfiguration.framework */,
-				0FF68C5B277709DA00D677C5 /* OpenGLES.framework */,
 				0FF68C5C277709E900D677C5 /* QuartzCore.framework */,
 				0FF68C59277709D000D677C5 /* CoreLocation.framework */,
 				0FF68C5D27770A0400D677C5 /* libc++.tbd */,
@@ -263,6 +286,14 @@
 			dependencies = (
 			);
 			name = FindConvenienceStoreApp;
+			packageProductDependencies = (
+				0FA3CE4B2777117800922982 /* SnapKit */,
+				0FA3CE4E277711A400922982 /* RxBlocking */,
+				0FA3CE50277711A400922982 /* RxCocoa */,
+				0FA3CE52277711A400922982 /* RxRelay */,
+				0FA3CE54277711A400922982 /* RxSwift */,
+				0FA3CE56277711A400922982 /* RxTest */,
+			);
 			productName = FindConvenienceStoreApp;
 			productReference = 0FF68BEC2777063C00D677C5 /* FindConvenienceStoreApp.app */;
 			productType = "com.apple.product-type.application";
@@ -291,6 +322,10 @@
 				Base,
 			);
 			mainGroup = 0FF68BE32777063C00D677C5;
+			packageReferences = (
+				0FA3CE4A2777117800922982 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0FA3CE4D277711A400922982 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 0FF68BED2777063C00D677C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,7 +367,6 @@
 				0FF68C3D2777082A00D677C5 /* noimage256.png in Resources */,
 				0FF68C2C2777082A00D677C5 /* shadow_balloon.png in Resources */,
 				0FF68BF92777063D00D677C5 /* Assets.xcassets in Resources */,
-				0FF68BF72777063C00D677C5 /* Main.storyboard in Resources */,
 				0FF68C432777082A00D677C5 /* daum_th_line.png in Resources */,
 				0FF68C2D2777082A00D677C5 /* map_pinup.png in Resources */,
 			);
@@ -347,24 +381,18 @@
 			files = (
 				0FA3CE3F27770D5600922982 /* LocationData.swift in Sources */,
 				0FA3CE4227770D9800922982 /* KLDocument.swift in Sources */,
-				0FF68BF42777063C00D677C5 /* ViewController.swift in Sources */,
+				0FA3CE4627770F1C00922982 /* LocationInformationViewController.swift in Sources */,
+				0FEC2CDC277AE5840042A30D /* MTMapViewError.swift in Sources */,
 				0FF68BF02777063C00D677C5 /* AppDelegate.swift in Sources */,
 				0FA3CE4427770E4F00922982 /* DetailListCellData.swift in Sources */,
 				0FF68BF22777063C00D677C5 /* SceneDelegate.swift in Sources */,
+				0FA3CE4927770F4C00922982 /* LocationInformationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0FF68BF52777063C00D677C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FF68BF62777063C00D677C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0FF68BFA2777063D00D677C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -495,11 +523,13 @@
 		0FF68C012777063D00D677C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7MH5N2BKX;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -508,7 +538,6 @@
 				INFOPLIST_FILE = FindConvenienceStoreApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -529,11 +558,13 @@
 		0FF68C022777063D00D677C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7MH5N2BKX;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -542,7 +573,6 @@
 				INFOPLIST_FILE = FindConvenienceStoreApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -582,6 +612,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0FA3CE4A2777117800922982 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0FA3CE4D277711A400922982 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0FA3CE4B2777117800922982 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FA3CE4A2777117800922982 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		0FA3CE4E277711A400922982 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FA3CE4D277711A400922982 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		0FA3CE50277711A400922982 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FA3CE4D277711A400922982 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0FA3CE52277711A400922982 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FA3CE4D277711A400922982 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		0FA3CE54277711A400922982 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FA3CE4D277711A400922982 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		0FA3CE56277711A400922982 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FA3CE4D277711A400922982 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0FF68BE42777063C00D677C5 /* Project object */;
 }
