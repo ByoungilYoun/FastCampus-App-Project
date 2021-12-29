@@ -64,8 +64,7 @@ class DetailListCell : UITableViewCell {
   
   func setData(_ data : DetailListCellData) {
     placeNameLabel.text = data.placeName
-    
-    placeNameLabel.text = data.address
-    placeNameLabel.text = data.distance
+    addressLabel.text = data.address
+    distanceLabel.text = data.distance
   }
 }
