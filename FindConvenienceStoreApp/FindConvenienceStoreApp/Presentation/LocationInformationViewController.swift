@@ -20,6 +20,7 @@ class LocationInformationViewController : UIViewController {
   let mapView = MTMapView() // 맵뷰
   let currentLocationButton = UIButton() // 현재 위치로 가는 버튼
   let detailList = UITableView() // 상세 테이블 뷰
+  let detailListBackgroundView = DetailListBackgroundView() // 편의점이 없을때 나오는 백그라운드 뷰
   let viewModel = LocationInformationViewModel()
   
   //MARK: - LifeCycle
@@ -38,9 +39,7 @@ class LocationInformationViewController : UIViewController {
   //MARK: - Functions
   
   private func bind(_ viewModel : LocationInformationViewModel) {
-    currentLocationButton.rx.tap
-      .bind(to: viewModel.currentLocationButtonTapped)
-      .disposed(by: self.disposeBag)
+    detailListBackgroundView.bind(viewModel.detailListBackgroundViewModel)
     
     // 맵 중앙에 오도록 bind
     viewModel.setMapCenter
@@ -49,6 +48,31 @@ class LocationInformationViewController : UIViewController {
     
     viewModel.errorMessage
       .emit(to: self.rx.presentAlert)
+      .disposed(by: self.disposeBag)
+    
+    viewModel.detailListCellData
+      .drive(detailList.rx.items) { tableview, row, data in
+        let cell = tableview.dequeueReusableCell(withIdentifier: DetailListCell.identifier, for: IndexPath(row: row, section: 0)) as! DetailListCell
+        cell.setData(data)
+        return cell
+      }.disposed(by: self.disposeBag)
+    
+    viewModel.detailListCellData // 맵뷰에 마커(핀)을 뿌려주기 위해
+      .map { $0.compactMap {$0.point} }
+      .drive(self.rx.addPOIItems)
+      .disposed(by: self.disposeBag)
+    
+    viewModel.scrollToSelectedLocation
+      .emit(to: self.rx.showSelectedLocation)
+      .disposed(by: self.disposeBag)
+    
+    detailList.rx.itemSelected
+      .map { $0.row }
+      .bind(to: viewModel.detailListItemSelected)
+      .disposed(by: self.disposeBag)
+    
+    currentLocationButton.rx.tap
+      .bind(to: viewModel.currentLocationButtonTapped)
       .disposed(by: self.disposeBag)
   }
   
@@ -62,6 +86,10 @@ class LocationInformationViewController : UIViewController {
     currentLocationButton.setImage(UIImage(systemName: "location.fill"), for: .normal)
     currentLocationButton.backgroundColor = .white
     currentLocationButton.layer.cornerRadius = 20
+    
+    detailList.register(DetailListCell.self, forCellReuseIdentifier: DetailListCell.identifier)
+    detailList.separatorStyle = .none
+    detailList.backgroundView = detailListBackgroundView
   }
   
   private func layout() {
@@ -142,6 +170,31 @@ extension Reactive where Base : LocationInformationViewController {
       let action = UIAlertAction(title: "확인", style: .default, handler: nil)
       alertController.addAction(action)
       base.present(alertController, animated: true, completion: nil)
+    }
+  }
+  
+  var showSelectedLocation : Binder<Int> { // 마크 클릭하면 테이블뷰 상단에 오도록 커스텀 설정
+    return Binder(base) { base, row in
+      let indexPath = IndexPath(row: row, section: 0)
+      base.detailList.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+    }
+  }
+  
+  var addPOIItems : Binder<[MTMapPoint]> {
+    return Binder(base) { base, points in
+      let items = points
+        .enumerated()
+        .map { offset, point -> MTMapPOIItem in
+          let mapPOIItem = MTMapPOIItem()
+          mapPOIItem.mapPoint = point // 지도상 좌표
+          mapPOIItem.markerType = .redPin
+          mapPOIItem.showAnimationType = .springFromGround
+          mapPOIItem.tag = offset // 고유한 tag 를 가질수 있도록
+          return mapPOIItem
+        }
+      
+      base.mapView.removeAllPOIItems() // 매번 새로운 어떤 이벤트를 받을때마다 기존에 가지고 있던 아이템을 다 지우고
+      base.mapView.addPOIItems(items) // POIitem 을 새로 넣어준다.
     }
   }
 }

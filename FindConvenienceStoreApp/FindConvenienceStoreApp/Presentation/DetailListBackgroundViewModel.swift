@@ -18,6 +18,6 @@ struct DetailListBackgroundViewModel {
   
   init() {
     isStatusLabelHidden = shouldHideStatusLabel
-      .asSignal(onErrorJustReturn: true)
+      .asSignal(onErrorJustReturn: true) // 만약 에러가 났다면 숨겨라 
   }
 }
