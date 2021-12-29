@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F78BABE277CE80500457222 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78BABD277CE80500457222 /* LocalAPI.swift */; };
+		0F78BAC1277CE90300457222 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78BAC0277CE90300457222 /* LocalNetwork.swift */; };
+		0F78BAC3277CF3CF00457222 /* LocationInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78BAC2277CF3CF00457222 /* LocationInformationModel.swift */; };
 		0FA3CE3F27770D5600922982 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE3E27770D5600922982 /* LocationData.swift */; };
 		0FA3CE4227770D9800922982 /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4127770D9800922982 /* KLDocument.swift */; };
 		0FA3CE4427770E4F00922982 /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4327770E4F00922982 /* DetailListCellData.swift */; };
@@ -64,6 +67,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F78BABD277CE80500457222 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		0F78BAC0277CE90300457222 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		0F78BAC2277CF3CF00457222 /* LocationInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModel.swift; sourceTree = "<group>"; };
 		0FA3CE3E27770D5600922982 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		0FA3CE4127770D9800922982 /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		0FA3CE4327770E4F00922982 /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
@@ -150,6 +156,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F78BABF277CE80B00457222 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0F78BABD277CE80500457222 /* LocalAPI.swift */,
+				0F78BAC0277CE90300457222 /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0F78BAC4277CF3D500457222 /* LocationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CE4527770F1C00922982 /* LocationInformationViewController.swift */,
+				0F78BAC2277CF3CF00457222 /* LocationInformationModel.swift */,
+				0FA3CE4827770F4C00922982 /* LocationInformationViewModel.swift */,
+			);
+			path = LocationInfo;
+			sourceTree = "<group>";
+		};
 		0FA3CE4027770D5E00922982 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +189,7 @@
 		0FA3CE4727770F2000922982 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0FA3CE4527770F1C00922982 /* LocationInformationViewController.swift */,
-				0FA3CE4827770F4C00922982 /* LocationInformationViewModel.swift */,
+				0F78BAC4277CF3D500457222 /* LocationInfo */,
 				0FEC2CDD277AEED10042A30D /* DetailListCell.swift */,
 				0FEC2CDF277AF0910042A30D /* DetailListBackgroundView.swift */,
 				0FEC2CE1277AF0A00042A30D /* DetailListBackgroundViewModel.swift */,
@@ -196,6 +220,7 @@
 				0FF68C462777087300D677C5 /* BridgingHeader.h */,
 				0FF68BEF2777063C00D677C5 /* AppDelegate.swift */,
 				0FF68BF12777063C00D677C5 /* SceneDelegate.swift */,
+				0F78BABF277CE80B00457222 /* Network */,
 				0FA3CE4727770F2000922982 /* Presentation */,
 				0FA3CE4027770D5E00922982 /* Entity */,
 				0FF68BF82777063D00D677C5 /* Assets.xcassets */,
@@ -392,11 +417,14 @@
 				0FEC2CE0277AF0910042A30D /* DetailListBackgroundView.swift in Sources */,
 				0FEC2CE2277AF0A00042A30D /* DetailListBackgroundViewModel.swift in Sources */,
 				0FA3CE4227770D9800922982 /* KLDocument.swift in Sources */,
+				0F78BAC1277CE90300457222 /* LocalNetwork.swift in Sources */,
 				0FA3CE4627770F1C00922982 /* LocationInformationViewController.swift in Sources */,
 				0FEC2CDC277AE5840042A30D /* MTMapViewError.swift in Sources */,
+				0F78BABE277CE80500457222 /* LocalAPI.swift in Sources */,
 				0FEC2CDE277AEED10042A30D /* DetailListCell.swift in Sources */,
 				0FF68BF02777063C00D677C5 /* AppDelegate.swift in Sources */,
 				0FA3CE4427770E4F00922982 /* DetailListCellData.swift in Sources */,
+				0F78BAC3277CF3CF00457222 /* LocationInformationModel.swift in Sources */,
 				0FF68BF22777063C00D677C5 /* SceneDelegate.swift in Sources */,
 				0FA3CE4927770F4C00922982 /* LocationInformationViewModel.swift in Sources */,
 			);
