@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F741F4027837446000E7CF6 /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F741F3F27837446000E7CF6 /* networkDummy.json */; };
+		0F741F4227837480000E7CF6 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F741F4127837480000E7CF6 /* Dummy.swift */; };
+		0F741F442783758E000E7CF6 /* LocationInformationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F741F432783758E000E7CF6 /* LocationInformationModelTests.swift */; };
 		0F78BABE277CE80500457222 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78BABD277CE80500457222 /* LocalAPI.swift */; };
 		0F78BAC1277CE90300457222 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78BAC0277CE90300457222 /* LocalNetwork.swift */; };
 		0F78BAC3277CF3CF00457222 /* LocationInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78BAC2277CF3CF00457222 /* LocationInformationModel.swift */; };
@@ -15,10 +18,7 @@
 		0FA3CE4427770E4F00922982 /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4327770E4F00922982 /* DetailListCellData.swift */; };
 		0FA3CE4627770F1C00922982 /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4527770F1C00922982 /* LocationInformationViewController.swift */; };
 		0FA3CE4927770F4C00922982 /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CE4827770F4C00922982 /* LocationInformationViewModel.swift */; };
-		0FA3CE4C2777117800922982 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA3CE4B2777117800922982 /* SnapKit */; };
-		0FAC8F66277D0FB800740686 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0FAC8F65277D0FB800740686 /* RxCocoa */; };
-		0FAC8F68277D0FB800740686 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0FAC8F67277D0FB800740686 /* RxRelay */; };
-		0FAC8F6A277D0FB800740686 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0FAC8F69277D0FB800740686 /* RxSwift */; };
+		0FB2A2D7278370450048930B /* LocalNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2A2D6278370450048930B /* LocalNetworkStub.swift */; };
 		0FEC2CDC277AE5840042A30D /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC2CDB277AE5840042A30D /* MTMapViewError.swift */; };
 		0FEC2CDE277AEED10042A30D /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC2CDD277AEED10042A30D /* DetailListCell.swift */; };
 		0FEC2CE0277AF0910042A30D /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC2CDF277AF0910042A30D /* DetailListBackgroundView.swift */; };
@@ -62,9 +62,24 @@
 		0FF68C6427770A3A00D677C5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF68C5A277709D800D677C5 /* SystemConfiguration.framework */; };
 		0FF68C6527770A4000D677C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF68C5C277709E900D677C5 /* QuartzCore.framework */; };
 		0FF68C6627770A4600D677C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF68C59277709D000D677C5 /* CoreLocation.framework */; };
+		9B2A2DB6BA7AA45EC216D1B3 /* Pods_FindConvenienceStoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB94D2BA3AECB17E5417B2E2 /* Pods_FindConvenienceStoreApp.framework */; };
+		E071F8BEE437CC3AB07E234E /* Pods_FindConvenienceStoreApp_FindConvenienceStoreAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436987EF9F780DC7F058FFCE /* Pods_FindConvenienceStoreApp_FindConvenienceStoreAppTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0FB2A2D1278370080048930B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FF68BE42777063C00D677C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FF68BEB2777063C00D677C5;
+			remoteInfo = FindConvenienceStoreApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0F741F3F27837446000E7CF6 /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
+		0F741F4127837480000E7CF6 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		0F741F432783758E000E7CF6 /* LocationInformationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModelTests.swift; sourceTree = "<group>"; };
 		0F78BABD277CE80500457222 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
 		0F78BAC0277CE90300457222 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
 		0F78BAC2277CF3CF00457222 /* LocationInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModel.swift; sourceTree = "<group>"; };
@@ -73,6 +88,8 @@
 		0FA3CE4327770E4F00922982 /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
 		0FA3CE4527770F1C00922982 /* LocationInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewController.swift; sourceTree = "<group>"; };
 		0FA3CE4827770F4C00922982 /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
+		0FB2A2CD278370080048930B /* FindConvenienceStoreAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindConvenienceStoreAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB2A2D6278370450048930B /* LocalNetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkStub.swift; sourceTree = "<group>"; };
 		0FEC2CDB277AE5840042A30D /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
 		0FEC2CDD277AEED10042A30D /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
 		0FEC2CDF277AF0910042A30D /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
@@ -127,25 +144,36 @@
 		0FF68C5D27770A0400D677C5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0FF68C5F27770A0600D677C5 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		0FF68C6127770A0800D677C5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		255FC7004EFBDD15276C706E /* Pods-FindConvenienceStoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindConvenienceStoreApp.debug.xcconfig"; path = "Target Support Files/Pods-FindConvenienceStoreApp/Pods-FindConvenienceStoreApp.debug.xcconfig"; sourceTree = "<group>"; };
+		436987EF9F780DC7F058FFCE /* Pods_FindConvenienceStoreApp_FindConvenienceStoreAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindConvenienceStoreApp_FindConvenienceStoreAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7920A24CFD0D18F5AF670FB6 /* Pods-FindConvenienceStoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindConvenienceStoreApp.release.xcconfig"; path = "Target Support Files/Pods-FindConvenienceStoreApp/Pods-FindConvenienceStoreApp.release.xcconfig"; sourceTree = "<group>"; };
+		DA42A1AFC1016FE7B3BACE47 /* Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.release.xcconfig"; path = "Target Support Files/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF5A96C43E11D9FA220169B7 /* Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB94D2BA3AECB17E5417B2E2 /* Pods_FindConvenienceStoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindConvenienceStoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0FB2A2CA278370080048930B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E071F8BEE437CC3AB07E234E /* Pods_FindConvenienceStoreApp_FindConvenienceStoreAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FF68BE92777063C00D677C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0FF68C6627770A4600D677C5 /* CoreLocation.framework in Frameworks */,
 				0FF68C6527770A4000D677C5 /* QuartzCore.framework in Frameworks */,
-				0FAC8F66277D0FB800740686 /* RxCocoa in Frameworks */,
 				0FF68C6427770A3A00D677C5 /* SystemConfiguration.framework in Frameworks */,
 				0FF68C6327770A2E00D677C5 /* OpenGLES.framework in Frameworks */,
 				0FF68C5E27770A0400D677C5 /* libc++.tbd in Frameworks */,
-				0FAC8F6A277D0FB800740686 /* RxSwift in Frameworks */,
 				0FF68C6227770A0800D677C5 /* libsqlite3.tbd in Frameworks */,
-				0FA3CE4C2777117800922982 /* SnapKit in Frameworks */,
 				0FF68C6027770A0600D677C5 /* libxml2.tbd in Frameworks */,
 				0FF68C452777082A00D677C5 /* DaumMap.framework in Frameworks */,
-				0FAC8F68277D0FB800740686 /* RxRelay in Frameworks */,
+				9B2A2DB6BA7AA45EC216D1B3 /* Pods_FindConvenienceStoreApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,12 +221,25 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		0FB2A2CE278370080048930B /* FindConvenienceStoreAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				0FB2A2D6278370450048930B /* LocalNetworkStub.swift */,
+				0F741F4127837480000E7CF6 /* Dummy.swift */,
+				0F741F432783758E000E7CF6 /* LocationInformationModelTests.swift */,
+				0F741F3F27837446000E7CF6 /* networkDummy.json */,
+			);
+			path = FindConvenienceStoreAppTests;
+			sourceTree = "<group>";
+		};
 		0FF68BE32777063C00D677C5 = {
 			isa = PBXGroup;
 			children = (
 				0FF68BEE2777063C00D677C5 /* FindConvenienceStoreApp */,
+				0FB2A2CE278370080048930B /* FindConvenienceStoreAppTests */,
 				0FF68BED2777063C00D677C5 /* Products */,
 				0FF68C47277708E600D677C5 /* Frameworks */,
+				11F1721175DB2888E57AB7CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				0FF68BEC2777063C00D677C5 /* FindConvenienceStoreApp.app */,
+				0FB2A2CD278370080048930B /* FindConvenienceStoreAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,32 +338,61 @@
 			isa = PBXGroup;
 			children = (
 				0FF68C032777082A00D677C5 /* DaumMap.embeddedframework */,
+				EB94D2BA3AECB17E5417B2E2 /* Pods_FindConvenienceStoreApp.framework */,
+				436987EF9F780DC7F058FFCE /* Pods_FindConvenienceStoreApp_FindConvenienceStoreAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11F1721175DB2888E57AB7CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				255FC7004EFBDD15276C706E /* Pods-FindConvenienceStoreApp.debug.xcconfig */,
+				7920A24CFD0D18F5AF670FB6 /* Pods-FindConvenienceStoreApp.release.xcconfig */,
+				DF5A96C43E11D9FA220169B7 /* Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.debug.xcconfig */,
+				DA42A1AFC1016FE7B3BACE47 /* Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0FB2A2CC278370080048930B /* FindConvenienceStoreAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FB2A2D5278370080048930B /* Build configuration list for PBXNativeTarget "FindConvenienceStoreAppTests" */;
+			buildPhases = (
+				3A74A1ABC256EC1619FDCEA4 /* [CP] Check Pods Manifest.lock */,
+				0FB2A2C9278370080048930B /* Sources */,
+				0FB2A2CA278370080048930B /* Frameworks */,
+				0FB2A2CB278370080048930B /* Resources */,
+				D94BF3ED90C48B33FBA58448 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FB2A2D2278370080048930B /* PBXTargetDependency */,
+			);
+			name = FindConvenienceStoreAppTests;
+			productName = FindConvenienceStoreAppTests;
+			productReference = 0FB2A2CD278370080048930B /* FindConvenienceStoreAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0FF68BEB2777063C00D677C5 /* FindConvenienceStoreApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FF68C002777063D00D677C5 /* Build configuration list for PBXNativeTarget "FindConvenienceStoreApp" */;
 			buildPhases = (
+				4B1C1A2431AB0692746415BA /* [CP] Check Pods Manifest.lock */,
 				0FF68BE82777063C00D677C5 /* Sources */,
 				0FF68BE92777063C00D677C5 /* Frameworks */,
 				0FF68BEA2777063C00D677C5 /* Resources */,
+				87D4A40BC71A7580B5E15FCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FindConvenienceStoreApp;
-			packageProductDependencies = (
-				0FA3CE4B2777117800922982 /* SnapKit */,
-				0FAC8F65277D0FB800740686 /* RxCocoa */,
-				0FAC8F67277D0FB800740686 /* RxRelay */,
-				0FAC8F69277D0FB800740686 /* RxSwift */,
-			);
 			productName = FindConvenienceStoreApp;
 			productReference = 0FF68BEC2777063C00D677C5 /* FindConvenienceStoreApp.app */;
 			productType = "com.apple.product-type.application";
@@ -336,6 +407,11 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					0FB2A2CC278370080048930B = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+						TestTargetID = 0FF68BEB2777063C00D677C5;
+					};
 					0FF68BEB2777063C00D677C5 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -350,20 +426,25 @@
 				Base,
 			);
 			mainGroup = 0FF68BE32777063C00D677C5;
-			packageReferences = (
-				0FA3CE4A2777117800922982 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				0FAC8F64277D0FB800740686 /* XCRemoteSwiftPackageReference "RxSwift" */,
-			);
 			productRefGroup = 0FF68BED2777063C00D677C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0FF68BEB2777063C00D677C5 /* FindConvenienceStoreApp */,
+				0FB2A2CC278370080048930B /* FindConvenienceStoreAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0FB2A2CB278370080048930B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F741F4027837446000E7CF6 /* networkDummy.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FF68BEA2777063C00D677C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,7 +483,98 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A74A1ABC256EC1619FDCEA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B1C1A2431AB0692746415BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindConvenienceStoreApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87D4A40BC71A7580B5E15FCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindConvenienceStoreApp/Pods-FindConvenienceStoreApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindConvenienceStoreApp/Pods-FindConvenienceStoreApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindConvenienceStoreApp/Pods-FindConvenienceStoreApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D94BF3ED90C48B33FBA58448 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests/Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		0FB2A2C9278370080048930B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F741F4227837480000E7CF6 /* Dummy.swift in Sources */,
+				0FB2A2D7278370450048930B /* LocalNetworkStub.swift in Sources */,
+				0F741F442783758E000E7CF6 /* LocationInformationModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FF68BE82777063C00D677C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,6 +598,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0FB2A2D2278370080048930B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FF68BEB2777063C00D677C5 /* FindConvenienceStoreApp */;
+			targetProxy = 0FB2A2D1278370080048930B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		0FF68BFA2777063D00D677C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -438,6 +618,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0FB2A2D3278370080048930B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5A96C43E11D9FA220169B7 /* Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7MH5N2BKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byougil.youn.FindConvenienceStoreAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindConvenienceStoreApp.app/FindConvenienceStoreApp";
+			};
+			name = Debug;
+		};
+		0FB2A2D4278370080048930B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA42A1AFC1016FE7B3BACE47 /* Pods-FindConvenienceStoreApp-FindConvenienceStoreAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7MH5N2BKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byougil.youn.FindConvenienceStoreAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindConvenienceStoreApp.app/FindConvenienceStoreApp";
+			};
+			name = Release;
+		};
 		0FF68BFE2777063D00D677C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -556,6 +791,7 @@
 		};
 		0FF68C012777063D00D677C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 255FC7004EFBDD15276C706E /* Pods-FindConvenienceStoreApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -591,6 +827,7 @@
 		};
 		0FF68C022777063D00D677C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7920A24CFD0D18F5AF670FB6 /* Pods-FindConvenienceStoreApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -627,6 +864,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0FB2A2D5278370080048930B /* Build configuration list for PBXNativeTarget "FindConvenienceStoreAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FB2A2D3278370080048930B /* Debug */,
+				0FB2A2D4278370080048930B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0FF68BE72777063C00D677C5 /* Build configuration list for PBXProject "FindConvenienceStoreApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -646,48 +892,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0FA3CE4A2777117800922982 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		0FAC8F64277D0FB800740686 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 6.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0FA3CE4B2777117800922982 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0FA3CE4A2777117800922982 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		0FAC8F65277D0FB800740686 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0FAC8F64277D0FB800740686 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		0FAC8F67277D0FB800740686 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0FAC8F64277D0FB800740686 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		0FAC8F69277D0FB800740686 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0FAC8F64277D0FB800740686 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0FF68BE42777063C00D677C5 /* Project object */;
 }
