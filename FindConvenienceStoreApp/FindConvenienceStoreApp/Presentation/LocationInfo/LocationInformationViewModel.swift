@@ -71,14 +71,7 @@ struct LocationInformationViewModel {
     // 지도의 중심점 설정
     let selectDetailListItem = detailListItemSelected
       .withLatestFrom(documentData) { $1[$0] }
-      .map { data -> MTMapPoint in
-        guard let longitude = Double(data.x),
-              let latitude = Double(data.y) else {
-                return MTMapPoint()
-              }
-        let geoCorde = MTMapPointGeo(latitude: latitude, longitude: longitude)
-        return MTMapPoint(geoCoord: geoCorde)
-      }
+      .map(model.documentToMTMapPoint) 
     
     let moveToCurrentLocation = currentLocationButtonTapped
       .withLatestFrom(currentLocation) // 현재위치 버튼이 currentLocation을 한번이라도 받은 이후에 작동하도록
