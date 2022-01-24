@@ -11,6 +11,7 @@
 		0F96422B279DBEF500FC7D6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96422A279DBEF500FC7D6A /* ContentView.swift */; };
 		0F96422D279DBEF600FC7D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F96422C279DBEF600FC7D6A /* Assets.xcassets */; };
 		0F964230279DBEF600FC7D6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F96422F279DBEF600FC7D6A /* Preview Assets.xcassets */; };
+		0F98A2EF279E73230083A5B3 /* NavigationBarWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A2EE279E73230083A5B3 /* NavigationBarWithButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0F96422A279DBEF500FC7D6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F96422C279DBEF600FC7D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F96422F279DBEF600FC7D6A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0F98A2EE279E73230083A5B3 /* NavigationBarWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				0F964228279DBEF500FC7D6A /* MyAssetApp.swift */,
 				0F96422A279DBEF500FC7D6A /* ContentView.swift */,
+				0F98A2EE279E73230083A5B3 /* NavigationBarWithButton.swift */,
 				0F96422C279DBEF600FC7D6A /* Assets.xcassets */,
 				0F96422E279DBEF600FC7D6A /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F98A2EF279E73230083A5B3 /* NavigationBarWithButton.swift in Sources */,
 				0F96422B279DBEF500FC7D6A /* ContentView.swift in Sources */,
 				0F964229279DBEF500FC7D6A /* MyAssetApp.swift in Sources */,
 			);
