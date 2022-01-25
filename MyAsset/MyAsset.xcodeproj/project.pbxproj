@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F329C16279FDFCE0026A230 /* AssetSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F329C15279FDFCE0026A230 /* AssetSectionHeaderView.swift */; };
+		0F329C18279FE0620026A230 /* AssetSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F329C17279FE0620026A230 /* AssetSectionView.swift */; };
+		0F329C1A27A0312E0026A230 /* AssetSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F329C1927A0312E0026A230 /* AssetSummaryView.swift */; };
 		0F964229279DBEF500FC7D6A /* MyAssetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F964228279DBEF500FC7D6A /* MyAssetApp.swift */; };
 		0F96422B279DBEF500FC7D6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96422A279DBEF500FC7D6A /* ContentView.swift */; };
 		0F96422D279DBEF600FC7D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F96422C279DBEF600FC7D6A /* Assets.xcassets */; };
@@ -21,9 +24,15 @@
 		0F98A2FF279E9A9C0083A5B3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A2FE279E9A9C0083A5B3 /* PageViewController.swift */; };
 		0F98A301279E9CB30083A5B3 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A300279E9CB30083A5B3 /* PageControl.swift */; };
 		0F98A303279EA0D80083A5B3 /* AssetBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A302279EA0D80083A5B3 /* AssetBannerView.swift */; };
+		0F98A306279EA6310083A5B3 /* assets.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F98A305279EA6310083A5B3 /* assets.json */; };
+		0F98A308279EA6760083A5B3 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A307279EA6760083A5B3 /* Asset.swift */; };
+		0F98A30A279EA72D0083A5B3 /* AssetSummaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98A309279EA72D0083A5B3 /* AssetSummaryData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F329C15279FDFCE0026A230 /* AssetSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSectionHeaderView.swift; sourceTree = "<group>"; };
+		0F329C17279FE0620026A230 /* AssetSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSectionView.swift; sourceTree = "<group>"; };
+		0F329C1927A0312E0026A230 /* AssetSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSummaryView.swift; sourceTree = "<group>"; };
 		0F964225279DBEF500FC7D6A /* MyAsset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAsset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F964228279DBEF500FC7D6A /* MyAssetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAssetApp.swift; sourceTree = "<group>"; };
 		0F96422A279DBEF500FC7D6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +48,9 @@
 		0F98A2FE279E9A9C0083A5B3 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		0F98A300279E9CB30083A5B3 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		0F98A302279EA0D80083A5B3 /* AssetBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetBannerView.swift; sourceTree = "<group>"; };
+		0F98A305279EA6310083A5B3 /* assets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assets.json; sourceTree = "<group>"; };
+		0F98A307279EA6760083A5B3 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		0F98A309279EA72D0083A5B3 /* AssetSummaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSummaryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F81150827A032990046D554 /* AssetSummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				0F98A309279EA72D0083A5B3 /* AssetSummaryData.swift */,
+				0F329C15279FDFCE0026A230 /* AssetSectionHeaderView.swift */,
+				0F329C17279FE0620026A230 /* AssetSectionView.swift */,
+				0F329C1927A0312E0026A230 /* AssetSummaryView.swift */,
+			);
+			path = AssetSummaryView;
+			sourceTree = "<group>";
+		};
 		0F96421C279DBEF500FC7D6A = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +101,9 @@
 				0F98A2FA279E92390083A5B3 /* Entities */,
 				0F98A2FD279E92750083A5B3 /* AssetMenu */,
 				0F98A304279EA0FD0083A5B3 /* AssetBannerView */,
+				0F81150827A032990046D554 /* AssetSummaryView */,
 				0F96422C279DBEF600FC7D6A /* Assets.xcassets */,
+				0F98A305279EA6310083A5B3 /* assets.json */,
 				0F96422E279DBEF600FC7D6A /* Preview Content */,
 			);
 			path = MyAsset;
@@ -97,6 +122,7 @@
 			children = (
 				0F98A2F0279E78660083A5B3 /* AssetMenu.swift */,
 				0F98A2F8279E92360083A5B3 /* AssetBanner.swift */,
+				0F98A307279EA6760083A5B3 /* Asset.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -179,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F98A306279EA6310083A5B3 /* assets.json in Resources */,
 				0F964230279DBEF600FC7D6A /* Preview Assets.xcassets in Resources */,
 				0F96422D279DBEF600FC7D6A /* Assets.xcassets in Resources */,
 			);
@@ -192,7 +219,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F98A2F5279E8F1B0083A5B3 /* AssetMenuGridView.swift in Sources */,
+				0F329C18279FE0620026A230 /* AssetSectionView.swift in Sources */,
+				0F98A308279EA6760083A5B3 /* Asset.swift in Sources */,
 				0F98A2FF279E9A9C0083A5B3 /* PageViewController.swift in Sources */,
+				0F98A30A279EA72D0083A5B3 /* AssetSummaryData.swift in Sources */,
+				0F329C16279FDFCE0026A230 /* AssetSectionHeaderView.swift in Sources */,
+				0F329C1A27A0312E0026A230 /* AssetSummaryView.swift in Sources */,
 				0F98A2EF279E73230083A5B3 /* NavigationBarWithButton.swift in Sources */,
 				0F98A2F9279E92360083A5B3 /* AssetBanner.swift in Sources */,
 				0F98A2F7279E90080083A5B3 /* AssetView.swift in Sources */,
