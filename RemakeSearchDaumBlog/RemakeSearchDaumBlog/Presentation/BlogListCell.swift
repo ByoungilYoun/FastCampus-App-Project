@@ -12,6 +12,7 @@ import Kingfisher
 class BlogListCell : UITableViewCell {
   
   //MARK: - Properties
+  static let identifier = "BlogListCell"
   
   let thumbnailImageView = UIImageView()
   let nameLabel = UILabel()
