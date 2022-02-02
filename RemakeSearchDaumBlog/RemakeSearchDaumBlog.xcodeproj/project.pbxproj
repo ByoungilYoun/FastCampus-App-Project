@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F05771427A6DB2C00B60DDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05771327A6DB2C00B60DDC /* MainViewController.swift */; };
+		0F2CAA4127AABEE000ED4443 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CAA4027AABEE000ED4443 /* SearchBar.swift */; };
 		0FD53C6527A1559C00AD910B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD53C6427A1559C00AD910B /* AppDelegate.swift */; };
 		0FD53C6727A1559C00AD910B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD53C6627A1559C00AD910B /* SceneDelegate.swift */; };
-		0FD53C6927A1559C00AD910B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD53C6827A1559C00AD910B /* ViewController.swift */; };
 		0FD53C6E27A1559F00AD910B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD53C6D27A1559F00AD910B /* Assets.xcassets */; };
 		0FD53C7127A1559F00AD910B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD53C6F27A1559F00AD910B /* LaunchScreen.storyboard */; };
+		45A0F3CDC6C2707A625B1C87 /* Pods_RemakeSearchDaumBlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F504636809A46E47E7EBF769 /* Pods_RemakeSearchDaumBlog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F05771327A6DB2C00B60DDC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F2CAA4027AABEE000ED4443 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		0FD53C6127A1559C00AD910B /* RemakeSearchDaumBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemakeSearchDaumBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD53C6427A1559C00AD910B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FD53C6627A1559C00AD910B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0FD53C6827A1559C00AD910B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0FD53C6D27A1559F00AD910B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FD53C7027A1559F00AD910B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FD53C7227A1559F00AD910B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E88727FC3C27882A9DC1AAFC /* Pods-RemakeSearchDaumBlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeSearchDaumBlog.debug.xcconfig"; path = "Target Support Files/Pods-RemakeSearchDaumBlog/Pods-RemakeSearchDaumBlog.debug.xcconfig"; sourceTree = "<group>"; };
+		F504636809A46E47E7EBF769 /* Pods_RemakeSearchDaumBlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemakeSearchDaumBlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9E4C5A261EE0DE9866989F /* Pods-RemakeSearchDaumBlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeSearchDaumBlog.release.xcconfig"; path = "Target Support Files/Pods-RemakeSearchDaumBlog/Pods-RemakeSearchDaumBlog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A0F3CDC6C2707A625B1C87 /* Pods_RemakeSearchDaumBlog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				0FD53C6327A1559C00AD910B /* RemakeSearchDaumBlog */,
 				0FD53C6227A1559C00AD910B /* Products */,
+				85BDC54189D137F7C8335AD1 /* Pods */,
+				B4B64E38E709FFC6E9EC56E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +65,30 @@
 			children = (
 				0FD53C6427A1559C00AD910B /* AppDelegate.swift */,
 				0FD53C6627A1559C00AD910B /* SceneDelegate.swift */,
-				0FD53C6827A1559C00AD910B /* ViewController.swift */,
+				0F05771327A6DB2C00B60DDC /* MainViewController.swift */,
+				0F2CAA4027AABEE000ED4443 /* SearchBar.swift */,
 				0FD53C6D27A1559F00AD910B /* Assets.xcassets */,
 				0FD53C6F27A1559F00AD910B /* LaunchScreen.storyboard */,
 				0FD53C7227A1559F00AD910B /* Info.plist */,
 			);
 			path = RemakeSearchDaumBlog;
+			sourceTree = "<group>";
+		};
+		85BDC54189D137F7C8335AD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E88727FC3C27882A9DC1AAFC /* Pods-RemakeSearchDaumBlog.debug.xcconfig */,
+				FD9E4C5A261EE0DE9866989F /* Pods-RemakeSearchDaumBlog.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4B64E38E709FFC6E9EC56E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F504636809A46E47E7EBF769 /* Pods_RemakeSearchDaumBlog.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FD53C7527A1559F00AD910B /* Build configuration list for PBXNativeTarget "RemakeSearchDaumBlog" */;
 			buildPhases = (
+				BC94356EDD2E06C942094023 /* [CP] Check Pods Manifest.lock */,
 				0FD53C5D27A1559C00AD910B /* Sources */,
 				0FD53C5E27A1559C00AD910B /* Frameworks */,
 				0FD53C5F27A1559C00AD910B /* Resources */,
+				BB836A5825E425801F9E5AB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,12 +158,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BB836A5825E425801F9E5AB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemakeSearchDaumBlog/Pods-RemakeSearchDaumBlog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemakeSearchDaumBlog/Pods-RemakeSearchDaumBlog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemakeSearchDaumBlog/Pods-RemakeSearchDaumBlog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC94356EDD2E06C942094023 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemakeSearchDaumBlog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FD53C5D27A1559C00AD910B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FD53C6927A1559C00AD910B /* ViewController.swift in Sources */,
+				0F05771427A6DB2C00B60DDC /* MainViewController.swift in Sources */,
+				0F2CAA4127AABEE000ED4443 /* SearchBar.swift in Sources */,
 				0FD53C6527A1559C00AD910B /* AppDelegate.swift in Sources */,
 				0FD53C6727A1559C00AD910B /* SceneDelegate.swift in Sources */,
 			);
@@ -205,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -260,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -272,6 +344,7 @@
 		};
 		0FD53C7627A1559F00AD910B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E88727FC3C27882A9DC1AAFC /* Pods-RemakeSearchDaumBlog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,12 +366,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0FD53C7727A1559F00AD910B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9E4C5A261EE0DE9866989F /* Pods-RemakeSearchDaumBlog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +394,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
