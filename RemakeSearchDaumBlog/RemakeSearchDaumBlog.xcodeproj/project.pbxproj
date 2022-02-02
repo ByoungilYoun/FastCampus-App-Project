@@ -14,6 +14,9 @@
 		0F2CAA4727AACC7900ED4443 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CAA4627AACC7900ED4443 /* BlogListCell.swift */; };
 		0F2CAA4927AACC8300ED4443 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CAA4827AACC8300ED4443 /* BlogListCellData.swift */; };
 		0F2CAA4F27AAF69C00ED4443 /* AlertActionConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CAA4E27AAF69C00ED4443 /* AlertActionConvertable.swift */; };
+		0F2CAA5127AAFECE00ED4443 /* DKBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CAA5027AAFECE00ED4443 /* DKBlog.swift */; };
+		0F2CAA5327AB095200ED4443 /* SearchBlogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CAA5227AB095200ED4443 /* SearchBlogAPI.swift */; };
+		0F2CAA5627AB0A1F00ED4443 /* SearchBlogNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CAA5527AB0A1F00ED4443 /* SearchBlogNetwork.swift */; };
 		0FD53C6527A1559C00AD910B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD53C6427A1559C00AD910B /* AppDelegate.swift */; };
 		0FD53C6727A1559C00AD910B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD53C6627A1559C00AD910B /* SceneDelegate.swift */; };
 		0FD53C6E27A1559F00AD910B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD53C6D27A1559F00AD910B /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		0F2CAA4627AACC7900ED4443 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
 		0F2CAA4827AACC8300ED4443 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
 		0F2CAA4E27AAF69C00ED4443 /* AlertActionConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionConvertable.swift; sourceTree = "<group>"; };
+		0F2CAA5027AAFECE00ED4443 /* DKBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBlog.swift; sourceTree = "<group>"; };
+		0F2CAA5227AB095200ED4443 /* SearchBlogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogAPI.swift; sourceTree = "<group>"; };
+		0F2CAA5527AB0A1F00ED4443 /* SearchBlogNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogNetwork.swift; sourceTree = "<group>"; };
 		0FD53C6127A1559C00AD910B /* RemakeSearchDaumBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemakeSearchDaumBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD53C6427A1559C00AD910B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FD53C6627A1559C00AD910B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 			children = (
 				0F2CAA4827AACC8300ED4443 /* BlogListCellData.swift */,
 				0F2CAA4E27AAF69C00ED4443 /* AlertActionConvertable.swift */,
+				0F2CAA5027AAFECE00ED4443 /* DKBlog.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -87,6 +94,15 @@
 				0F2CAA4627AACC7900ED4443 /* BlogListCell.swift */,
 			);
 			path = SubComponents;
+			sourceTree = "<group>";
+		};
+		0F2CAA5427AB095C00ED4443 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0F2CAA5227AB095200ED4443 /* SearchBlogAPI.swift */,
+				0F2CAA5527AB0A1F00ED4443 /* SearchBlogNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		0FD53C5827A1559C00AD910B = {
@@ -112,6 +128,7 @@
 			children = (
 				0FD53C6427A1559C00AD910B /* AppDelegate.swift */,
 				0FD53C6627A1559C00AD910B /* SceneDelegate.swift */,
+				0F2CAA5427AB095C00ED4443 /* Network */,
 				0F2CAA4B27AACC9F00ED4443 /* Entity */,
 				0F2CAA4A27AACC9800ED4443 /* Presentation */,
 				0FD53C6D27A1559F00AD910B /* Assets.xcassets */,
@@ -254,12 +271,15 @@
 			files = (
 				0F05771427A6DB2C00B60DDC /* MainViewController.swift in Sources */,
 				0F2CAA4727AACC7900ED4443 /* BlogListCell.swift in Sources */,
+				0F2CAA5127AAFECE00ED4443 /* DKBlog.swift in Sources */,
 				0F2CAA4527AACC6500ED4443 /* BlogListView.swift in Sources */,
+				0F2CAA5327AB095200ED4443 /* SearchBlogAPI.swift in Sources */,
 				0F2CAA4927AACC8300ED4443 /* BlogListCellData.swift in Sources */,
 				0F2CAA4127AABEE000ED4443 /* SearchBar.swift in Sources */,
 				0FD53C6527A1559C00AD910B /* AppDelegate.swift in Sources */,
 				0F2CAA4327AAC7B100ED4443 /* FilterView.swift in Sources */,
 				0F2CAA4F27AAF69C00ED4443 /* AlertActionConvertable.swift in Sources */,
+				0F2CAA5627AB0A1F00ED4443 /* SearchBlogNetwork.swift in Sources */,
 				0FD53C6727A1559C00AD910B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
