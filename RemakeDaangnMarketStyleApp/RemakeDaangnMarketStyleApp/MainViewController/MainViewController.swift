@@ -47,6 +47,8 @@ class MainViewController : UIViewController {
     tableView.backgroundColor = .white
     tableView.separatorStyle = .singleLine
     tableView.tableFooterView = UIView()
+    
+    tableView.register(TitleTextFieldCell.self, forCellReuseIdentifier: TitleTextFieldCell.identifier)
   }
   
   private func layout() {

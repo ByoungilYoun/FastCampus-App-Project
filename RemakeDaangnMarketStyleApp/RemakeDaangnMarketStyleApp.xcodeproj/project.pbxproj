@@ -13,6 +13,8 @@
 		0F28071C27B1069500E22B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F28071A27B1069500E22B99 /* LaunchScreen.storyboard */; };
 		0FDC299527B10D5300119213 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299427B10D5300119213 /* MainViewController.swift */; };
 		0FDC299727B10DA500119213 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299627B10DA500119213 /* MainViewModel.swift */; };
+		0FDC299A27B1276900119213 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299927B1276900119213 /* TitleTextFieldCell.swift */; };
+		0FDC299C27B1277400119213 /* TitleTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299B27B1277400119213 /* TitleTextFieldCellViewModel.swift */; };
 		F5B15D46216B0ECD0A88413B /* Pods_RemakeDaangnMarketStyleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED2231E25F92D8E68B27241 /* Pods_RemakeDaangnMarketStyleApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		0F28071D27B1069500E22B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FDC299427B10D5300119213 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0FDC299627B10DA500119213 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0FDC299927B1276900119213 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
+		0FDC299B27B1277400119213 /* TitleTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCellViewModel.swift; sourceTree = "<group>"; };
 		2CE6CC95715B2B2A29189423 /* Pods-RemakeDaangnMarketStyleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeDaangnMarketStyleApp.debug.xcconfig"; path = "Target Support Files/Pods-RemakeDaangnMarketStyleApp/Pods-RemakeDaangnMarketStyleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED2231E25F92D8E68B27241 /* Pods_RemakeDaangnMarketStyleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemakeDaangnMarketStyleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C04618C1B4BE7A13A9F513 /* Pods-RemakeDaangnMarketStyleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeDaangnMarketStyleApp.release.xcconfig"; path = "Target Support Files/Pods-RemakeDaangnMarketStyleApp/Pods-RemakeDaangnMarketStyleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,13 +77,31 @@
 			children = (
 				0F28070F27B1069300E22B99 /* AppDelegate.swift */,
 				0F28071127B1069300E22B99 /* SceneDelegate.swift */,
-				0FDC299427B10D5300119213 /* MainViewController.swift */,
-				0FDC299627B10DA500119213 /* MainViewModel.swift */,
+				0FDC299827B1275900119213 /* MainViewController */,
 				0F28071827B1069500E22B99 /* Assets.xcassets */,
 				0F28071A27B1069500E22B99 /* LaunchScreen.storyboard */,
 				0F28071D27B1069500E22B99 /* Info.plist */,
 			);
 			path = RemakeDaangnMarketStyleApp;
+			sourceTree = "<group>";
+		};
+		0FDC299827B1275900119213 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0FDC299427B10D5300119213 /* MainViewController.swift */,
+				0FDC299627B10DA500119213 /* MainViewModel.swift */,
+				0FDC299D27B1277900119213 /* TitleTextFieldCell */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		0FDC299D27B1277900119213 /* TitleTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FDC299927B1276900119213 /* TitleTextFieldCell.swift */,
+				0FDC299B27B1277400119213 /* TitleTextFieldCellViewModel.swift */,
+			);
+			path = TitleTextFieldCell;
 			sourceTree = "<group>";
 		};
 		2A9FEC3B031D2A48DA27A748 /* Pods */ = {
@@ -206,8 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FDC299527B10D5300119213 /* MainViewController.swift in Sources */,
+				0FDC299C27B1277400119213 /* TitleTextFieldCellViewModel.swift in Sources */,
 				0F28071027B1069300E22B99 /* AppDelegate.swift in Sources */,
 				0F28071227B1069300E22B99 /* SceneDelegate.swift in Sources */,
+				0FDC299A27B1276900119213 /* TitleTextFieldCell.swift in Sources */,
 				0FDC299727B10DA500119213 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
