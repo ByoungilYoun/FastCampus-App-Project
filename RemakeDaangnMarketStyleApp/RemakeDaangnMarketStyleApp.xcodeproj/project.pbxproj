@@ -11,6 +11,8 @@
 		0F28071227B1069300E22B99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28071127B1069300E22B99 /* SceneDelegate.swift */; };
 		0F28071927B1069500E22B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F28071827B1069500E22B99 /* Assets.xcassets */; };
 		0F28071C27B1069500E22B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F28071A27B1069500E22B99 /* LaunchScreen.storyboard */; };
+		0FCEE48427B16B04002955CC /* PriceTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCEE48327B16B04002955CC /* PriceTextFieldCellViewModel.swift */; };
+		0FCEE48627B16EF9002955CC /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCEE48527B16EF9002955CC /* PriceTextFieldCell.swift */; };
 		0FDC299527B10D5300119213 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299427B10D5300119213 /* MainViewController.swift */; };
 		0FDC299727B10DA500119213 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299627B10DA500119213 /* MainViewModel.swift */; };
 		0FDC299A27B1276900119213 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299927B1276900119213 /* TitleTextFieldCell.swift */; };
@@ -28,6 +30,8 @@
 		0F28071827B1069500E22B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F28071B27B1069500E22B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F28071D27B1069500E22B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FCEE48327B16B04002955CC /* PriceTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCellViewModel.swift; sourceTree = "<group>"; };
+		0FCEE48527B16EF9002955CC /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
 		0FDC299427B10D5300119213 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0FDC299627B10DA500119213 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		0FDC299927B1276900119213 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = RemakeDaangnMarketStyleApp;
 			sourceTree = "<group>";
 		};
+		0FCEE48727B17268002955CC /* PriceTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FCEE48527B16EF9002955CC /* PriceTextFieldCell.swift */,
+				0FCEE48327B16B04002955CC /* PriceTextFieldCellViewModel.swift */,
+			);
+			path = PriceTextFieldCell;
+			sourceTree = "<group>";
+		};
 		0FDC299827B1275900119213 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 				0FDC299627B10DA500119213 /* MainViewModel.swift */,
 				0FDC299D27B1277900119213 /* TitleTextFieldCell */,
 				0FDC29A527B13AD000119213 /* CategoryViewController */,
+				0FCEE48727B17268002955CC /* PriceTextFieldCell */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -254,9 +268,11 @@
 			files = (
 				0FDC299527B10D5300119213 /* MainViewController.swift in Sources */,
 				0FDC299C27B1277400119213 /* TitleTextFieldCellViewModel.swift in Sources */,
+				0FCEE48427B16B04002955CC /* PriceTextFieldCellViewModel.swift in Sources */,
 				0FDC29A427B1359500119213 /* CategoryListViewController.swift in Sources */,
 				0F28071027B1069300E22B99 /* AppDelegate.swift in Sources */,
 				0F28071227B1069300E22B99 /* SceneDelegate.swift in Sources */,
+				0FCEE48627B16EF9002955CC /* PriceTextFieldCell.swift in Sources */,
 				0FDC29A227B12F3600119213 /* CategoryViewModel.swift in Sources */,
 				0FDC299A27B1276900119213 /* TitleTextFieldCell.swift in Sources */,
 				0FDC299727B10DA500119213 /* MainViewModel.swift in Sources */,
