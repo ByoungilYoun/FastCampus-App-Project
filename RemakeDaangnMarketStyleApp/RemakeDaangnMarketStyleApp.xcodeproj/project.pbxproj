@@ -13,6 +13,8 @@
 		0F28071C27B1069500E22B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F28071A27B1069500E22B99 /* LaunchScreen.storyboard */; };
 		0FCEE48427B16B04002955CC /* PriceTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCEE48327B16B04002955CC /* PriceTextFieldCellViewModel.swift */; };
 		0FCEE48627B16EF9002955CC /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCEE48527B16EF9002955CC /* PriceTextFieldCell.swift */; };
+		0FCEE48927B1731C002955CC /* DetailWriteFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCEE48827B1731C002955CC /* DetailWriteFormCell.swift */; };
+		0FCEE48B27B17326002955CC /* DetailWriteFormCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCEE48A27B17326002955CC /* DetailWriteFormCellViewModel.swift */; };
 		0FDC299527B10D5300119213 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299427B10D5300119213 /* MainViewController.swift */; };
 		0FDC299727B10DA500119213 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299627B10DA500119213 /* MainViewModel.swift */; };
 		0FDC299A27B1276900119213 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC299927B1276900119213 /* TitleTextFieldCell.swift */; };
@@ -32,6 +34,8 @@
 		0F28071D27B1069500E22B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCEE48327B16B04002955CC /* PriceTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCellViewModel.swift; sourceTree = "<group>"; };
 		0FCEE48527B16EF9002955CC /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
+		0FCEE48827B1731C002955CC /* DetailWriteFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCell.swift; sourceTree = "<group>"; };
+		0FCEE48A27B17326002955CC /* DetailWriteFormCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCellViewModel.swift; sourceTree = "<group>"; };
 		0FDC299427B10D5300119213 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0FDC299627B10DA500119213 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		0FDC299927B1276900119213 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 			path = PriceTextFieldCell;
 			sourceTree = "<group>";
 		};
+		0FCEE48C27B17329002955CC /* DetailWriteFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FCEE48827B1731C002955CC /* DetailWriteFormCell.swift */,
+				0FCEE48A27B17326002955CC /* DetailWriteFormCellViewModel.swift */,
+			);
+			path = DetailWriteFormCell;
+			sourceTree = "<group>";
+		};
 		0FDC299827B1275900119213 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 				0FDC299D27B1277900119213 /* TitleTextFieldCell */,
 				0FDC29A527B13AD000119213 /* CategoryViewController */,
 				0FCEE48727B17268002955CC /* PriceTextFieldCell */,
+				0FCEE48C27B17329002955CC /* DetailWriteFormCell */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -273,9 +287,11 @@
 				0F28071027B1069300E22B99 /* AppDelegate.swift in Sources */,
 				0F28071227B1069300E22B99 /* SceneDelegate.swift in Sources */,
 				0FCEE48627B16EF9002955CC /* PriceTextFieldCell.swift in Sources */,
+				0FCEE48B27B17326002955CC /* DetailWriteFormCellViewModel.swift in Sources */,
 				0FDC29A227B12F3600119213 /* CategoryViewModel.swift in Sources */,
 				0FDC299A27B1276900119213 /* TitleTextFieldCell.swift in Sources */,
 				0FDC299727B10DA500119213 /* MainViewModel.swift in Sources */,
+				0FCEE48927B1731C002955CC /* DetailWriteFormCell.swift in Sources */,
 				0FDC299F27B12EFE00119213 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
