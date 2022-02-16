@@ -45,10 +45,14 @@
 		0F4619C327BD023E00A4283A /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619C227BD023E00A4283A /* LocationData.swift */; };
 		0F4619C627BD027E00A4283A /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619C527BD027E00A4283A /* KLDocument.swift */; };
 		0F4619C827BD034700A4283A /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619C727BD034700A4283A /* DetailListCellData.swift */; };
+		0F4619CA27BD03B300A4283A /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619C927BD03B300A4283A /* LocationInformationViewController.swift */; };
+		0F4619CD27BD03E200A4283A /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619CC27BD03E200A4283A /* LocationInformationViewModel.swift */; };
 		0F9E14BE27B40B490082E3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E14BD27B40B490082E3B3 /* AppDelegate.swift */; };
 		0F9E14C027B40B490082E3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E14BF27B40B490082E3B3 /* SceneDelegate.swift */; };
 		0F9E14C727B40B4B0082E3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E14C627B40B4B0082E3B3 /* Assets.xcassets */; };
 		0F9E14CA27B40B4B0082E3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E14C827B40B4B0082E3B3 /* LaunchScreen.storyboard */; };
+		0FB2F02F27BD15A5003A6C76 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2F02E27BD15A5003A6C76 /* MTMapViewError.swift */; };
+		32850A24820BC78C1CC1BA21 /* Pods_RemakeFindCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7CBB6289C65D8395A759F37 /* Pods_RemakeFindCVS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,12 +103,18 @@
 		0F4619C227BD023E00A4283A /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		0F4619C527BD027E00A4283A /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		0F4619C727BD034700A4283A /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
+		0F4619C927BD03B300A4283A /* LocationInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewController.swift; sourceTree = "<group>"; };
+		0F4619CC27BD03E200A4283A /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
 		0F9E14BA27B40B490082E3B3 /* RemakeFindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemakeFindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9E14BD27B40B490082E3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F9E14BF27B40B490082E3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0F9E14C627B40B4B0082E3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F9E14C927B40B4B0082E3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F9E14CB27B40B4B0082E3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FB2F02E27BD15A5003A6C76 /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
+		6D3DD9AF9E573944860D5D51 /* Pods-RemakeFindCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeFindCVS.debug.xcconfig"; path = "Target Support Files/Pods-RemakeFindCVS/Pods-RemakeFindCVS.debug.xcconfig"; sourceTree = "<group>"; };
+		A7CBB6289C65D8395A759F37 /* Pods_RemakeFindCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemakeFindCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51D83E712A4E8D331BAEFA3 /* Pods-RemakeFindCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeFindCVS.release.xcconfig"; path = "Target Support Files/Pods-RemakeFindCVS/Pods-RemakeFindCVS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 				0F4619B727BCFD6D00A4283A /* SystemConfiguration.framework in Frameworks */,
 				0F4619B527BCFD6000A4283A /* OpenGLES.framework in Frameworks */,
 				0F4619B127BCFCD800A4283A /* DaumMap.framework in Frameworks */,
+				32850A24820BC78C1CC1BA21 /* Pods_RemakeFindCVS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +207,7 @@
 				0F4619B827BCFD8200A4283A /* CoreLocation.framework */,
 				0F4619B627BCFD6D00A4283A /* SystemConfiguration.framework */,
 				0F4619B427BCFD6000A4283A /* OpenGLES.framework */,
+				A7CBB6289C65D8395A759F37 /* Pods_RemakeFindCVS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,8 +218,18 @@
 				0F4619C227BD023E00A4283A /* LocationData.swift */,
 				0F4619C527BD027E00A4283A /* KLDocument.swift */,
 				0F4619C727BD034700A4283A /* DetailListCellData.swift */,
+				0FB2F02E27BD15A5003A6C76 /* MTMapViewError.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		0F4619CB27BD03B800A4283A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0F4619C927BD03B300A4283A /* LocationInformationViewController.swift */,
+				0F4619CC27BD03E200A4283A /* LocationInformationViewModel.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		0F9E14B127B40B490082E3B3 = {
@@ -216,6 +238,7 @@
 				0F9E14BC27B40B490082E3B3 /* RemakeFindCVS */,
 				0F9E14BB27B40B490082E3B3 /* Products */,
 				0F4619B327BCFD6000A4283A /* Frameworks */,
+				F52E503E9855DFF37E9ED73D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,12 +256,22 @@
 				0F4619B227BCFCFD00A4283A /* BridgingHeader.h */,
 				0F9E14BD27B40B490082E3B3 /* AppDelegate.swift */,
 				0F9E14BF27B40B490082E3B3 /* SceneDelegate.swift */,
+				0F4619CB27BD03B800A4283A /* Presentation */,
 				0F4619C427BD024400A4283A /* Entity */,
 				0F9E14C627B40B4B0082E3B3 /* Assets.xcassets */,
 				0F9E14C827B40B4B0082E3B3 /* LaunchScreen.storyboard */,
 				0F9E14CB27B40B4B0082E3B3 /* Info.plist */,
 			);
 			path = RemakeFindCVS;
+			sourceTree = "<group>";
+		};
+		F52E503E9855DFF37E9ED73D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DD9AF9E573944860D5D51 /* Pods-RemakeFindCVS.debug.xcconfig */,
+				D51D83E712A4E8D331BAEFA3 /* Pods-RemakeFindCVS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F9E14CE27B40B4B0082E3B3 /* Build configuration list for PBXNativeTarget "RemakeFindCVS" */;
 			buildPhases = (
+				E89E2DE1D3B76D7F1B1BF917 /* [CP] Check Pods Manifest.lock */,
 				0F9E14B627B40B490082E3B3 /* Sources */,
 				0F9E14B727B40B490082E3B3 /* Frameworks */,
 				0F9E14B827B40B490082E3B3 /* Resources */,
+				AAE31DF1C29DDBA3225BA9FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,6 +368,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AAE31DF1C29DDBA3225BA9FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemakeFindCVS/Pods-RemakeFindCVS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemakeFindCVS/Pods-RemakeFindCVS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemakeFindCVS/Pods-RemakeFindCVS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E89E2DE1D3B76D7F1B1BF917 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemakeFindCVS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0F9E14B627B40B490082E3B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -340,9 +417,12 @@
 			files = (
 				0F4619C327BD023E00A4283A /* LocationData.swift in Sources */,
 				0F4619C627BD027E00A4283A /* KLDocument.swift in Sources */,
+				0F4619CA27BD03B300A4283A /* LocationInformationViewController.swift in Sources */,
+				0FB2F02F27BD15A5003A6C76 /* MTMapViewError.swift in Sources */,
 				0F9E14BE27B40B490082E3B3 /* AppDelegate.swift in Sources */,
 				0F4619C827BD034700A4283A /* DetailListCellData.swift in Sources */,
 				0F9E14C027B40B490082E3B3 /* SceneDelegate.swift in Sources */,
+				0F4619CD27BD03E200A4283A /* LocationInformationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +558,7 @@
 		};
 		0F9E14CF27B40B4B0082E3B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D3DD9AF9E573944860D5D51 /* Pods-RemakeFindCVS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -511,6 +592,7 @@
 		};
 		0F9E14D027B40B4B0082E3B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D51D83E712A4E8D331BAEFA3 /* Pods-RemakeFindCVS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
