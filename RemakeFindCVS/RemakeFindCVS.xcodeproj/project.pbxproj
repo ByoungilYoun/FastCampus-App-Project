@@ -42,6 +42,9 @@
 		0F4619BD27BCFDA000A4283A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4619BC27BCFDA000A4283A /* libc++.tbd */; };
 		0F4619BF27BCFDB900A4283A /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4619BE27BCFDB900A4283A /* libxml2.tbd */; };
 		0F4619C127BCFDC200A4283A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4619C027BCFDC200A4283A /* libsqlite3.tbd */; };
+		0F4619C327BD023E00A4283A /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619C227BD023E00A4283A /* LocationData.swift */; };
+		0F4619C627BD027E00A4283A /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619C527BD027E00A4283A /* KLDocument.swift */; };
+		0F4619C827BD034700A4283A /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4619C727BD034700A4283A /* DetailListCellData.swift */; };
 		0F9E14BE27B40B490082E3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E14BD27B40B490082E3B3 /* AppDelegate.swift */; };
 		0F9E14C027B40B490082E3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E14BF27B40B490082E3B3 /* SceneDelegate.swift */; };
 		0F9E14C727B40B4B0082E3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E14C627B40B4B0082E3B3 /* Assets.xcassets */; };
@@ -93,6 +96,9 @@
 		0F4619BC27BCFDA000A4283A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0F4619BE27BCFDB900A4283A /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		0F4619C027BCFDC200A4283A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0F4619C227BD023E00A4283A /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		0F4619C527BD027E00A4283A /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
+		0F4619C727BD034700A4283A /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
 		0F9E14BA27B40B490082E3B3 /* RemakeFindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemakeFindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9E14BD27B40B490082E3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F9E14BF27B40B490082E3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +200,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0F4619C427BD024400A4283A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0F4619C227BD023E00A4283A /* LocationData.swift */,
+				0F4619C527BD027E00A4283A /* KLDocument.swift */,
+				0F4619C727BD034700A4283A /* DetailListCellData.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		0F9E14B127B40B490082E3B3 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +233,7 @@
 				0F4619B227BCFCFD00A4283A /* BridgingHeader.h */,
 				0F9E14BD27B40B490082E3B3 /* AppDelegate.swift */,
 				0F9E14BF27B40B490082E3B3 /* SceneDelegate.swift */,
+				0F4619C427BD024400A4283A /* Entity */,
 				0F9E14C627B40B4B0082E3B3 /* Assets.xcassets */,
 				0F9E14C827B40B4B0082E3B3 /* LaunchScreen.storyboard */,
 				0F9E14CB27B40B4B0082E3B3 /* Info.plist */,
@@ -321,7 +338,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4619C327BD023E00A4283A /* LocationData.swift in Sources */,
+				0F4619C627BD027E00A4283A /* KLDocument.swift in Sources */,
 				0F9E14BE27B40B490082E3B3 /* AppDelegate.swift in Sources */,
+				0F4619C827BD034700A4283A /* DetailListCellData.swift in Sources */,
 				0F9E14C027B40B490082E3B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
