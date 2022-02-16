@@ -52,6 +52,7 @@
 		0F9E14C727B40B4B0082E3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E14C627B40B4B0082E3B3 /* Assets.xcassets */; };
 		0F9E14CA27B40B4B0082E3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E14C827B40B4B0082E3B3 /* LaunchScreen.storyboard */; };
 		0FB2F02F27BD15A5003A6C76 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2F02E27BD15A5003A6C76 /* MTMapViewError.swift */; };
+		0FC04B6A27BD562400087092 /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC04B6927BD562400087092 /* DetailListCell.swift */; };
 		32850A24820BC78C1CC1BA21 /* Pods_RemakeFindCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7CBB6289C65D8395A759F37 /* Pods_RemakeFindCVS.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,7 @@
 		0F9E14C927B40B4B0082E3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F9E14CB27B40B4B0082E3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB2F02E27BD15A5003A6C76 /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
+		0FC04B6927BD562400087092 /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
 		6D3DD9AF9E573944860D5D51 /* Pods-RemakeFindCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeFindCVS.debug.xcconfig"; path = "Target Support Files/Pods-RemakeFindCVS/Pods-RemakeFindCVS.debug.xcconfig"; sourceTree = "<group>"; };
 		A7CBB6289C65D8395A759F37 /* Pods_RemakeFindCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemakeFindCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51D83E712A4E8D331BAEFA3 /* Pods-RemakeFindCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemakeFindCVS.release.xcconfig"; path = "Target Support Files/Pods-RemakeFindCVS/Pods-RemakeFindCVS.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				0F4619C927BD03B300A4283A /* LocationInformationViewController.swift */,
 				0F4619CC27BD03E200A4283A /* LocationInformationViewModel.swift */,
+				0FC04B6927BD562400087092 /* DetailListCell.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				0F4619C627BD027E00A4283A /* KLDocument.swift in Sources */,
 				0F4619CA27BD03B300A4283A /* LocationInformationViewController.swift in Sources */,
 				0FB2F02F27BD15A5003A6C76 /* MTMapViewError.swift in Sources */,
+				0FC04B6A27BD562400087092 /* DetailListCell.swift in Sources */,
 				0F9E14BE27B40B490082E3B3 /* AppDelegate.swift in Sources */,
 				0F4619C827BD034700A4283A /* DetailListCellData.swift in Sources */,
 				0F9E14C027B40B490082E3B3 /* SceneDelegate.swift in Sources */,
