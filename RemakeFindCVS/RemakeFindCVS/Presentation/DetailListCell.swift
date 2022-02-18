@@ -10,6 +10,9 @@ import UIKit
 class DetailListCell : UITableViewCell {
   
   //MARK: - Properties
+
+  static let identifier = "DetailListCell"
+  
   let placeNameLabel = UILabel()
   let addressLabel = UILabel()
   let distanceLabel = UILabel()
