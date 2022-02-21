@@ -72,12 +72,14 @@ class TranslateViewController : UIViewController {
   private lazy var bookmarkButton : UIButton = {
     let button = UIButton()
     button.setImage(UIImage(systemName: "bookmark"), for: .normal)
+    button.addTarget(self, action: #selector(didTapBookmarkButton), for: .touchUpInside)
     return button
   }()
   
   private lazy var copyButton : UIButton = {
     let button = UIButton()
     button.setImage(UIImage(systemName: "doc.on.doc"), for: .normal)
+    button.addTarget(self, action: #selector(didTapCopyButton), for: .touchUpInside)
     return button
   }()
   
@@ -94,7 +96,6 @@ class TranslateViewController : UIViewController {
     let label = UILabel()
     label.text = "텍스트 입력"
     label.textColor = .tertiaryLabel
-    //TODO : sourceLabel 에 입력값이 추가되면, placeholder 스타일 해제
     label.numberOfLines = 0
     label.font = .systemFont(ofSize: 23.0, weight: .semibold)
     return label
@@ -201,6 +202,23 @@ class TranslateViewController : UIViewController {
   @objc func didTapTargetLanguageButton() {
     didTapLanguageButton(type: .target)
   }
+  
+  @objc func didTapBookmarkButton() {  // 북마크 기능이 되려면 양쪽 (번역전, 번역후) 두가지 값이 있어야 한다.
+    guard let sourceText = sourceLabel.text,
+          let translatedText = resultLabel.text,
+          bookmarkButton.imageView?.image == UIImage(systemName: "bookmark") else { return }
+   
+    bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+    
+    let currentBookmarks : [Bookmark] = UserDefaults.standard.bookmarks // 지금까지 있는 북마크를 가져와서
+    let newBookmark = Bookmark(sourceLanguage: self.sourceLanguage, translatedLanguage: self.targetLanguage, sourceText: sourceText, translatedText: translatedText) // 새로운 북마크 객체 생성후
+    
+    UserDefaults.standard.bookmarks = [newBookmark] + currentBookmarks
+  }
+  
+  @objc func didTapCopyButton() {
+    UIPasteboard.general.string = resultLabel.text
+  }
 }
 
   //MARK: - extension SourceTextViewControllerDelegate
@@ -210,5 +228,7 @@ extension TranslateViewController : SourceTextViewControllerDelegate {
     
     sourceLabel.text = sourceText
     sourceLabel.textColor = .label
+    
+    bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
   }
 }
