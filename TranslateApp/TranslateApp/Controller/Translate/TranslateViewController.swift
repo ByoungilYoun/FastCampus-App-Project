@@ -8,10 +8,6 @@
 import UIKit
 import SnapKit
 
-enum `Type` {
-  case source
-  case target
-}
 
 class TranslateViewController : UIViewController {
   
