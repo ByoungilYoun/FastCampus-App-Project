@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9E97AF27C4C06E0039B24C /* TranslateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E97AE27C4C06E0039B24C /* TranslateRequestModel.swift */; };
+		0F9E97B127C4C0B20039B24C /* TranslateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E97B027C4C0B20039B24C /* TranslateResponseModel.swift */; };
+		0F9E97B327C4CAE70039B24C /* TranslatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E97B227C4CAE70039B24C /* TranslatorManager.swift */; };
 		0FD12C2D27C3281800654CE0 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD12C2C27C3281800654CE0 /* TranslateViewController.swift */; };
 		0FD12C3127C3395C00654CE0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD12C3027C3395C00654CE0 /* UIColor.swift */; };
 		0FD12C3327C36B8600654CE0 /* SourceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD12C3227C36B8600654CE0 /* SourceTextViewController.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F9E97AE27C4C06E0039B24C /* TranslateRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRequestModel.swift; sourceTree = "<group>"; };
+		0F9E97B027C4C0B20039B24C /* TranslateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResponseModel.swift; sourceTree = "<group>"; };
+		0F9E97B227C4CAE70039B24C /* TranslatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorManager.swift; sourceTree = "<group>"; };
 		0FD12C2C27C3281800654CE0 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		0FD12C3027C3395C00654CE0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		0FD12C3227C36B8600654CE0 /* SourceTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0F9E97B427C4CAEC0039B24C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E97B227C4CAE70039B24C /* TranslatorManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		0FD12C3427C36B9200654CE0 /* Translate */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +117,8 @@
 				0FD12C3527C37E4200654CE0 /* Language.swift */,
 				0FD12C3727C3884300654CE0 /* Bookmark.swift */,
 				0FEF644327C3E98800923615 /* Type.swift */,
+				0F9E97AE27C4C06E0039B24C /* TranslateRequestModel.swift */,
+				0F9E97B027C4C0B20039B24C /* TranslateResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +156,7 @@
 			children = (
 				0FF687B427C298A900646DE6 /* AppDelegate.swift */,
 				0FF687B627C298A900646DE6 /* SceneDelegate.swift */,
+				0F9E97B427C4CAEC0039B24C /* Managers */,
 				0FD12C4127C39D6200654CE0 /* Models */,
 				0FD12C4227C39D7B00654CE0 /* Controller */,
 				0FD12C3B27C3902600654CE0 /* Extension */,
@@ -274,9 +291,12 @@
 			files = (
 				0FF687B927C298A900646DE6 /* TabBarController.swift in Sources */,
 				0FD12C2D27C3281800654CE0 /* TranslateViewController.swift in Sources */,
+				0F9E97AF27C4C06E0039B24C /* TranslateRequestModel.swift in Sources */,
 				0FD12C3327C36B8600654CE0 /* SourceTextViewController.swift in Sources */,
 				0FD12C3627C37E4200654CE0 /* Language.swift in Sources */,
 				0FF687B527C298A900646DE6 /* AppDelegate.swift in Sources */,
+				0F9E97B127C4C0B20039B24C /* TranslateResponseModel.swift in Sources */,
+				0F9E97B327C4CAE70039B24C /* TranslatorManager.swift in Sources */,
 				0FF687B727C298A900646DE6 /* SceneDelegate.swift in Sources */,
 				0FD12C3127C3395C00654CE0 /* UIColor.swift in Sources */,
 				0FEF644427C3E98800923615 /* Type.swift in Sources */,

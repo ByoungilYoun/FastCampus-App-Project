@@ -101,6 +101,9 @@ class TranslateViewController : UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configureUI()
+    TranslatorManager().translate(from: "안녕") { text in
+      print("하하하 결과값 \(text)")
+    }
   }
   
   //MARK: - Functions
