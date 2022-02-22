@@ -44,7 +44,7 @@ final class BookmarkListViewController : UIViewController {
   private func configureUI() {
     view.backgroundColor = .secondarySystemBackground
     
-    navigationItem.title = "즐겨찾기"
+    navigationItem.title = NSLocalizedString("Bookmark", comment: "즐겨찾기")
     navigationController?.navigationBar.prefersLargeTitles = true
     
     view.addSubview(collectionView)

@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  TranslateApp
+
+  Created by 윤병일 on 2022/02/22.
+  
+*/
+
+
+// "키값" = "표시될 언어의값";
+
+//TabBar Title
+"Translate" = "Translate";
+"Bookmark" = "Bookmark"; // Navigation title 도 사용
+
+//Language Model
+"Korean" = "Korean";
+"English" = "English";
+"Japanese" = "Japanese";
+"Chinese" = "Chinese";
+
+// Action Sheet
+"Cancel" = "Cancel";
+
+// Placeholder
+"Enter_text" = "Enter text";
+
