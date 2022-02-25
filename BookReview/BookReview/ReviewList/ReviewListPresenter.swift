@@ -5,13 +5,14 @@
 //  Created by 윤병일 on 2022/02/24.
 //
 
-import Foundation
+import UIKit
 
 protocol ReviewListProtocol {
-  
+  func setupNavigationBar()
+  func setupViews()
 }
 
-final class ReviewListPresenter {
+final class ReviewListPresenter : NSObject {
   private let viewController : ReviewListProtocol
   
   
@@ -20,7 +21,21 @@ final class ReviewListPresenter {
     self.viewController = viewController
   }
   
-  func print() {
-    Swift.print("프리젠터에서 프린트됨")
+  func viewDidLoad() {
+    viewController.setupNavigationBar()
+    viewController.setupViews()
+  }
+}
+
+  //MARK: - UITableViewDataSource
+extension ReviewListPresenter : UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 3
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+    cell.textLabel?.text = "\(indexPath.row)"
+    return cell 
   }
 }
