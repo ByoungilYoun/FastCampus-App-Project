@@ -10,6 +10,8 @@
 		07FCC9BA0C457FB91A933C4B /* Pods_BookReviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F98128E266AC8687181AAAB /* Pods_BookReviewTests.framework */; };
 		0F270C7127C6A1E1009FDD30 /* ReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F270C7027C6A1E1009FDD30 /* ReviewListViewController.swift */; };
 		0F270C7327C6A253009FDD30 /* ReviewListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F270C7227C6A253009FDD30 /* ReviewListPresenter.swift */; };
+		0F99E8D027CCCBFB00B236F0 /* ReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99E8CF27CCCBFB00B236F0 /* ReviewWriteViewController.swift */; };
+		0F99E8D227CCCC0500B236F0 /* ReviewWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99E8D127CCCC0500B236F0 /* ReviewWritePresenter.swift */; };
 		0FF781B427C6432D0041A456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF781B327C6432D0041A456 /* AppDelegate.swift */; };
 		0FF781B627C6432D0041A456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF781B527C6432D0041A456 /* SceneDelegate.swift */; };
 		0FF781BD27C6432E0041A456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF781BC27C6432E0041A456 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		044AB16761FE41D2391EF778 /* Pods_BookReview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookReview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F270C7027C6A1E1009FDD30 /* ReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewController.swift; sourceTree = "<group>"; };
 		0F270C7227C6A253009FDD30 /* ReviewListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListPresenter.swift; sourceTree = "<group>"; };
+		0F99E8CF27CCCBFB00B236F0 /* ReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWriteViewController.swift; sourceTree = "<group>"; };
+		0F99E8D127CCCC0500B236F0 /* ReviewWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritePresenter.swift; sourceTree = "<group>"; };
 		0FF781B027C6432D0041A456 /* BookReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF781B327C6432D0041A456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF781B527C6432D0041A456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 			path = ReviewList;
 			sourceTree = "<group>";
 		};
+		0F99E8D327CCCC0800B236F0 /* ReviewWrite */ = {
+			isa = PBXGroup;
+			children = (
+				0F99E8CF27CCCBFB00B236F0 /* ReviewWriteViewController.swift */,
+				0F99E8D127CCCC0500B236F0 /* ReviewWritePresenter.swift */,
+			);
+			path = ReviewWrite;
+			sourceTree = "<group>";
+		};
 		0FF781A727C6432C0041A456 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 				0FF781B327C6432D0041A456 /* AppDelegate.swift */,
 				0FF781B527C6432D0041A456 /* SceneDelegate.swift */,
 				0F270C7427C6A262009FDD30 /* ReviewList */,
+				0F99E8D327CCCC0800B236F0 /* ReviewWrite */,
 				0FF781BC27C6432E0041A456 /* Assets.xcassets */,
 				0FF781BE27C6432E0041A456 /* LaunchScreen.storyboard */,
 				0FF781C127C6432E0041A456 /* Info.plist */,
@@ -413,8 +427,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F99E8D227CCCC0500B236F0 /* ReviewWritePresenter.swift in Sources */,
 				0F270C7127C6A1E1009FDD30 /* ReviewListViewController.swift in Sources */,
 				0FF781B427C6432D0041A456 /* AppDelegate.swift in Sources */,
+				0F99E8D027CCCBFB00B236F0 /* ReviewWriteViewController.swift in Sources */,
 				0F270C7327C6A253009FDD30 /* ReviewListPresenter.swift in Sources */,
 				0FF781B627C6432D0041A456 /* SceneDelegate.swift in Sources */,
 			);

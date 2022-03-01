@@ -18,11 +18,23 @@ class ReviewListViewController : UIViewController {
     tableView.dataSource = presenter
     return tableView
   }()
+  
   //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     presenter.viewDidLoad()
-    
+  }
+  
+  //MARK: - Functions
+  func presentToReviewWriteViewController() {
+    let vc = UINavigationController(rootViewController: ReviewWriteViewController())
+    vc.modalPresentationStyle = .fullScreen
+    self.present(vc, animated: true, completion: nil)
+  }
+  
+  //MARK: - @objc func
+  @objc func didTapRightBarButtonItem() {
+    presenter.didTapRightBarButtonItem()
   }
 }
 
@@ -32,7 +44,7 @@ extension ReviewListViewController : ReviewListProtocol {
     navigationItem.title = "도서 리뷰"
     navigationController?.navigationBar.prefersLargeTitles = true
     
-    let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+    let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapRightBarButtonItem))
     navigationItem.rightBarButtonItem = rightBarButtonItem
   }
   
