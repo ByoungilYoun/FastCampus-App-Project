@@ -25,6 +25,11 @@ class ReviewListViewController : UIViewController {
     presenter.viewDidLoad()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    presenter.viewWillAppear()
+  }
+  
   //MARK: - Functions
   func presentToReviewWriteViewController() {
     let vc = UINavigationController(rootViewController: ReviewWriteViewController())
@@ -53,5 +58,10 @@ extension ReviewListViewController : ReviewListProtocol {
     tableView.snp.makeConstraints {
       $0.edges.equalToSuperview()
     }
+  }
+  
+  func reloadTableView() {
+    tableView.reloadData()
+    print("하하하 리로드됨")
   }
 }

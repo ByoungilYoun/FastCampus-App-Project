@@ -10,6 +10,8 @@ import Foundation
 protocol ReviewWriteProtocol {
   func setupNavigationBar()
   func showCloseAlertController()
+  func close()
+  func setupViews()
 }
 
 final class ReviewWritePresenter {
@@ -26,9 +28,15 @@ final class ReviewWritePresenter {
   //MARK: - Functions
   func viewDidLoad() {
     viewController.setupNavigationBar()
+    viewController.setupViews()
   }
   
   func didTapLeftBarButton() {
     viewController.showCloseAlertController()
+  }
+  
+  func didTapRightBarButton() {
+    // TODO : UserDefaults 에 유저가 저장한 도서리뷰를 저장하기
+    viewController.close()
   }
 }
