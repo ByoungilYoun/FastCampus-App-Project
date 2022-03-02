@@ -19,6 +19,7 @@ final class ReviewWriteViewController : UIViewController {
     button.setTitleColor(.tertiaryLabel, for: .normal)
     button.contentHorizontalAlignment = .left
     button.titleLabel?.font = .systemFont(ofSize: 23.0, weight : .bold)
+    button.addTarget(self, action: #selector(didTapBookTitleButton), for: .touchUpInside)
     return button
   }()
   
@@ -95,6 +96,11 @@ extension ReviewWriteViewController : ReviewWriteProtocol {
       $0.bottom.equalTo(view.safeAreaLayoutGuide)
     }
   }
+  
+  func presentToSearchBookViewController() {
+    let vc = UINavigationController(rootViewController: SearchBookViewController())
+    self.present(vc, animated: true)
+  }
 }
 
 //MARK: - UITextViewDelegate
@@ -109,12 +115,16 @@ extension ReviewWriteViewController : UITextViewDelegate {
 }
 
 //MARK: - Extension ReviewWriteViewController
-extension ReviewWriteViewController {
+private extension ReviewWriteViewController {
   @objc func didTapLeftBarButton() {
     presenter.didTapLeftBarButton()
   }
   
   @objc func didTapRightBarButton() {
     presenter.didTapRightBarButton()
+  }
+  
+  @objc func didTapBookTitleButton() {
+    presenter.didTapBookTitleButton()
   }
 }

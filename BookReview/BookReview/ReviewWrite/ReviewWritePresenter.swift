@@ -12,6 +12,7 @@ protocol ReviewWriteProtocol {
   func showCloseAlertController()
   func close()
   func setupViews()
+  func presentToSearchBookViewController()
 }
 
 final class ReviewWritePresenter {
@@ -38,5 +39,9 @@ final class ReviewWritePresenter {
   func didTapRightBarButton() {
     // TODO : UserDefaults 에 유저가 저장한 도서리뷰를 저장하기
     viewController.close()
+  }
+  
+  func didTapBookTitleButton() {
+    viewController.presentToSearchBookViewController()
   }
 }
