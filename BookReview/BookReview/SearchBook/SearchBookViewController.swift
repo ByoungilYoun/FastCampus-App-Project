@@ -47,4 +47,8 @@ extension SearchBookViewController : SearchBookProtocol {
   func dismiss() {
     self.dismiss(animated: true)
   }
+  
+  func reloadView() {
+    tableView.reloadData()
+  }
 }

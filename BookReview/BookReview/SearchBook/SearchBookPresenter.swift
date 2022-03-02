@@ -10,12 +10,17 @@ import UIKit
 protocol SearchBookProtocol {
   func setupViews()
   func dismiss()
+  func reloadView()
 }
 
 final class SearchBookPresenter : NSObject {
   
   //MARK: - Properties
   private let viewController : SearchBookProtocol
+  
+  private let bookSearchManager = BookSearchManager()
+  
+  private var books : [Book] = []
   
   //MARK: - init
   init(viewController : SearchBookProtocol) {
@@ -30,7 +35,14 @@ final class SearchBookPresenter : NSObject {
 
   //MARK: - UISearchBarDelegate
 extension SearchBookPresenter : UISearchBarDelegate {
-  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    guard let searchText = searchBar.text else { return }
+    
+    bookSearchManager.request(from: searchText) { [weak self] newBooks in
+      self?.books = newBooks
+      self?.viewController.reloadView()
+    }
+  }
 }
 
   //MARK: - UITableViewDelegate
@@ -43,12 +55,12 @@ extension SearchBookPresenter : UITableViewDelegate {
   //MARK: - UITableViewDataSource
 extension SearchBookPresenter : UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    books.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.textLabel?.text = "\(indexPath.row)"
+    cell.textLabel?.text = books[indexPath.row].title
     return cell
   }
 }
