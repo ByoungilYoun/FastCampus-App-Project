@@ -10,7 +10,7 @@ import UIKit
 final class SearchBookViewController : UIViewController {
   
   //MARK: - Properties
-  private lazy var presenter = SearchBookPresenter(viewController: self)
+  private lazy var presenter = SearchBookPresenter(viewController: self, delegate: searchBookDelegate)
   
   private lazy var tableView : UITableView = {
     let tableView = UITableView()
@@ -19,6 +19,18 @@ final class SearchBookViewController : UIViewController {
     return tableView
   }()
   
+  private let searchBookDelegate : SearchBookDelegate
+  
+  //MARK: - Init
+  init(searchBookDelegate : SearchBookDelegate) {
+    self.searchBookDelegate = searchBookDelegate
+    
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
   
   //MARK: - Lifecycle
   override func viewDidLoad() {
@@ -45,6 +57,7 @@ extension SearchBookViewController : SearchBookProtocol {
   }
   
   func dismiss() {
+    self.navigationItem.searchController?.dismiss(animated: true)
     self.dismiss(animated: true)
   }
   

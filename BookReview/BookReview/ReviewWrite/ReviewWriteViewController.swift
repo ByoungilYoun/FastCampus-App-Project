@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 final class ReviewWriteViewController : UIViewController {
   
@@ -98,8 +99,14 @@ extension ReviewWriteViewController : ReviewWriteProtocol {
   }
   
   func presentToSearchBookViewController() {
-    let vc = UINavigationController(rootViewController: SearchBookViewController())
+    let vc = UINavigationController(rootViewController: SearchBookViewController(searchBookDelegate: presenter))
     self.present(vc, animated: true)
+  }
+  
+  func updateViews(title : String, imageUrl : URL?) {
+    self.bookTitleButton.setTitle(title, for: .normal)
+    self.bookTitleButton.setTitleColor(.label, for: .normal)
+    self.imageView.kf.setImage(with: imageUrl)
   }
 }
 

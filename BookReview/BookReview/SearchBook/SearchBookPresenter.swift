@@ -13,6 +13,10 @@ protocol SearchBookProtocol {
   func reloadView()
 }
 
+protocol SearchBookDelegate {
+  func selectBook(_ book : Book)
+}
+
 final class SearchBookPresenter : NSObject {
   
   //MARK: - Properties
@@ -22,9 +26,12 @@ final class SearchBookPresenter : NSObject {
   
   private var books : [Book] = []
   
+  private let delegate : SearchBookDelegate
+  
   //MARK: - init
-  init(viewController : SearchBookProtocol) {
+  init(viewController : SearchBookProtocol, delegate : SearchBookDelegate) {
     self.viewController = viewController
+    self.delegate = delegate
   }
   
   //MARK: - Functions
@@ -48,6 +55,9 @@ extension SearchBookPresenter : UISearchBarDelegate {
   //MARK: - UITableViewDelegate
 extension SearchBookPresenter : UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let selectedBook = books[indexPath.row]
+    delegate.selectBook(selectedBook)
+    
     viewController.dismiss()
   }
 }
