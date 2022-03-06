@@ -12,6 +12,7 @@
 		0F270C7327C6A253009FDD30 /* ReviewListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F270C7227C6A253009FDD30 /* ReviewListPresenter.swift */; };
 		0F7BCCAA27D51CC500ED5DE3 /* MockReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BCCA927D51CC500ED5DE3 /* MockReviewListViewController.swift */; };
 		0F7BCCAC27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BCCAB27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift */; };
+		0F7BCCB027D520D900ED5DE3 /* ReviewWritePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BCCAF27D520D900ED5DE3 /* ReviewWritePresenterTests.swift */; };
 		0F99E8D027CCCBFB00B236F0 /* ReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99E8CF27CCCBFB00B236F0 /* ReviewWriteViewController.swift */; };
 		0F99E8D227CCCC0500B236F0 /* ReviewWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99E8D127CCCC0500B236F0 /* ReviewWritePresenter.swift */; };
 		0F9B809E27CF545200BB7587 /* BookSearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B809D27CF545200BB7587 /* BookSearchRequestModel.swift */; };
@@ -56,6 +57,7 @@
 		0F270C7227C6A253009FDD30 /* ReviewListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListPresenter.swift; sourceTree = "<group>"; };
 		0F7BCCA927D51CC500ED5DE3 /* MockReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReviewListViewController.swift; sourceTree = "<group>"; };
 		0F7BCCAB27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsManager.swift; sourceTree = "<group>"; };
+		0F7BCCAF27D520D900ED5DE3 /* ReviewWritePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritePresenterTests.swift; sourceTree = "<group>"; };
 		0F99E8CF27CCCBFB00B236F0 /* ReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWriteViewController.swift; sourceTree = "<group>"; };
 		0F99E8D127CCCC0500B236F0 /* ReviewWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritePresenter.swift; sourceTree = "<group>"; };
 		0F9B809D27CF545200BB7587 /* BookSearchRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequestModel.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0FF781CA27C6432E0041A456 /* ReviewListPresenterTests.swift */,
+				0F7BCCAF27D520D900ED5DE3 /* ReviewWritePresenterTests.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 			files = (
 				0F7BCCAA27D51CC500ED5DE3 /* MockReviewListViewController.swift in Sources */,
 				0FF781CB27C6432E0041A456 /* ReviewListPresenterTests.swift in Sources */,
+				0F7BCCB027D520D900ED5DE3 /* ReviewWritePresenterTests.swift in Sources */,
 				0F7BCCAC27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

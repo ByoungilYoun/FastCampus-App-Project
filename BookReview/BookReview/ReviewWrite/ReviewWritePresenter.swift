@@ -21,16 +21,17 @@ final class ReviewWritePresenter {
   //MARK: - Properties
   private let viewController : ReviewWriteProtocol
   
-  private let userDefaultManager = UserDefaultsManager()
+  private let userDefaultManager : UserDefaultsManagerProtocol
 
-  private var book : Book?
+  var book : Book?
   
   let contentsTextViewPlaceHolderText = "내용을 입력해주세요."
   
   //MARK: - init
   
-  init(viewController : ReviewWriteProtocol) {
+  init(viewController : ReviewWriteProtocol, userDefaultsManager : UserDefaultsManagerProtocol = UserDefaultsManager()) {
     self.viewController = viewController
+    self.userDefaultManager = userDefaultsManager
   }
   
   //MARK: - Functions

@@ -12,4 +12,9 @@ struct Book : Decodable {
   private let image : String?
   
   var imageURL : URL? { URL(string: image ?? "") }
+  
+  init(title : String, imageUrl : String?) {
+    self.title = title
+    self.image = imageUrl
+  }
 }
