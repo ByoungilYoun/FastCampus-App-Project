@@ -10,6 +10,8 @@
 		07FCC9BA0C457FB91A933C4B /* Pods_BookReviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F98128E266AC8687181AAAB /* Pods_BookReviewTests.framework */; };
 		0F270C7127C6A1E1009FDD30 /* ReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F270C7027C6A1E1009FDD30 /* ReviewListViewController.swift */; };
 		0F270C7327C6A253009FDD30 /* ReviewListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F270C7227C6A253009FDD30 /* ReviewListPresenter.swift */; };
+		0F7BCCAA27D51CC500ED5DE3 /* MockReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BCCA927D51CC500ED5DE3 /* MockReviewListViewController.swift */; };
+		0F7BCCAC27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BCCAB27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift */; };
 		0F99E8D027CCCBFB00B236F0 /* ReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99E8CF27CCCBFB00B236F0 /* ReviewWriteViewController.swift */; };
 		0F99E8D227CCCC0500B236F0 /* ReviewWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99E8D127CCCC0500B236F0 /* ReviewWritePresenter.swift */; };
 		0F9B809E27CF545200BB7587 /* BookSearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B809D27CF545200BB7587 /* BookSearchRequestModel.swift */; };
@@ -24,7 +26,7 @@
 		0FF781B627C6432D0041A456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF781B527C6432D0041A456 /* SceneDelegate.swift */; };
 		0FF781BD27C6432E0041A456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF781BC27C6432E0041A456 /* Assets.xcassets */; };
 		0FF781C027C6432E0041A456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF781BE27C6432E0041A456 /* LaunchScreen.storyboard */; };
-		0FF781CB27C6432E0041A456 /* BookReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF781CA27C6432E0041A456 /* BookReviewTests.swift */; };
+		0FF781CB27C6432E0041A456 /* ReviewListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF781CA27C6432E0041A456 /* ReviewListPresenterTests.swift */; };
 		0FF781D527C6432E0041A456 /* BookReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF781D427C6432E0041A456 /* BookReviewUITests.swift */; };
 		0FF781D727C6432E0041A456 /* BookReviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF781D627C6432E0041A456 /* BookReviewUITestsLaunchTests.swift */; };
 		2D027D1A5CB76E1D137B2C1E /* Pods_BookReview_BookReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B27716B5352424F1F582FB /* Pods_BookReview_BookReviewUITests.framework */; };
@@ -52,6 +54,8 @@
 		044AB16761FE41D2391EF778 /* Pods_BookReview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookReview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F270C7027C6A1E1009FDD30 /* ReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewController.swift; sourceTree = "<group>"; };
 		0F270C7227C6A253009FDD30 /* ReviewListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListPresenter.swift; sourceTree = "<group>"; };
+		0F7BCCA927D51CC500ED5DE3 /* MockReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReviewListViewController.swift; sourceTree = "<group>"; };
+		0F7BCCAB27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsManager.swift; sourceTree = "<group>"; };
 		0F99E8CF27CCCBFB00B236F0 /* ReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWriteViewController.swift; sourceTree = "<group>"; };
 		0F99E8D127CCCC0500B236F0 /* ReviewWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritePresenter.swift; sourceTree = "<group>"; };
 		0F9B809D27CF545200BB7587 /* BookSearchRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequestModel.swift; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		0FF781BF27C6432E0041A456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FF781C127C6432E0041A456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FF781C627C6432E0041A456 /* BookReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF781CA27C6432E0041A456 /* BookReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewTests.swift; sourceTree = "<group>"; };
+		0FF781CA27C6432E0041A456 /* ReviewListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListPresenterTests.swift; sourceTree = "<group>"; };
 		0FF781D027C6432E0041A456 /* BookReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF781D427C6432E0041A456 /* BookReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewUITests.swift; sourceTree = "<group>"; };
 		0FF781D627C6432E0041A456 /* BookReviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -118,6 +122,23 @@
 				0F270C7227C6A253009FDD30 /* ReviewListPresenter.swift */,
 			);
 			path = ReviewList;
+			sourceTree = "<group>";
+		};
+		0F7BCCAD27D51D0900ED5DE3 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0F7BCCA927D51CC500ED5DE3 /* MockReviewListViewController.swift */,
+				0F7BCCAB27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		0F7BCCAE27D51D1300ED5DE3 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				0FF781CA27C6432E0041A456 /* ReviewListPresenterTests.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		0F99E8D327CCCC0800B236F0 /* ReviewWrite */ = {
@@ -200,7 +221,8 @@
 		0FF781C927C6432E0041A456 /* BookReviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FF781CA27C6432E0041A456 /* BookReviewTests.swift */,
+				0F7BCCAE27D51D1300ED5DE3 /* Test */,
+				0F7BCCAD27D51D0900ED5DE3 /* Mock */,
 			);
 			path = BookReviewTests;
 			sourceTree = "<group>";
@@ -496,7 +518,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF781CB27C6432E0041A456 /* BookReviewTests.swift in Sources */,
+				0F7BCCAA27D51CC500ED5DE3 /* MockReviewListViewController.swift in Sources */,
+				0FF781CB27C6432E0041A456 /* ReviewListPresenterTests.swift in Sources */,
+				0F7BCCAC27D51CEF00ED5DE3 /* MockUserDefaultsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -642,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -667,7 +691,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -696,7 +720,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
