@@ -9,7 +9,7 @@ target 'MovieReview' do
 pod 'SnapKit', '~> 5.0.0'
 pod 'Alamofire', '~> 5.5'
 pod 'Kingfisher', '~> 7.0'
-
+pod 'SwiftLint'
   target 'MovieReviewTests' do
     inherit! :search_paths
     # Pods for testing
