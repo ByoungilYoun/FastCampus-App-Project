@@ -11,6 +11,7 @@ protocol MovieListProtocol : AnyObject {
   func setupNavigationBar()
   func setupSearchBar()
   func setupViews()
+  func updateSearchTableView(isHidden : Bool)
 }
 
 final class MovieListPresenter : NSObject {
@@ -39,7 +40,13 @@ final class MovieListPresenter : NSObject {
 
   //MARK: - UISearchBarDelegate
 extension MovieListPresenter : UISearchBarDelegate {
+  func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    viewController?.updateSearchTableView(isHidden: false)
+  }
   
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    viewController?.updateSearchTableView(isHidden: true)
+  }
 }
 
   //MARK: - UICollectionViewDelegateFlowLayout
@@ -67,5 +74,23 @@ extension MovieListPresenter : UICollectionViewDataSource {
     let movie = likedMovie[indexPath.item]
     cell?.update(movie)
     return cell ?? UICollectionViewCell()
+  }
+}
+
+  //MARK: - UITableViewDelegate
+extension MovieListPresenter : UITableViewDelegate {
+  
+}
+
+  //MARK: - UITableViewDataSource
+extension MovieListPresenter : UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    3
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = UITableViewCell()
+    cell.textLabel?.text = "\(indexPath.row)"
+    return cell
   }
 }
