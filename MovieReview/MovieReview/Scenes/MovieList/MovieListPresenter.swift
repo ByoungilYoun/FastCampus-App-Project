@@ -18,6 +18,8 @@ final class MovieListPresenter : NSObject {
   
   //MARK: - Properties
   private weak var viewController : MovieListProtocol?
+  
+  private let movieSearchManager : MovieSearchManagerProtocol
 
   private var likedMovie : [Movie] = [
     Movie(title: "Starwars", imageURL: "", userRating: "5.0", actor: "haha", director: "asdf", pubDate: "2022"),
@@ -25,9 +27,12 @@ final class MovieListPresenter : NSObject {
     Movie(title: "Starwars", imageURL: "", userRating: "5.0", actor: "haha", director: "asdf", pubDate: "2022")
   ]
   
+  private var currentMovieSearchResult : [Movie] = []
+  
   //MARK: - Init
-  init(viewController : MovieListProtocol) {
+  init(viewController : MovieListProtocol, movieSearchManager : MovieSearchManagerProtocol = MovieSearchManager()) {
     self.viewController = viewController
+    self.movieSearchManager = movieSearchManager
   }
   
   //MARK: - Functions
@@ -45,7 +50,15 @@ extension MovieListPresenter : UISearchBarDelegate {
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    currentMovieSearchResult = [] // 전에 검색한거 지우기
     viewController?.updateSearchTableView(isHidden: true)
+  }
+  
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    movieSearchManager.request(from: searchText) { [weak self] movies in
+      self?.currentMovieSearchResult = movies
+      self?.viewController?.updateSearchTableView(isHidden: false)
+    }
   }
 }
 
@@ -85,12 +98,12 @@ extension MovieListPresenter : UITableViewDelegate {
   //MARK: - UITableViewDataSource
 extension MovieListPresenter : UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    3
+    currentMovieSearchResult.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.textLabel?.text = "\(indexPath.row)"
+    cell.textLabel?.text = currentMovieSearchResult[indexPath.row].title
     return cell
   }
 }
