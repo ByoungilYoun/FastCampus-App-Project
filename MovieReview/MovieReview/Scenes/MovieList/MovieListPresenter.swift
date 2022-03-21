@@ -12,6 +12,7 @@ protocol MovieListProtocol : AnyObject {
   func setupSearchBar()
   func setupViews()
   func updateSearchTableView(isHidden : Bool)
+  func pushToMovieDetailViewController(with movie : Movie)
 }
 
 final class MovieListPresenter : NSObject {
@@ -74,6 +75,11 @@ extension MovieListPresenter : UICollectionViewDelegateFlowLayout {
     let inset : CGFloat = 16.0
     return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
   }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let movie = likedMovie[indexPath.item]
+    viewController?.pushToMovieDetailViewController(with: movie)
+  }
 }
 
   //MARK: - UICollectionViewDataSource
@@ -92,7 +98,10 @@ extension MovieListPresenter : UICollectionViewDataSource {
 
   //MARK: - UITableViewDelegate
 extension MovieListPresenter : UITableViewDelegate {
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let movie = currentMovieSearchResult[indexPath.row]
+    viewController?.pushToMovieDetailViewController(with: movie)
+  }
 }
 
   //MARK: - UITableViewDataSource
