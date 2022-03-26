@@ -16,9 +16,12 @@ final class MovieDetailPresenter {
   //MARK: - Properties
   private weak var viewController : MovieDetailProtocol?
   
+  private var movie : Movie
+  
   //MARK: - init
-  init(viewController : MovieDetailProtocol) {
+  init(viewController : MovieDetailProtocol, movie : Movie) {
     self.viewController = viewController
+    self.movie = movie
   }
   
   
