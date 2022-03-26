@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MovieDetailProtocol : AnyObject {
-  
+  func setupViews(with movie : Movie)
 }
 
 final class MovieDetailPresenter {
@@ -24,5 +24,8 @@ final class MovieDetailPresenter {
     self.movie = movie
   }
   
-  
+  //MARK: - Functions
+  func viewDidLoad() {
+    viewController?.setupViews(with: movie)
+  }
 }
