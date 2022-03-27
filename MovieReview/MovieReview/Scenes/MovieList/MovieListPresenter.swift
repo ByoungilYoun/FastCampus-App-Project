@@ -13,6 +13,7 @@ protocol MovieListProtocol : AnyObject {
   func setupViews()
   func updateSearchTableView(isHidden : Bool)
   func pushToMovieDetailViewController(with movie : Movie)
+  func updateCollectionView()
 }
 
 final class MovieListPresenter : NSObject {
@@ -22,18 +23,17 @@ final class MovieListPresenter : NSObject {
   
   private let movieSearchManager : MovieSearchManagerProtocol
 
-  private var likedMovie : [Movie] = [
-    Movie(title: "Starwars", imageURL: "", userRating: "5.0", actor: "haha", director: "asdf", pubDate: "2022"),
-    Movie(title: "Starwars", imageURL: "", userRating: "5.0", actor: "haha", director: "asdf", pubDate: "2022"),
-    Movie(title: "Starwars", imageURL: "", userRating: "5.0", actor: "haha", director: "asdf", pubDate: "2022")
-  ]
+  private let userDefaultsManager : UserDefaultsManagerProtocol
+  
+  private var likedMovie : [Movie] = []
   
   private var currentMovieSearchResult : [Movie] = []
   
   //MARK: - Init
-  init(viewController : MovieListProtocol, movieSearchManager : MovieSearchManagerProtocol = MovieSearchManager()) {
+  init(viewController : MovieListProtocol, movieSearchManager : MovieSearchManagerProtocol = MovieSearchManager(), userDefaultsManager : UserDefaultsManagerProtocol = UserDefaultManager()) {
     self.viewController = viewController
     self.movieSearchManager = movieSearchManager
+    self.userDefaultsManager = userDefaultsManager
   }
   
   //MARK: - Functions
@@ -41,6 +41,11 @@ final class MovieListPresenter : NSObject {
     viewController?.setupNavigationBar()
     viewController?.setupSearchBar()
     viewController?.setupViews()
+  }
+  
+  func viewWillAppear() {
+    likedMovie = userDefaultsManager.getMovies()
+    viewController?.updateCollectionView()
   }
 }
 
