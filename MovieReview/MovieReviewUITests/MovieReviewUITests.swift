@@ -9,34 +9,44 @@ import XCTest
 
 class MovieReviewUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+  var app : XCUIApplication!
+  
+  //MARK: - setUp()
+  override func setUp() {
+    super.setUp()
+    
+    continueAfterFailure = false //  실패하고 나서도 계속 실행이 안되게끔 하기 위해서
+    
+    app = XCUIApplication()
+    app.launch()
+  }
+  
+  //MARK: - tearDown()
+  override func tearDown() {
+    super.tearDown()
+    app = nil // app을 초기화로 nil 로 설정해준다.
+  }
+  
+  //MARK: - Test Functions
+  
+  // 네비게이션 타이틀이 영화평점인지 확인하는 메서드
+  func test_ifNavigationBarTitleIs영화평점() {
+    let existNavigationBarTitle =  app.navigationBars["영화 평점"].exists // app.navigationBar 에서 앱의 모든 네비게이션바를 가져올수 있고 .exist 로 존재하면 true, 존재하지 않으면 false 가 된다.
+   XCTAssertTrue(existNavigationBarTitle) // exitNagivationBarTitle 이 true 인지 확인
+  }
+  
+  // SearchBar 가 존재하는지 확인하는 메서드
+  func test_ifSearchBarExist() {
+    let existSearchBar = app.navigationBars["영화 평점"].searchFields["Search"].exists
+    XCTAssertTrue(existSearchBar)
+  }
+  
+  // SearchBar 에 cancel 버튼이 존재하는지 확인하는 메서드
+  func test_ifCancelButtonExist() {
+    let navigationBar = app.navigationBars["영화 평점"]
+    navigationBar.searchFields["Search"].tap() // 네비게이션바의 searchBar placeholder 가 "Search" 인 searchBar 를 tap (누른다)
+    
+    let existSearchBarCancelButton = navigationBar.buttons["Cancel"].exists // 네비게이션바의 버튼들 중에 Cancel 이라는 이름의 버튼이 있는지
+    XCTAssertTrue(existSearchBarCancelButton)
+  }
 }
