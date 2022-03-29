@@ -32,7 +32,6 @@ final class MovieDetailPresenter {
   func viewDidLoad() {
     viewController?.setupViews(with: movie)
     viewController?.setRightBarButton(with: movie.isLiked)
-    print("하하 movie.isliked : \(movie.isLiked)")
   }
   
   func didTapRightBarButtonItem() {
