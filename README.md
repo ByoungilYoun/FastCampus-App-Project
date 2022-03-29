@@ -90,3 +90,11 @@
 19. [도서 리뷰 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/BookReview). 
     - MVP
     - UnitTest
+
+20. [영화평점 앱](https://github.com/ByoungilYoun/FastCampus-App-Project/tree/main/MovieReview/MovieReview).  
+    - MVP
+    - BDD
+    - UI Test
+    - Unit Test
+    
+    
