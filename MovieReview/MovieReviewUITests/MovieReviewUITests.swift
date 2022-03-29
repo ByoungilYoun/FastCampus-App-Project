@@ -49,4 +49,21 @@ class MovieReviewUITests: XCTestCase {
     let existSearchBarCancelButton = navigationBar.buttons["Cancel"].exists // 네비게이션바의 버튼들 중에 Cancel 이라는 이름의 버튼이 있는지
     XCTAssertTrue(existSearchBarCancelButton)
   }
+  
+  // BDD에 따른 UI Test 작성해보기
+  enum CellTitleData : String {
+    case existsMovie = "<b>겨울왕국</b> 2"
+    case notExistsMovie = "007"
+  }
+  
+  func test_영화가즐겨찾기되어있으면() {
+    let existCell = app.collectionViews.cells.containing(.staticText, identifier: CellTitleData.existsMovie.rawValue).element.exists
+    
+    XCTAssertTrue(existCell, "Title이 표시된 Cell이 존재한다.")
+  }
+  
+  func test_영화가즐겨찾기되어있지않으면() {
+    let existCell = app.collectionViews.cells.containing(.staticText, identifier: CellTitleData.notExistsMovie.rawValue).element.exists
+    XCTAssertFalse(existCell, "Title이 표시된 Cell이 존재하지 않는다.")
+  }
 }
