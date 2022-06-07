@@ -14,6 +14,7 @@
 		0F8E1DD9284F7E7B00903263 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8E1DD8284F7E7B00903263 /* SnapKit */; };
 		0F8E1DDB284F7EAE00903263 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8E1DDA284F7EAE00903263 /* MainViewController.swift */; };
 		0F8E1DDD284F7FAF00903263 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8E1DDC284F7FAF00903263 /* SearchBar.swift */; };
+		0F8E1DDF284F9E1600903263 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8E1DDE284F9E1600903263 /* FilterView.swift */; };
 		0FEDE947284E21D600FFB648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE946284E21D600FFB648 /* AppDelegate.swift */; };
 		0FEDE949284E21D600FFB648 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDE948284E21D600FFB648 /* SceneDelegate.swift */; };
 		0FEDE94E284E21D600FFB648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEDE94C284E21D600FFB648 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0F8E1DDA284F7EAE00903263 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0F8E1DDC284F7FAF00903263 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		0F8E1DDE284F9E1600903263 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		0FEDE943284E21D600FFB648 /* RemakeSearchDaumBlog2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemakeSearchDaumBlog2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FEDE946284E21D600FFB648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FEDE948284E21D600FFB648 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0FEDE948284E21D600FFB648 /* SceneDelegate.swift */,
 				0F8E1DDA284F7EAE00903263 /* MainViewController.swift */,
 				0F8E1DDC284F7FAF00903263 /* SearchBar.swift */,
+				0F8E1DDE284F9E1600903263 /* FilterView.swift */,
 				0FEDE94C284E21D600FFB648 /* Main.storyboard */,
 				0FEDE94F284E21D700FFB648 /* Assets.xcassets */,
 				0FEDE951284E21D700FFB648 /* LaunchScreen.storyboard */,
@@ -166,6 +169,7 @@
 				0FEDE947284E21D600FFB648 /* AppDelegate.swift in Sources */,
 				0F8E1DDD284F7FAF00903263 /* SearchBar.swift in Sources */,
 				0FEDE949284E21D600FFB648 /* SceneDelegate.swift in Sources */,
+				0F8E1DDF284F9E1600903263 /* FilterView.swift in Sources */,
 				0F8E1DDB284F7EAE00903263 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
