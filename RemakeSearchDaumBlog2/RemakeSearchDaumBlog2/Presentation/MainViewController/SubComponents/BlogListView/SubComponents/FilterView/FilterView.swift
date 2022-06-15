@@ -17,13 +17,11 @@ class FilterView : UITableViewHeaderFooterView {
   let sortButton = UIButton()
   let bottomBorder = UIView()
   
-  // FilterView 외부에서 관찰
-  let sortButtonTapped = PublishRelay<Void>()
+  
   
   //MARK: - Init
   override init(reuseIdentifier: String?) {
     super.init(reuseIdentifier: reuseIdentifier)
-    bind()
     attribute()
     layout()
   }
@@ -34,9 +32,9 @@ class FilterView : UITableViewHeaderFooterView {
   
   //MARK: - Functions
   
-  private func bind() {
+  func bind(viewModel : FilterViewModel) {
     sortButton.rx.tap
-      .bind(to: sortButtonTapped)
+      .bind(to: viewModel.sortButtonTapped)
       .disposed(by: disposeBag)
   }
   

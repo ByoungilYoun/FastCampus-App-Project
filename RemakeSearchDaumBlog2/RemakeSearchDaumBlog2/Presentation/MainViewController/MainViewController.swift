@@ -17,13 +17,11 @@ class MainViewController : UIViewController {
   
   let searchBar = SearchBar()
   let listView = BlogListView()
-  let alertActionTapped = PublishRelay<AlertAction>()
   
   //MARK: - Init
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    self.bind()
     self.attribute()
     self.layout()
   }
@@ -34,92 +32,16 @@ class MainViewController : UIViewController {
   
   //MARK: - Functions
   
-  private func bind() {
+  func bind(_ viewModel : MainViewModel) {
+    listView.bind(viewModel: viewModel.blogListViewModel)
+    searchBar.bind(viewModel: viewModel.searchBarViewModel)
     
-    let blogResult = searchBar.shouldLoadResult
-      .flatMapLatest { query in
-        SearchBlogNetwork().searchBlog(query: query)
-      }
-      .share() // 스트림 공유
-    
-    // blogResult 에서 성공한값 (데이터)
-    let blogValue = blogResult
-      .compactMap { data -> DKBlog? in
-        guard case .success(let value) = data else {
-          return nil
-        }
-        
-        return value
-      }
-    
-    // blogResult 에서 실패한값 (에러)
-    let blogError = blogResult
-      .compactMap { data -> String? in
-        guard case .failure(let error) = data else {
-          return nil
-        }
-        return error.localizedDescription
-      }
-    
-    let alertForErrorMessage = blogError
-      .map { message -> Alert in
-        return (title : "앗!", message : "예상치 못한 오류 발생 \(message)", actions : [.confirm], style : .alert)
-      }
-    
-  
-    // 네트워크를 통해 가져온 값을 cellData 로 변환
-    let cellData = blogValue
-      .map { blog -> [BlogListCellData] in
-        return blog.documents
-          .map { doc in
-            let thumbnailURL = URL(string: doc.thumbnail ?? "")
-            return BlogListCellData(thumbnailURL: thumbnailURL, name: doc.name, title: doc.title, datetime: doc.datetime)
-          }
-      }
-    
-    // FilterView  를 선택했을때 나오는 alertSheet 를 선택했을 때 type
-    let sortedType = alertActionTapped
-      .filter {
-        switch $0 {
-        case .title, .datetime :
-          return true
-        default :
-          return false
-        }
-      }
-      .startWith(.title)
-    
-    // MainViewController -> BlogListView 의 셀 데이터로 전달
-    Observable
-      .combineLatest(sortedType, cellData) { type, data -> [BlogListCellData] in
-        switch type {
-        case .title :
-          return data.sorted { $0.title ?? "" < $1.title ?? "" }
-        case .datetime :
-          return data.sorted { $0.datetime ?? Date() > $1.datetime ?? Date() }
-        default :
-          return data
-        }
-      }.bind(to: listView.cellData)
-      .disposed(by: self.disposeBag)
-    
-    
-    let alertSheetForSorting = listView.headerView.sortButtonTapped
-      .map { _ -> Alert in
-        return (title : nil, message : nil, actions : [.title, .datetime, .cancel], style : .actionSheet)
-      }
-    
-    Observable
-      .merge(
-        alertSheetForSorting, // 필터 눌렀을때 alert 창 나올때
-        alertForErrorMessage // 에러 메세지가 있을때 alert 창 나올때
-      )
-      .asSignal(onErrorSignalWith: .empty())
+      viewModel.shouldPresentAlert
       .flatMapLatest { alert -> Signal<AlertAction> in
         let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
         return self.presentAlertController(alertController, actions: alert.actions)
       }
-      .emit(to: alertActionTapped)
+      .emit(to: viewModel.alertActionTapped)
       .disposed(by: self.disposeBag)
   }
   
