@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		0F84EFEF285B634F00A4F872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84EFEE285B634F00A4F872 /* AppDelegate.swift */; };
 		0F84EFF1285B634F00A4F872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84EFF0285B634F00A4F872 /* SceneDelegate.swift */; };
-		0F84EFF3285B634F00A4F872 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84EFF2285B634F00A4F872 /* ViewController.swift */; };
-		0F84EFF6285B634F00A4F872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F84EFF4285B634F00A4F872 /* Main.storyboard */; };
 		0F84EFF8285B635300A4F872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F84EFF7285B635300A4F872 /* Assets.xcassets */; };
 		0F84EFFB285B635300A4F872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F84EFF9285B635300A4F872 /* LaunchScreen.storyboard */; };
 		0F84F006285B635300A4F872 /* RemakeDanngnMarketStyleApp2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84F005285B635300A4F872 /* RemakeDanngnMarketStyleApp2Tests.swift */; };
 		0F84F010285B635300A4F872 /* RemakeDanngnMarketStyleApp2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84F00F285B635300A4F872 /* RemakeDanngnMarketStyleApp2UITests.swift */; };
 		0F84F012285B635300A4F872 /* RemakeDanngnMarketStyleApp2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84F011285B635300A4F872 /* RemakeDanngnMarketStyleApp2UITestsLaunchTests.swift */; };
+		0F84F020285B77C100A4F872 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84F01F285B77C100A4F872 /* RxCocoa */; };
+		0F84F022285B77C100A4F872 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84F021285B77C100A4F872 /* RxRelay */; };
+		0F84F024285B77C100A4F872 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84F023285B77C100A4F872 /* RxSwift */; };
+		0F84F027285B77D200A4F872 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F84F026285B77D200A4F872 /* SnapKit */; };
+		0F84F029285B7A6700A4F872 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84F028285B7A6700A4F872 /* MainViewController.swift */; };
+		0F84F02B285B7ACC00A4F872 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84F02A285B7ACC00A4F872 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,6 @@
 		0F84EFEB285B634F00A4F872 /* RemakeDanngnMarketStyleApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemakeDanngnMarketStyleApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F84EFEE285B634F00A4F872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F84EFF0285B634F00A4F872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F84EFF2285B634F00A4F872 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F84EFF5285B634F00A4F872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F84EFF7285B635300A4F872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F84EFFA285B635300A4F872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F84EFFC285B635300A4F872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		0F84F00B285B635300A4F872 /* RemakeDanngnMarketStyleApp2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemakeDanngnMarketStyleApp2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F84F00F285B635300A4F872 /* RemakeDanngnMarketStyleApp2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemakeDanngnMarketStyleApp2UITests.swift; sourceTree = "<group>"; };
 		0F84F011285B635300A4F872 /* RemakeDanngnMarketStyleApp2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemakeDanngnMarketStyleApp2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F84F028285B7A6700A4F872 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F84F02A285B7ACC00A4F872 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F84F024285B77C100A4F872 /* RxSwift in Frameworks */,
+				0F84F027285B77D200A4F872 /* SnapKit in Frameworks */,
+				0F84F022285B77C100A4F872 /* RxRelay in Frameworks */,
+				0F84F020285B77C100A4F872 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +109,8 @@
 			children = (
 				0F84EFEE285B634F00A4F872 /* AppDelegate.swift */,
 				0F84EFF0285B634F00A4F872 /* SceneDelegate.swift */,
-				0F84EFF2285B634F00A4F872 /* ViewController.swift */,
-				0F84EFF4285B634F00A4F872 /* Main.storyboard */,
+				0F84F028285B7A6700A4F872 /* MainViewController.swift */,
+				0F84F02A285B7ACC00A4F872 /* MainViewModel.swift */,
 				0F84EFF7285B635300A4F872 /* Assets.xcassets */,
 				0F84EFF9285B635300A4F872 /* LaunchScreen.storyboard */,
 				0F84EFFC285B635300A4F872 /* Info.plist */,
@@ -143,6 +151,12 @@
 			dependencies = (
 			);
 			name = RemakeDanngnMarketStyleApp2;
+			packageProductDependencies = (
+				0F84F01F285B77C100A4F872 /* RxCocoa */,
+				0F84F021285B77C100A4F872 /* RxRelay */,
+				0F84F023285B77C100A4F872 /* RxSwift */,
+				0F84F026285B77D200A4F872 /* SnapKit */,
+			);
 			productName = RemakeDanngnMarketStyleApp2;
 			productReference = 0F84EFEB285B634F00A4F872 /* RemakeDanngnMarketStyleApp2.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,10 @@
 				Base,
 			);
 			mainGroup = 0F84EFE2285B634F00A4F872;
+			packageReferences = (
+				0F84F01E285B77C100A4F872 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				0F84F025285B77D200A4F872 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 0F84EFEC285B634F00A4F872 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +251,6 @@
 			files = (
 				0F84EFFB285B635300A4F872 /* LaunchScreen.storyboard in Resources */,
 				0F84EFF8285B635300A4F872 /* Assets.xcassets in Resources */,
-				0F84EFF6285B634F00A4F872 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F84EFF3285B634F00A4F872 /* ViewController.swift in Sources */,
 				0F84EFEF285B634F00A4F872 /* AppDelegate.swift in Sources */,
 				0F84EFF1285B634F00A4F872 /* SceneDelegate.swift in Sources */,
+				0F84F029285B7A6700A4F872 /* MainViewController.swift in Sources */,
+				0F84F02B285B7ACC00A4F872 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +315,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0F84EFF4285B634F00A4F872 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F84EFF5285B634F00A4F872 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0F84EFF9285B635300A4F872 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +452,6 @@
 				INFOPLIST_FILE = RemakeDanngnMarketStyleApp2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +479,6 @@
 				INFOPLIST_FILE = RemakeDanngnMarketStyleApp2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +610,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F84F01E285B77C100A4F872 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		0F84F025285B77D200A4F872 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F84F01F285B77C100A4F872 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F84F01E285B77C100A4F872 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0F84F021285B77C100A4F872 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F84F01E285B77C100A4F872 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		0F84F023285B77C100A4F872 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F84F01E285B77C100A4F872 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		0F84F026285B77D200A4F872 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F84F025285B77D200A4F872 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F84EFE3285B634F00A4F872 /* Project object */;
 }
