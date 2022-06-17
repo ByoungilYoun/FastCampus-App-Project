@@ -12,6 +12,8 @@ import RxCocoa
 class PriceTextFieldCell : UITableViewCell {
   
   //MARK: - Properties
+  static let identifier = "PriceTextFieldCell"
+  
   let disposeBag = DisposeBag()
   let priceInputField = UITextField()
   let freeshareButton = UIButton()

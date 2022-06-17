@@ -27,6 +27,8 @@
 		0F84F039285B9FE300A4F872 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84F038285B9FE300A4F872 /* CategoryListViewController.swift */; };
 		0FD18D30285CD8460083F628 /* PriceTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D2F285CD8460083F628 /* PriceTextFieldCellViewModel.swift */; };
 		0FD18D32285CD94D0083F628 /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D31285CD94D0083F628 /* PriceTextFieldCell.swift */; };
+		0FD18D35285CEDFF0083F628 /* DetailWriteFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D34285CEDFF0083F628 /* DetailWriteFormCell.swift */; };
+		0FD18D37285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D36285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		0F84F038285B9FE300A4F872 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		0FD18D2F285CD8460083F628 /* PriceTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCellViewModel.swift; sourceTree = "<group>"; };
 		0FD18D31285CD94D0083F628 /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
+		0FD18D34285CEDFF0083F628 /* DetailWriteFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCell.swift; sourceTree = "<group>"; };
+		0FD18D36285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +160,8 @@
 				0F84F02A285B7ACC00A4F872 /* MainViewModel.swift */,
 				0F84F032285B93C700A4F872 /* TitleTextFieldCell */,
 				0F84F03A285BA05B00A4F872 /* CategoryViewController */,
-				0FD18D2F285CD8460083F628 /* PriceTextFieldCellViewModel.swift */,
-				0FD18D31285CD94D0083F628 /* PriceTextFieldCell.swift */,
+				0FD18D33285CED2F0083F628 /* PriceTextFieldCell */,
+				0FD18D38285CEE110083F628 /* DetailWriteFormCell */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -186,6 +190,24 @@
 				0F84F036285B965A00A4F872 /* CategoryViewModel.swift */,
 			);
 			path = CategoryViewController;
+			sourceTree = "<group>";
+		};
+		0FD18D33285CED2F0083F628 /* PriceTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FD18D31285CD94D0083F628 /* PriceTextFieldCell.swift */,
+				0FD18D2F285CD8460083F628 /* PriceTextFieldCellViewModel.swift */,
+			);
+			path = PriceTextFieldCell;
+			sourceTree = "<group>";
+		};
+		0FD18D38285CEE110083F628 /* DetailWriteFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FD18D34285CEDFF0083F628 /* DetailWriteFormCell.swift */,
+				0FD18D36285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift */,
+			);
+			path = DetailWriteFormCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +357,11 @@
 				0F84F029285B7A6700A4F872 /* MainViewController.swift in Sources */,
 				0F84F037285B965B00A4F872 /* CategoryViewModel.swift in Sources */,
 				0FD18D32285CD94D0083F628 /* PriceTextFieldCell.swift in Sources */,
+				0FD18D37285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift in Sources */,
 				0F84F039285B9FE300A4F872 /* CategoryListViewController.swift in Sources */,
 				0F84F02F285B93B900A4F872 /* TitleTextFieldCell.swift in Sources */,
 				0F84F02B285B7ACC00A4F872 /* MainViewModel.swift in Sources */,
+				0FD18D35285CEDFF0083F628 /* DetailWriteFormCell.swift in Sources */,
 				0F84F035285B964500A4F872 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
