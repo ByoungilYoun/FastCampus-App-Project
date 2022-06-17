@@ -29,6 +29,7 @@
 		0FD18D32285CD94D0083F628 /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D31285CD94D0083F628 /* PriceTextFieldCell.swift */; };
 		0FD18D35285CEDFF0083F628 /* DetailWriteFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D34285CEDFF0083F628 /* DetailWriteFormCell.swift */; };
 		0FD18D37285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D36285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift */; };
+		0FD18D3A285CF7150083F628 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD18D39285CF7150083F628 /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		0FD18D31285CD94D0083F628 /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
 		0FD18D34285CEDFF0083F628 /* DetailWriteFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCell.swift; sourceTree = "<group>"; };
 		0FD18D36285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCellViewModel.swift; sourceTree = "<group>"; };
+		0FD18D39285CF7150083F628 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				0F84F028285B7A6700A4F872 /* MainViewController.swift */,
 				0F84F02A285B7ACC00A4F872 /* MainViewModel.swift */,
+				0FD18D39285CF7150083F628 /* MainModel.swift */,
 				0F84F032285B93C700A4F872 /* TitleTextFieldCell */,
 				0F84F03A285BA05B00A4F872 /* CategoryViewController */,
 				0FD18D33285CED2F0083F628 /* PriceTextFieldCell */,
@@ -360,6 +363,7 @@
 				0FD18D37285CEE0D0083F628 /* DetailWriteFormCellViewModel.swift in Sources */,
 				0F84F039285B9FE300A4F872 /* CategoryListViewController.swift in Sources */,
 				0F84F02F285B93B900A4F872 /* TitleTextFieldCell.swift in Sources */,
+				0FD18D3A285CF7150083F628 /* MainModel.swift in Sources */,
 				0F84F02B285B7ACC00A4F872 /* MainViewModel.swift in Sources */,
 				0FD18D35285CEDFF0083F628 /* DetailWriteFormCell.swift in Sources */,
 				0F84F035285B964500A4F872 /* Category.swift in Sources */,
